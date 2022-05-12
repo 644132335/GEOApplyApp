@@ -31,6 +31,7 @@ struct ApplyDetail: View {
                    BasicInfo(manager: _manager, nationality: "China", school: "Havard", major: "Computer Science")
                    ApplyInfoSec()
                    ScoreSec()
+                   EssaySec()
                 }
                 
             }

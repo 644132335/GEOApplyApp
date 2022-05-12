@@ -32,8 +32,3 @@ struct ScoreSec: View {
     }
 }
 
-struct ScoreSec_Previews: PreviewProvider {
-    static var previews: some View {
-        ScoreSec()
-    }
-}#imageLiteral(resourceName: "simulator_screenshot_9E8BC45D-495D-4986-8DF4-989F35B5370A.png")

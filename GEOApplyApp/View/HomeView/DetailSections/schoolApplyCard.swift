@@ -26,7 +26,7 @@ struct schoolApplyCard: View {
                     Spacer()
                     
                 }
-            }.padding(1).background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(color:.green.opacity(0.8) ,radius: 3)).padding(2)
+            }.padding(1).background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(radius: 3)).padding(2)
         }
         
         else{
@@ -41,7 +41,7 @@ struct schoolApplyCard: View {
                     Spacer()
                     
                 }
-            }.padding(1).background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(color:.red.opacity(0.8) ,radius: 3)).padding(2)
+            }.padding(1).background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(radius: 3)).padding(2)
         }
         
             
