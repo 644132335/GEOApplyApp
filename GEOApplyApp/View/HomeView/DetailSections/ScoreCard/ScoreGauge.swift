@@ -16,7 +16,7 @@ struct ScoreGauge: View {
     
     var body: some View {
         HStack{
-            
+            Text("gauge")
         }
     }
 }

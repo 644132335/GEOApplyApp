@@ -18,12 +18,12 @@ struct ScoreSec: View {
                     Text("Scores").font(.footnote).foregroundColor(manager.themeColor).bold().padding(2)
                     Spacer()
                 }
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack{
-                        schoolApplyCard(result: true, school: "Pennsylvania State University")
-                        schoolApplyCard(result: false, school: "Havard University")
-                        schoolApplyCard(result: false, school: "Havard University")
-                        
+                ScrollView(showsIndicators: false){
+                    VStack{
+                        ScoreProgress(max: 1600, cur: 1400, title: "SAT", gradientColor: manager.satGradientColor, showDecimal: false)
+                        ScoreProgress(max: 120, cur: 110, title: "TOFEL", gradientColor: manager.TofelGradientColor, showDecimal: false)
+                        ScoreProgress(max: 4.0, cur: 3.77, title: "GPA", gradientColor: manager.GPAGradientColor, showDecimal: true)
+                    
                     }
                 }
                 
@@ -36,4 +36,4 @@ struct ScoreSec_Previews: PreviewProvider {
     static var previews: some View {
         ScoreSec()
     }
-}
+}#imageLiteral(resourceName: "simulator_screenshot_9E8BC45D-495D-4986-8DF4-989F35B5370A.png")
