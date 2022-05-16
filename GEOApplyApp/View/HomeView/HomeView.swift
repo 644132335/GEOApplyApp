@@ -24,6 +24,26 @@ struct HomeView: View {
                         ApplyInfoCard().padding(3)
                     }
                 }
+                
+                //floating action button for adding info
+                VStack(){
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        NavigationLink(destination: AddInfo()){
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 57, height: 57)
+                                .foregroundColor(manager.themeColor)
+                                .shadow(color: .gray, radius: 0.4, x: 1, y: 1)
+                                .background(Circle().fill(Color.white).frame(width: 57, height: 57))
+                        }.padding()
+                        
+                    }
+                    
+                    //Spacer().frame(height:10)
+                }
+               
             }.navigationTitle("Explore")
         }
             .navigationBarTitleDisplayMode(.inline)

@@ -18,10 +18,7 @@ struct ContentView: View {
                 CommunityView().tabItem{Label("Community", systemImage: "person.3.fill")}
                 MeView().tabItem{Label("Me", systemImage: "person.fill")}
             }
-//            .onAppear() {
-//                UITabBar.appearance().backgroundColor = manager.blue1
-//            }
-//            .accentColor(.white)
+
             .navigationViewStyle(StackNavigationViewStyle())
         
     }
