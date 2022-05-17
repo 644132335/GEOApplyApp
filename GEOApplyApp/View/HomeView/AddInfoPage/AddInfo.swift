@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddInfo: View {
     @EnvironmentObject var manager : AppManager
+    @Environment(\.dismiss) var dismiss
     @State private var name=""
     @State private var school=""
     @State private var nation=""
@@ -20,7 +21,7 @@ struct AddInfo: View {
     var body: some View {
         ScrollView{
             VStack{
-                TextField("User ID", text: $userid).font(.title2).padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+//                TextField("User ID", text: $userid).font(.title2).padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
                 TextField("Name", text: $name).font(.title2)
                     .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
                 TextField("School", text: $school).font(.title2)
@@ -51,9 +52,9 @@ struct AddInfo: View {
                 HStack{
                     Button(action: {
                         manager.addUser(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa)
-                        print(manager.users)
+                        dismiss()
                     }){
-                        Text("Submit").foregroundColor(.white).bold().font(.title2).padding(EdgeInsets(top: 1, leading: 120, bottom: 1, trailing: 120)).padding(15).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor)).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                        Text("SUBMIT").foregroundColor(.white).bold().font(.title2).padding(EdgeInsets(top: 1, leading: 120, bottom: 1, trailing: 120)).padding(15).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor)).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
                     }
                 }
             }

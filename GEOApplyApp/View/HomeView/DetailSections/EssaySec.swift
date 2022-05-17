@@ -15,7 +15,7 @@ struct EssaySec: View {
             Divider()
             VStack(alignment:.leading){
                 HStack{
-                    Text("Application Essays").font(.footnote).foregroundColor(manager.themeColor).bold().padding(2)
+                    Text("APPLICATION ESSAYS").font(.footnote).foregroundColor(manager.themeColor).bold().padding(2)
                     Spacer()
                 }
                 ZStack(alignment:.center){

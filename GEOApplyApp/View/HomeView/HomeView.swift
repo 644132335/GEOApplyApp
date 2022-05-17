@@ -14,12 +14,15 @@ struct HomeView: View {
             ZStack{
                 ScrollView{
                     VStack{
+                        //own info
                         NavigationLink(destination: ApplyDetail(name: "Matthew", school: "Havard University", nation: "China", major: "Computer Science", sat: 1600, tofel: 110, gpa: 3.9)){
-                            ApplyInfoCard(name: "Matthew", nation: "United States", school: "Harvard University", gpa: 3.75, sat: 1550).padding(3)
+                            ApplyInfoCard(name: "Matthew", nation: "United States", school: "Harvard University", gpa: 3.75, sat: 1550, tofel: 110).padding(3)
                         }.padding(3)
+                        
+                        //other info
                         ForEach(manager.users, id:\.self){i in
                             NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!)){
-                                ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!).padding(3)
+                                ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!, tofel: i.tofel!).padding(3)
                             }.padding(3)
                         }
                             }

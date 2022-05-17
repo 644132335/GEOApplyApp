@@ -18,7 +18,7 @@ struct ScoreSec: View {
             Divider()
             VStack(alignment:.leading){
                 HStack{
-                    Text("Scores").font(.footnote).foregroundColor(manager.themeColor).bold().padding(2)
+                    Text("SCORES").font(.footnote).foregroundColor(manager.themeColor).bold().padding(2)
                     Spacer()
                 }
                 ScrollView(showsIndicators: false){

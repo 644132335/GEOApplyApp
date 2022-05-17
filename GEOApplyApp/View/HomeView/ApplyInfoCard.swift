@@ -13,6 +13,7 @@ struct ApplyInfoCard: View {
     var school:String
     var gpa:Double
     var sat:Double
+    var tofel:Double
     var body: some View {
         VStack{
             HStack{
@@ -39,7 +40,7 @@ struct ApplyInfoCard: View {
                 Spacer()
             }
             HStack{
-                Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                Text("TOFEL: "+String(format: "%.0f", tofel)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                 Divider()
                 Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                 Divider()
