@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ScoreSec: View {
     @EnvironmentObject var manager : AppManager
+    var sat:Double
+    var tofel:Double
+    var gpa:Double
     var body: some View {
         HStack{
             Image(systemName: "graduationcap.fill").foregroundColor(manager.themeColor)
@@ -20,9 +23,9 @@ struct ScoreSec: View {
                 }
                 ScrollView(showsIndicators: false){
                     VStack{
-                        ScoreProgress(max: 1600, cur: 1400, title: "SAT", gradientColor: manager.satGradientColor, showDecimal: false)
-                        ScoreProgress(max: 120, cur: 110, title: "TOFEL", gradientColor: manager.TofelGradientColor, showDecimal: false)
-                        ScoreProgress(max: 4.0, cur: 3.77, title: "GPA", gradientColor: manager.GPAGradientColor, showDecimal: true)
+                        ScoreProgress(max: 1600, cur: sat, title: "SAT", gradientColor: manager.satGradientColor, showDecimal: false)
+                        ScoreProgress(max: 120, cur: tofel, title: "TOFEL", gradientColor: manager.TofelGradientColor, showDecimal: false)
+                        ScoreProgress(max: 4.0, cur: gpa, title: "GPA", gradientColor: manager.GPAGradientColor, showDecimal: true)
                     
                     }
                 }

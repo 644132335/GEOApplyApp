@@ -53,9 +53,9 @@ struct AddInfo: View {
                         manager.addUser(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa)
                         print(manager.users)
                     }){
-                        Text("Submit").foregroundColor(.white).bold().font(.title2)
-                    }.padding(EdgeInsets(top: 1, leading: 120, bottom: 1, trailing: 120))
-                }.padding(15).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor)).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                        Text("Submit").foregroundColor(.white).bold().font(.title2).padding(EdgeInsets(top: 1, leading: 120, bottom: 1, trailing: 120)).padding(15).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor)).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                    }
+                }
             }
             Spacer()
         }.navigationTitle("Add Your Info")
