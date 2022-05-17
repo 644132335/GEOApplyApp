@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct UserInfo : Codable{
+struct UserInfo : Codable,Identifiable,Hashable{
    
     var userid:String?
     var name:String?
     var school:String?
     var nation:String?
     var major:String?
-    var sat:Int?
-    var tofel:Int?
-    var gpa:Int?
-    var id:String{userid ?? "00000"}
+    var sat:Double?
+    var tofel:Double?
+    var gpa:Double?
+    var id=UUID()
 }

@@ -25,7 +25,7 @@ class AppManager:ObservableObject{
         
     }
    
-    func addUser(userid: String?, name: String?, school: String?, nation: String?, major: String?, sat: Int?, tofel: Int?, gpa: Int?){
+    func addUser(userid: String?, name: String?, school: String?, nation: String?, major: String?, sat: Double?, tofel: Double?, gpa: Double?){
         users.append(UserInfo(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa))
     }
 }

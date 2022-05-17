@@ -15,14 +15,14 @@ struct HomeView: View {
                 ScrollView{
                     VStack{
                         NavigationLink(destination: ApplyDetail()){
-                            ApplyInfoCard().padding(3)
+                            ApplyInfoCard(name: "Matthew", nation: "United States", school: "Harvard University", gpa: 3.75, sat: 1550).padding(3)
+                        }.padding(3)
+                        ForEach(manager.users, id:\.self){i in
+                            NavigationLink(destination: ApplyDetail()){
+                                ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!).padding(3)
+                            }.padding(3)
                         }
-                        ApplyInfoCard().padding(3)
-                        ApplyInfoCard().padding(3)
-                        ApplyInfoCard().padding(3)
-                        ApplyInfoCard().padding(3)
-                        ApplyInfoCard().padding(3)
-                    }
+                            }
                 }
                 
                 //floating action button for adding info

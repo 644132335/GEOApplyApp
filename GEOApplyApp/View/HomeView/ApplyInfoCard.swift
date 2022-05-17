@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ApplyInfoCard: View {
+    var name:String
+    var nation:String
+    var school:String
+    var gpa:Double
+    var sat:Double
     var body: some View {
         VStack{
             HStack{
@@ -17,15 +22,15 @@ struct ApplyInfoCard: View {
                
                 VStack{
                     HStack{
-                        Text("Matthew Jiang").foregroundColor(.black.opacity(0.8)).bold()
+                        Text(name).foregroundColor(.black.opacity(0.8)).bold()
                         Spacer()
                     }
                     HStack{
-                        Text("United States").foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                        Text(nation).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                         Spacer()
                     }
                     HStack{
-                        Text("Havard University").foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                        Text(school).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                         Spacer()
                     }
                     
@@ -34,11 +39,11 @@ struct ApplyInfoCard: View {
                 Spacer()
             }
             HStack{
-                Text("American").foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                 Divider()
-                Text("GPA: 4.0").foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
                 Divider()
-                Text("SAT: 1600").foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                Text("SAT: "+String(format: "%.0f", sat)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
             }
             
             
