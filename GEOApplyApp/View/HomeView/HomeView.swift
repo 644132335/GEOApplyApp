@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var manager : AppManager
     var body: some View {
-        NavigationView{
+        
             ZStack{
                 ScrollView{
                     VStack{
@@ -47,9 +47,10 @@ struct HomeView: View {
                     //Spacer().frame(height:10)
                 }
                
-            }.navigationTitle("Explore")
-        }
-            .navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("Explore")
+        
         
     }
 }

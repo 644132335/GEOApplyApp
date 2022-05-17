@@ -12,7 +12,7 @@ struct GEOApplyAppApp: App {
     @StateObject var manager = AppManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
                 .environmentObject(manager)
         }
     }
