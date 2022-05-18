@@ -10,7 +10,7 @@ import SwiftUI
 struct MeView: View {
     var body: some View {
         ScrollView{
-            Text("Me View")
+            Text("hello")
         }
         
     }
