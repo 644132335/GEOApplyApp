@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct CommunityView: View {
+    @EnvironmentObject var manager : AppManager
     var body: some View {
-        Text("community view")
+        
+        VStack{
+            Text("community view")
+            Button(action: {
+                manager.signOut()
+            }){
+                Text("sign out")
+            }
+        }
     }
 }
 

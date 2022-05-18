@@ -24,7 +24,6 @@ class AppManager:ObservableObject{
     @Published var signedIn=false
     
     init(){
-        
     }
    
     func addUser(userid: String?, name: String?, school: String?, nation: String?, major: String?, sat: Double?, tofel: Double?, gpa: Double?){
@@ -53,10 +52,14 @@ class AppManager:ObservableObject{
         auth.createUser(withEmail: email, password: password){result, error in
             print(error)
             guard result != nil, error == nil else{
-                print("not created........................")
                 return
             }
         }
+    }
+    
+    func signOut(){
+        try? auth.signOut()
+        self.signedIn=false
     }
     
     
