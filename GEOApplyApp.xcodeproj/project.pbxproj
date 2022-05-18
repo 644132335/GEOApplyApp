@@ -1,0 +1,846 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
+		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
+		43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D92282CAD6900759F01 /* ScoreGauge.swift */; };
+		432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */; };
+		433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */; };
+		433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF99282DB73C00F4E9C4 /* EssaySec.swift */; };
+		4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */; };
+		43941561281AF54900ECBF38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941560281AF54900ECBF38 /* ContentView.swift */; };
+		43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43941562281AF54D00ECBF38 /* Assets.xcassets */; };
+		43941566281AF54D00ECBF38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43941565281AF54D00ECBF38 /* Preview Assets.xcassets */; };
+		43941570281AF54D00ECBF38 /* GEOApplyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394156F281AF54D00ECBF38 /* GEOApplyAppTests.swift */; };
+		4394157A281AF54D00ECBF38 /* GEOApplyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941579281AF54D00ECBF38 /* GEOApplyAppUITests.swift */; };
+		4394157C281AF54D00ECBF38 /* GEOApplyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394157B281AF54D00ECBF38 /* GEOApplyAppUITestsLaunchTests.swift */; };
+		43941592281AF68E00ECBF38 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941591281AF68E00ECBF38 /* MeView.swift */; };
+		43941594281AF6A400ECBF38 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941593281AF6A400ECBF38 /* HomeView.swift */; };
+		43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941597281AF6CE00ECBF38 /* CommunityView.swift */; };
+		4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941599281B061500ECBF38 /* GEOAppManager.swift */; };
+		4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394159B281B09EF00ECBF38 /* ApplyInfoCard.swift */; };
+		4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394159D281B19E300ECBF38 /* ApplyDetail.swift */; };
+		439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A0281C4BE600ECBF38 /* IntroSec.swift */; };
+		439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A2281C502C00ECBF38 /* ApplyInfoSec.swift */; };
+		439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A4281C504C00ECBF38 /* BasicInfo.swift */; };
+		439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */; };
+		43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2F82832B27700FED530 /* UserInfo.swift */; };
+		43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FA2832B3D500FED530 /* ThemeData.swift */; };
+		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
+		43DBB301283448FC00FED530 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB300283448FC00FED530 /* LoginView.swift */; };
+		6D46D950F487E9CC1D807752 /* Pods_GEOApplyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4394156C281AF54D00ECBF38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43941553281AF54900ECBF38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4394155A281AF54900ECBF38;
+			remoteInfo = GEOApplyApp;
+		};
+		43941576281AF54D00ECBF38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43941553281AF54900ECBF38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4394155A281AF54900ECBF38;
+			remoteInfo = GEOApplyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GEOApplyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
+		43213D92282CAD6900759F01 /* ScoreGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGauge.swift; sourceTree = "<group>"; };
+		432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProgress.swift; sourceTree = "<group>"; };
+		433DDF99282DB73C00F4E9C4 /* EssaySec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssaySec.swift; sourceTree = "<group>"; };
+		4394155B281AF54900ECBF38 /* GEOApplyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEOApplyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppApp.swift; sourceTree = "<group>"; };
+		43941560281AF54900ECBF38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43941562281AF54D00ECBF38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43941565281AF54D00ECBF38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4394156B281AF54D00ECBF38 /* GEOApplyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEOApplyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4394156F281AF54D00ECBF38 /* GEOApplyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppTests.swift; sourceTree = "<group>"; };
+		43941575281AF54D00ECBF38 /* GEOApplyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEOApplyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43941579281AF54D00ECBF38 /* GEOApplyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppUITests.swift; sourceTree = "<group>"; };
+		4394157B281AF54D00ECBF38 /* GEOApplyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		43941591281AF68E00ECBF38 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		43941593281AF6A400ECBF38 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		43941597281AF6CE00ECBF38 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		43941599281B061500ECBF38 /* GEOAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOAppManager.swift; sourceTree = "<group>"; };
+		4394159B281B09EF00ECBF38 /* ApplyInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyInfoCard.swift; sourceTree = "<group>"; };
+		4394159D281B19E300ECBF38 /* ApplyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyDetail.swift; sourceTree = "<group>"; };
+		439415A0281C4BE600ECBF38 /* IntroSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSec.swift; sourceTree = "<group>"; };
+		439415A2281C502C00ECBF38 /* ApplyInfoSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyInfoSec.swift; sourceTree = "<group>"; };
+		439415A4281C504C00ECBF38 /* BasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
+		439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schoolApplyCard.swift; sourceTree = "<group>"; };
+		43DBB2F82832B27700FED530 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		43DBB2FA2832B3D500FED530 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
+		43DBB2FD2832C13A00FED530 /* AddInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfo.swift; sourceTree = "<group>"; };
+		43DBB300283448FC00FED530 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7817A91D9BA81AD5F00CF6B9 /* Pods-GEOApplyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEOApplyApp.debug.xcconfig"; path = "Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		991B1E57D6648B9FFFCEAFCD /* Pods-GEOApplyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEOApplyApp.release.xcconfig"; path = "Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43941558281AF54900ECBF38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D46D950F487E9CC1D807752 /* Pods_GEOApplyApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941568281AF54D00ECBF38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941572281AF54D00ECBF38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43213D91282CAD3600759F01 /* ScoreCard */ = {
+			isa = PBXGroup;
+			children = (
+				43213D92282CAD6900759F01 /* ScoreGauge.swift */,
+				433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */,
+			);
+			path = ScoreCard;
+			sourceTree = "<group>";
+		};
+		43941552281AF54900ECBF38 = {
+			isa = PBXGroup;
+			children = (
+				4394155D281AF54900ECBF38 /* GEOApplyApp */,
+				4394156E281AF54D00ECBF38 /* GEOApplyAppTests */,
+				43941578281AF54D00ECBF38 /* GEOApplyAppUITests */,
+				4394155C281AF54900ECBF38 /* Products */,
+				ECCD5F46377DF996EAF8ED87 /* Pods */,
+				9A76A0F7C58E11C3DF7776FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4394155C281AF54900ECBF38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4394155B281AF54900ECBF38 /* GEOApplyApp.app */,
+				4394156B281AF54D00ECBF38 /* GEOApplyAppTests.xctest */,
+				43941575281AF54D00ECBF38 /* GEOApplyAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4394155D281AF54900ECBF38 /* GEOApplyApp */ = {
+			isa = PBXGroup;
+			children = (
+				432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */,
+				4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */,
+				4394158A281AF57900ECBF38 /* View */,
+				43941589281AF56D00ECBF38 /* ViewModel */,
+				43941588281AF56300ECBF38 /* Model */,
+				43941562281AF54D00ECBF38 /* Assets.xcassets */,
+				43941564281AF54D00ECBF38 /* Preview Content */,
+			);
+			path = GEOApplyApp;
+			sourceTree = "<group>";
+		};
+		43941564281AF54D00ECBF38 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				43941565281AF54D00ECBF38 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4394156E281AF54D00ECBF38 /* GEOApplyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4394156F281AF54D00ECBF38 /* GEOApplyAppTests.swift */,
+			);
+			path = GEOApplyAppTests;
+			sourceTree = "<group>";
+		};
+		43941578281AF54D00ECBF38 /* GEOApplyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43941579281AF54D00ECBF38 /* GEOApplyAppUITests.swift */,
+				4394157B281AF54D00ECBF38 /* GEOApplyAppUITestsLaunchTests.swift */,
+			);
+			path = GEOApplyAppUITests;
+			sourceTree = "<group>";
+		};
+		43941588281AF56300ECBF38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43DBB2F82832B27700FED530 /* UserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43941589281AF56D00ECBF38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43941599281B061500ECBF38 /* GEOAppManager.swift */,
+				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4394158A281AF57900ECBF38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43941560281AF54900ECBF38 /* ContentView.swift */,
+				43DBB2FF283448E900FED530 /* LoginView */,
+				4394158E281AF66B00ECBF38 /* MeView */,
+				4394158D281AF66400ECBF38 /* HomeView */,
+				4394158C281AF62D00ECBF38 /* CommunityView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4394158C281AF62D00ECBF38 /* CommunityView */ = {
+			isa = PBXGroup;
+			children = (
+				43941597281AF6CE00ECBF38 /* CommunityView.swift */,
+			);
+			path = CommunityView;
+			sourceTree = "<group>";
+		};
+		4394158D281AF66400ECBF38 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				43941593281AF6A400ECBF38 /* HomeView.swift */,
+				4394159D281B19E300ECBF38 /* ApplyDetail.swift */,
+				43DBB2FC2832C12200FED530 /* AddInfoPage */,
+				4394159F281C4BCA00ECBF38 /* DetailSections */,
+				4394159B281B09EF00ECBF38 /* ApplyInfoCard.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		4394158E281AF66B00ECBF38 /* MeView */ = {
+			isa = PBXGroup;
+			children = (
+				43941591281AF68E00ECBF38 /* MeView.swift */,
+			);
+			path = MeView;
+			sourceTree = "<group>";
+		};
+		4394159F281C4BCA00ECBF38 /* DetailSections */ = {
+			isa = PBXGroup;
+			children = (
+				439415A0281C4BE600ECBF38 /* IntroSec.swift */,
+				439415A4281C504C00ECBF38 /* BasicInfo.swift */,
+				439415A2281C502C00ECBF38 /* ApplyInfoSec.swift */,
+				439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */,
+				43213D8F282CAB3800759F01 /* ScoreSec.swift */,
+				433DDF99282DB73C00F4E9C4 /* EssaySec.swift */,
+				43213D91282CAD3600759F01 /* ScoreCard */,
+			);
+			path = DetailSections;
+			sourceTree = "<group>";
+		};
+		43DBB2FC2832C12200FED530 /* AddInfoPage */ = {
+			isa = PBXGroup;
+			children = (
+				43DBB2FD2832C13A00FED530 /* AddInfo.swift */,
+			);
+			path = AddInfoPage;
+			sourceTree = "<group>";
+		};
+		43DBB2FF283448E900FED530 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				43DBB300283448FC00FED530 /* LoginView.swift */,
+				43207EF528355FA0007C9985 /* SignupView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		9A76A0F7C58E11C3DF7776FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECCD5F46377DF996EAF8ED87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7817A91D9BA81AD5F00CF6B9 /* Pods-GEOApplyApp.debug.xcconfig */,
+				991B1E57D6648B9FFFCEAFCD /* Pods-GEOApplyApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4394155A281AF54900ECBF38 /* GEOApplyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4394157F281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyApp" */;
+			buildPhases = (
+				D589A865CBD99AB3C3330A17 /* [CP] Check Pods Manifest.lock */,
+				43941557281AF54900ECBF38 /* Sources */,
+				43941558281AF54900ECBF38 /* Frameworks */,
+				43941559281AF54900ECBF38 /* Resources */,
+				16DEBBE45C32DCEECA412ED0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEOApplyApp;
+			packageProductDependencies = (
+			);
+			productName = GEOApplyApp;
+			productReference = 4394155B281AF54900ECBF38 /* GEOApplyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4394156A281AF54D00ECBF38 /* GEOApplyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43941582281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyAppTests" */;
+			buildPhases = (
+				43941567281AF54D00ECBF38 /* Sources */,
+				43941568281AF54D00ECBF38 /* Frameworks */,
+				43941569281AF54D00ECBF38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4394156D281AF54D00ECBF38 /* PBXTargetDependency */,
+			);
+			name = GEOApplyAppTests;
+			productName = GEOApplyAppTests;
+			productReference = 4394156B281AF54D00ECBF38 /* GEOApplyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43941574281AF54D00ECBF38 /* GEOApplyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43941585281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyAppUITests" */;
+			buildPhases = (
+				43941571281AF54D00ECBF38 /* Sources */,
+				43941572281AF54D00ECBF38 /* Frameworks */,
+				43941573281AF54D00ECBF38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43941577281AF54D00ECBF38 /* PBXTargetDependency */,
+			);
+			name = GEOApplyAppUITests;
+			productName = GEOApplyAppUITests;
+			productReference = 43941575281AF54D00ECBF38 /* GEOApplyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43941553281AF54900ECBF38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					4394155A281AF54900ECBF38 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					4394156A281AF54D00ECBF38 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 4394155A281AF54900ECBF38;
+					};
+					43941574281AF54D00ECBF38 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 4394155A281AF54900ECBF38;
+					};
+				};
+			};
+			buildConfigurationList = 43941556281AF54900ECBF38 /* Build configuration list for PBXProject "GEOApplyApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43941552281AF54900ECBF38;
+			packageReferences = (
+			);
+			productRefGroup = 4394155C281AF54900ECBF38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4394155A281AF54900ECBF38 /* GEOApplyApp */,
+				4394156A281AF54D00ECBF38 /* GEOApplyAppTests */,
+				43941574281AF54D00ECBF38 /* GEOApplyAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43941559281AF54900ECBF38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43941566281AF54D00ECBF38 /* Preview Assets.xcassets in Resources */,
+				43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */,
+				432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941569281AF54D00ECBF38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941573281AF54D00ECBF38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16DEBBE45C32DCEECA412ED0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D589A865CBD99AB3C3330A17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GEOApplyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43941557281AF54900ECBF38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
+				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
+				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
+				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
+				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
+				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
+				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
+				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,
+				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
+				43941561281AF54900ECBF38 /* ContentView.swift in Sources */,
+				4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */,
+				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
+				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
+				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
+				43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */,
+				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
+				439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */,
+				43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */,
+				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
+				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
+				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941567281AF54D00ECBF38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43941570281AF54D00ECBF38 /* GEOApplyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43941571281AF54D00ECBF38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4394157A281AF54D00ECBF38 /* GEOApplyAppUITests.swift in Sources */,
+				4394157C281AF54D00ECBF38 /* GEOApplyAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4394156D281AF54D00ECBF38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4394155A281AF54900ECBF38 /* GEOApplyApp */;
+			targetProxy = 4394156C281AF54D00ECBF38 /* PBXContainerItemProxy */;
+		};
+		43941577281AF54D00ECBF38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4394155A281AF54900ECBF38 /* GEOApplyApp */;
+			targetProxy = 43941576281AF54D00ECBF38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4394157D281AF54D00ECBF38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4394157E281AF54D00ECBF38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43941580281AF54D00ECBF38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7817A91D9BA81AD5F00CF6B9 /* Pods-GEOApplyApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GEOApplyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geo.GEOApplyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43941581281AF54D00ECBF38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991B1E57D6648B9FFFCEAFCD /* Pods-GEOApplyApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GEOApplyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geo.GEOApplyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43941583281AF54D00ECBF38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kpj5148.GEOApplyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEOApplyApp.app/GEOApplyApp";
+			};
+			name = Debug;
+		};
+		43941584281AF54D00ECBF38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kpj5148.GEOApplyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEOApplyApp.app/GEOApplyApp";
+			};
+			name = Release;
+		};
+		43941586281AF54D00ECBF38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kpj5148.GEOApplyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GEOApplyApp;
+			};
+			name = Debug;
+		};
+		43941587281AF54D00ECBF38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM8D76N26T;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kpj5148.GEOApplyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GEOApplyApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43941556281AF54900ECBF38 /* Build configuration list for PBXProject "GEOApplyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4394157D281AF54D00ECBF38 /* Debug */,
+				4394157E281AF54D00ECBF38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4394157F281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43941580281AF54D00ECBF38 /* Debug */,
+				43941581281AF54D00ECBF38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43941582281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43941583281AF54D00ECBF38 /* Debug */,
+				43941584281AF54D00ECBF38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43941585281AF54D00ECBF38 /* Build configuration list for PBXNativeTarget "GEOApplyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43941586281AF54D00ECBF38 /* Debug */,
+				43941587281AF54D00ECBF38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43941553281AF54900ECBF38 /* Project object */;
+}
