@@ -35,6 +35,17 @@
 		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
 		43DBB301283448FC00FED530 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB300283448FC00FED530 /* LoginView.swift */; };
 		6D46D950F487E9CC1D807752 /* Pods_GEOApplyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */; };
+		DDDE849428358557009FE53A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE849328358557009FE53A /* Extensions.swift */; };
+		DDDE84962835856B009FE53A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84952835856B009FE53A /* CircleImage.swift */; };
+		DDDE84982835857C009FE53A /* BasicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84972835857C009FE53A /* BasicCard.swift */; };
+		DDDE849A28358593009FE53A /* RingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE849928358593009FE53A /* RingCard.swift */; };
+		DDDE849C283585A8009FE53A /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE849B283585A8009FE53A /* InfoCard.swift */; };
+		DDDE849E283585B7009FE53A /* TopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE849D283585B7009FE53A /* TopTab.swift */; };
+		DDDE84A0283585CD009FE53A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE849F283585CD009FE53A /* PostView.swift */; };
+		DDDE84A2283585DF009FE53A /* ProfitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A1283585DF009FE53A /* ProfitView.swift */; };
+		DDDE84A42835860D009FE53A /* HomeViewInMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A32835860D009FE53A /* HomeViewInMeView.swift */; };
+		DDDE84A62835861F009FE53A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A52835861F009FE53A /* SettingView.swift */; };
+		DDDE84A828358C48009FE53A /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A728358C48009FE53A /* TopTapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +99,17 @@
 		43DBB300283448FC00FED530 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7817A91D9BA81AD5F00CF6B9 /* Pods-GEOApplyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEOApplyApp.debug.xcconfig"; path = "Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		991B1E57D6648B9FFFCEAFCD /* Pods-GEOApplyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEOApplyApp.release.xcconfig"; path = "Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp.release.xcconfig"; sourceTree = "<group>"; };
+		DDDE849328358557009FE53A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DDDE84952835856B009FE53A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		DDDE84972835857C009FE53A /* BasicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCard.swift; sourceTree = "<group>"; };
+		DDDE849928358593009FE53A /* RingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingCard.swift; sourceTree = "<group>"; };
+		DDDE849B283585A8009FE53A /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		DDDE849D283585B7009FE53A /* TopTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTab.swift; sourceTree = "<group>"; };
+		DDDE849F283585CD009FE53A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		DDDE84A1283585DF009FE53A /* ProfitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitView.swift; sourceTree = "<group>"; };
+		DDDE84A32835860D009FE53A /* HomeViewInMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInMeView.swift; sourceTree = "<group>"; };
+		DDDE84A52835861F009FE53A /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		DDDE84A728358C48009FE53A /* TopTapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				43941599281B061500ECBF38 /* GEOAppManager.swift */,
+				DDDE84A728358C48009FE53A /* TopTapManager.swift */,
 				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
 			);
 			path = ViewModel;
@@ -239,6 +262,16 @@
 			isa = PBXGroup;
 			children = (
 				43941591281AF68E00ECBF38 /* MeView.swift */,
+				DDDE84972835857C009FE53A /* BasicCard.swift */,
+				DDDE849928358593009FE53A /* RingCard.swift */,
+				DDDE849B283585A8009FE53A /* InfoCard.swift */,
+				DDDE849D283585B7009FE53A /* TopTab.swift */,
+				DDDE84A32835860D009FE53A /* HomeViewInMeView.swift */,
+				DDDE84952835856B009FE53A /* CircleImage.swift */,
+				DDDE849F283585CD009FE53A /* PostView.swift */,
+				DDDE84A1283585DF009FE53A /* ProfitView.swift */,
+				DDDE84A52835861F009FE53A /* SettingView.swift */,
+				DDDE849328358557009FE53A /* Extensions.swift */,
 			);
 			path = MeView;
 			sourceTree = "<group>";
@@ -471,23 +504,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
+				DDDE84A828358C48009FE53A /* TopTapManager.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
+				DDDE84A42835860D009FE53A /* HomeViewInMeView.swift in Sources */,
+				DDDE84A62835861F009FE53A /* SettingView.swift in Sources */,
 				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
+				DDDE849C283585A8009FE53A /* InfoCard.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
+				DDDE84982835857C009FE53A /* BasicCard.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
+				DDDE84962835856B009FE53A /* CircleImage.swift in Sources */,
 				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,
 				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
+				DDDE849E283585B7009FE53A /* TopTab.swift in Sources */,
+				DDDE849428358557009FE53A /* Extensions.swift in Sources */,
+				DDDE84A0283585CD009FE53A /* PostView.swift in Sources */,
 				43941561281AF54900ECBF38 /* ContentView.swift in Sources */,
 				4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
+				DDDE84A2283585DF009FE53A /* ProfitView.swift in Sources */,
 				43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
 				439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */,
 				43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */,
+				DDDE849A28358593009FE53A /* RingCard.swift in Sources */,
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
