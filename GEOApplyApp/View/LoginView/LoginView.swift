@@ -41,7 +41,6 @@ struct LoginView: View {
                             return
                         }
                         manager.signIn(email: email, password: password)
-                        
                     }){
                         Text("Login").foregroundColor(manager.themeColor).font(.title2).padding(EdgeInsets(top: 5, leading: 50, bottom: 5, trailing: 50)).padding(5).background(RoundedRectangle(cornerRadius: 10).stroke(manager.themeColor, lineWidth: 3))
                     }.padding(5)

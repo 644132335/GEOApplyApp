@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 class AppManager:ObservableObject{
     
@@ -19,11 +20,21 @@ class AppManager:ObservableObject{
     let GPAGradientColor = LinearGradient(colors: [Color.yellow.opacity(0.4),Color.orange.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
     
     
-    //**********************************************************Storage and functions******************************************************
+    //****************************************************Storage and functions*******************************************
+    //state variables
     @Published var users=[UserInfo]()
+    
+    //firebase variables
     @Published var signedIn=false
     @Published var signinerro=""
     @Published var signuperro=""
+    @Published var currentUser:BasicUser?
+    @Published var currentPage: Page = .login
+    
+    enum Page{
+        case login
+        case main
+    }
     
     init(){
     }
@@ -32,11 +43,14 @@ class AppManager:ObservableObject{
         users.append(UserInfo(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa))
     }
     
-    //Firebase Login Methods
+    //******************************************************Firebase Area*****************************
     let auth = Auth.auth()
+    let db = Firestore.firestore()
+    
     var isSignedIn:Bool{
         return auth.currentUser != nil
     }
+    
     //login func
     func signIn(email: String, password: String){
         auth.signIn(withEmail: email, password: password){[weak self]result, error in
@@ -48,27 +62,86 @@ class AppManager:ObservableObject{
             DispatchQueue.main.async {
                 self?.signedIn=true
                 self?.signinerro=""
-            }
-        }
-    }
-    //sign up func
-    func signUp(email:String, password:String){
-        auth.createUser(withEmail: email, password: password){[weak self]result, error in
-            
-            guard result != nil, error == nil else{
-                self?.signuperro=error!.localizedDescription
-                return
-            }
-            DispatchQueue.main.async {
-                self?.signedIn=true
-                self?.signinerro=""
+                //populate user
+                self?.getUser()
+                withAnimation{
+                    self?.currentPage = .main
+                }
             }
         }
     }
     
+    //sign up func
+    func signUp(email:String, password:String, username:String) {
+        auth.createUser(withEmail: email, password: password){result, error in
+            
+            guard result != nil, error == nil else{
+                self.signuperro=error!.localizedDescription
+                return
+            }
+            DispatchQueue.main.async {
+                self.signedIn=true
+                self.signinerro=""
+                self.createUsers(email:email, username:username)
+                withAnimation{
+                    self.currentPage = .main
+                }
+            }
+            
+        }
+    }
+    
+    //sign out func
     func signOut(){
         try? auth.signOut()
         self.signedIn=false
+        withAnimation{
+            self.currentPage = .login
+        }
+    }
+    
+    //create db for a user
+    func createUsers(email:String, username:String) {
+        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
+        db.collection("users").document(uid).setData([
+            "email":email,
+            "username":username,
+            "uid":uid
+        ]){ err in
+            if let err = err {
+                self.signuperro="\(err)"
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //populate user
+        self.getUser()
+        
+    }
+    
+    //get user info
+    func getUser(){
+        guard let uid = auth.currentUser?.uid else { print("no Current user signed"); return }
+        db.collection("users").document(uid).getDocument{ info,error in
+            if let error = error {
+                //self.errorMessage = "Failed to fetch current user: \(error)"
+                print("Failed to fetch current user:", error)
+                return
+            }
+            
+            guard let data = info?.data() else {
+                //self.errorMessage = "No data found"
+                print("No data found")
+                return
+            }
+            
+            let uid = data["uid"] as? String ?? ""
+            let email = data["email"] as? String ?? ""
+            let username = data["username"] as? String ?? ""
+            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0)
+        }
     }
     
     

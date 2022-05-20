@@ -14,11 +14,11 @@ struct GEOApplyAppApp: App {
     @StateObject var manager = AppManager()
     var body: some Scene {
         WindowGroup {
-            if manager.signedIn==true{
+            switch manager.currentPage{
+            case .login:
+                LoginView().environmentObject(manager)
+            case.main:
                 ContentView().environmentObject(manager)
-            }else{
-                LoginView()
-                    .environmentObject(manager)
             }
            
         }

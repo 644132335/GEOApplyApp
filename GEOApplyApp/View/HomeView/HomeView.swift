@@ -19,6 +19,8 @@ struct HomeView: View {
                             ApplyInfoCard(name: "Matthew", nation: "United States", school: "Harvard University", gpa: 3.75, sat: 1550, tofel: 110).padding(3)
                         }.padding(3)
                         
+                        Text(manager.currentUser?.name ?? "")
+                        Text(manager.currentUser?.email ?? "")
                         //other info
                         ForEach(manager.users, id:\.self){i in
                             NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!)){

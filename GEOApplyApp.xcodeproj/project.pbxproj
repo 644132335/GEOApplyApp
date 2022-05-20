@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431CF2F7283814A300953914 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CF2F6283814A300953914 /* BasicUser.swift */; };
 		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
 		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
 		43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D92282CAD6900759F01 /* ScoreGauge.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GEOApplyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		431CF2F6283814A300953914 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
 		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
 		43213D92282CAD6900759F01 /* ScoreGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGauge.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				43DBB2F82832B27700FED530 /* UserInfo.swift */,
+				431CF2F6283814A300953914 /* BasicUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
+				431CF2F7283814A300953914 /* BasicUser.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
 				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
