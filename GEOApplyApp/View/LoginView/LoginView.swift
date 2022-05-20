@@ -30,10 +30,6 @@ struct LoginView: View {
                 HStack{
                     
                     //register button
-//                    Button(action: {
-//                    }){
-//                        Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 5, leading: 45, bottom: 5, trailing: 45)).padding(5).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
-//                    }.padding(5)
                     NavigationLink(destination: SignupView()){
                         Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 5, leading: 45, bottom: 5, trailing: 45)).padding(5).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
                     }.padding(5)
