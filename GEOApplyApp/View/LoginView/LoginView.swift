@@ -22,11 +22,12 @@ struct LoginView: View {
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
-                TextField("Password", text: $password).font(.title2)
+                SecureField("Password", text: $password).font(.title2)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
-
+                //error message
+                Text(manager.signinerro).font(.subheadline).foregroundColor(.red).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
                 HStack{
                     
                     //register button

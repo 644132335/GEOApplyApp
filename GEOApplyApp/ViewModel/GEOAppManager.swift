@@ -22,6 +22,8 @@ class AppManager:ObservableObject{
     //**********************************************************Storage and functions******************************************************
     @Published var users=[UserInfo]()
     @Published var signedIn=false
+    @Published var signinerro=""
+    @Published var signuperro=""
     
     init(){
     }
@@ -39,20 +41,27 @@ class AppManager:ObservableObject{
     func signIn(email: String, password: String){
         auth.signIn(withEmail: email, password: password){[weak self]result, error in
             guard result != nil, error == nil else{
+                self?.signinerro=error!.localizedDescription
                 return
             }
             
             DispatchQueue.main.async {
                 self?.signedIn=true
+                self?.signinerro=""
             }
         }
     }
     //sign up func
     func signUp(email:String, password:String){
-        auth.createUser(withEmail: email, password: password){result, error in
-            print(error)
+        auth.createUser(withEmail: email, password: password){[weak self]result, error in
+            
             guard result != nil, error == nil else{
+                self?.signuperro=error!.localizedDescription
                 return
+            }
+            DispatchQueue.main.async {
+                self?.signedIn=true
+                self?.signinerro=""
             }
         }
     }

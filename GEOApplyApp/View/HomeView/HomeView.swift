@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var manager : AppManager
     var body: some View {
-        
+        NavigationView{
             ZStack{
                 ScrollView{
                     VStack{
@@ -50,7 +50,7 @@ struct HomeView: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
-        
+        }
         
     }
 }
