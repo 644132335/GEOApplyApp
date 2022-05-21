@@ -31,6 +31,19 @@
 		439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A2281C502C00ECBF38 /* ApplyInfoSec.swift */; };
 		439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A4281C504C00ECBF38 /* BasicInfo.swift */; };
 		439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */; };
+		439DEFB9283970E0002824D7 /* TopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFB8283970E0002824D7 /* TopTab.swift */; };
+		439DEFC6283970EF002824D7 /* RingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFBA283970EF002824D7 /* RingCard.swift */; };
+		439DEFC7283970EF002824D7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFBB283970EF002824D7 /* CircleImage.swift */; };
+		439DEFC8283970EF002824D7 /* BasicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFBC283970EF002824D7 /* BasicCard.swift */; };
+		439DEFC9283970EF002824D7 /* MedianChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFBD283970EF002824D7 /* MedianChart.swift */; };
+		439DEFCA283970EF002824D7 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFBE283970EF002824D7 /* BarView.swift */; };
+		439DEFCC283970EF002824D7 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC0283970EF002824D7 /* PostView.swift */; };
+		439DEFCD283970EF002824D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC1283970EF002824D7 /* Extensions.swift */; };
+		439DEFCE283970EF002824D7 /* HomeViewInMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC2283970EF002824D7 /* HomeViewInMeView.swift */; };
+		439DEFCF283970EF002824D7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC3283970EF002824D7 /* SettingView.swift */; };
+		439DEFD0283970EF002824D7 /* ProfitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC4283970EF002824D7 /* ProfitView.swift */; };
+		439DEFD1283970EF002824D7 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC5283970EF002824D7 /* InfoCard.swift */; };
+		439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFD22839712D002824D7 /* TopTapManager.swift */; };
 		43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2F82832B27700FED530 /* UserInfo.swift */; };
 		43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FA2832B3D500FED530 /* ThemeData.swift */; };
 		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
@@ -84,6 +97,19 @@
 		439415A2281C502C00ECBF38 /* ApplyInfoSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyInfoSec.swift; sourceTree = "<group>"; };
 		439415A4281C504C00ECBF38 /* BasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
 		439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schoolApplyCard.swift; sourceTree = "<group>"; };
+		439DEFB8283970E0002824D7 /* TopTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTab.swift; sourceTree = "<group>"; };
+		439DEFBA283970EF002824D7 /* RingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingCard.swift; sourceTree = "<group>"; };
+		439DEFBB283970EF002824D7 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		439DEFBC283970EF002824D7 /* BasicCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCard.swift; sourceTree = "<group>"; };
+		439DEFBD283970EF002824D7 /* MedianChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianChart.swift; sourceTree = "<group>"; };
+		439DEFBE283970EF002824D7 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		439DEFC0283970EF002824D7 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		439DEFC1283970EF002824D7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		439DEFC2283970EF002824D7 /* HomeViewInMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewInMeView.swift; sourceTree = "<group>"; };
+		439DEFC3283970EF002824D7 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		439DEFC4283970EF002824D7 /* ProfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitView.swift; sourceTree = "<group>"; };
+		439DEFC5283970EF002824D7 /* InfoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		439DEFD22839712D002824D7 /* TopTapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
 		43DBB2F82832B27700FED530 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		43DBB2FA2832B3D500FED530 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 		43DBB2FD2832C13A00FED530 /* AddInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfo.swift; sourceTree = "<group>"; };
@@ -200,6 +226,7 @@
 		43941589281AF56D00ECBF38 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				439DEFD22839712D002824D7 /* TopTapManager.swift */,
 				43941599281B061500ECBF38 /* GEOAppManager.swift */,
 				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
 			);
@@ -242,6 +269,18 @@
 			isa = PBXGroup;
 			children = (
 				43941591281AF68E00ECBF38 /* MeView.swift */,
+				439DEFBE283970EF002824D7 /* BarView.swift */,
+				439DEFBC283970EF002824D7 /* BasicCard.swift */,
+				439DEFBB283970EF002824D7 /* CircleImage.swift */,
+				439DEFC1283970EF002824D7 /* Extensions.swift */,
+				439DEFC2283970EF002824D7 /* HomeViewInMeView.swift */,
+				439DEFC5283970EF002824D7 /* InfoCard.swift */,
+				439DEFBD283970EF002824D7 /* MedianChart.swift */,
+				439DEFC0283970EF002824D7 /* PostView.swift */,
+				439DEFC4283970EF002824D7 /* ProfitView.swift */,
+				439DEFBA283970EF002824D7 /* RingCard.swift */,
+				439DEFC3283970EF002824D7 /* SettingView.swift */,
+				439DEFB8283970E0002824D7 /* TopTab.swift */,
 			);
 			path = MeView;
 			sourceTree = "<group>";
@@ -473,9 +512,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439DEFCA283970EF002824D7 /* BarView.swift in Sources */,
 				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
 				431CF2F7283814A300953914 /* BasicUser.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
+				439DEFC6283970EF002824D7 /* RingCard.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
 				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
@@ -485,16 +526,27 @@
 				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
 				43941561281AF54900ECBF38 /* ContentView.swift in Sources */,
 				4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */,
+				439DEFB9283970E0002824D7 /* TopTab.swift in Sources */,
+				439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */,
+				439DEFC9283970EF002824D7 /* MedianChart.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
+				439DEFD1283970EF002824D7 /* InfoCard.swift in Sources */,
+				439DEFCD283970EF002824D7 /* Extensions.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
+				439DEFCF283970EF002824D7 /* SettingView.swift in Sources */,
 				43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
 				439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */,
+				439DEFC8283970EF002824D7 /* BasicCard.swift in Sources */,
+				439DEFCE283970EF002824D7 /* HomeViewInMeView.swift in Sources */,
 				43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */,
+				439DEFD0283970EF002824D7 /* ProfitView.swift in Sources */,
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
+				439DEFCC283970EF002824D7 /* PostView.swift in Sources */,
+				439DEFC7283970EF002824D7 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
