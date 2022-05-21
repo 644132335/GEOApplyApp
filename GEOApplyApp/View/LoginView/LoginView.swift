@@ -11,8 +11,10 @@ struct LoginView: View {
     @EnvironmentObject var manager : AppManager
     @State var email=""
     @State var password=""
+    @FocusState private var isFocused: Bool
     var body: some View {
         NavigationView{
+            ScrollView{
             VStack{
                 Spacer().frame(height:100)
                 Image("GEOtitle").resizable().scaledToFit().padding()
@@ -21,31 +23,32 @@ struct LoginView: View {
                 TextField("Email", text: $email).font(.title2)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
+                    .focused($isFocused)
+                    .keyboardType(.emailAddress)
                     .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
                 SecureField("Password", text: $password).font(.title2)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
+                    .focused($isFocused)
                     .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
                 //error message
                 Text(manager.signinerro).font(.subheadline).foregroundColor(.red).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
-                HStack{
                     
-                    //register button
-                    NavigationLink(destination: SignupView()){
-                        Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 5, leading: 45, bottom: 5, trailing: 45)).padding(5).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
-                    }.padding(5)
+                //login button
+                Button(action: {
+                    isFocused=false
+                    guard !email.isEmpty, !password.isEmpty else{
+                        return
+                    }
+                    manager.signIn(email: email, password: password)
+                }){
+                    Text("Login").foregroundColor(manager.themeColor).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.36, bottom: 10, trailing: manager.screenWidth*0.36)).background(RoundedRectangle(cornerRadius: 10).stroke(manager.themeColor, lineWidth: 3))
+                }.padding(5)
                     
-                    //login button
-                    Button(action: {
-                        guard !email.isEmpty, !password.isEmpty else{
-                            return
-                        }
-                        manager.signIn(email: email, password: password)
-                    }){
-                        Text("Login").foregroundColor(manager.themeColor).font(.title2).padding(EdgeInsets(top: 5, leading: 50, bottom: 5, trailing: 50)).padding(5).background(RoundedRectangle(cornerRadius: 10).stroke(manager.themeColor, lineWidth: 3))
-                    }.padding(5)
-
-                }
+                //register button
+                NavigationLink(destination: SignupView()){
+                    Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.34, bottom: 10, trailing: manager.screenWidth*0.34)).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
+                }.padding(5)
                                 
                 NavigationLink(destination: ContentView()){
                     Text("SKIP")
@@ -54,7 +57,7 @@ struct LoginView: View {
                 }.padding()
                 Spacer()
             
-            } .navigationViewStyle(StackNavigationViewStyle())
+            }} .navigationViewStyle(StackNavigationViewStyle())
         }.onAppear{
             manager.signedIn=manager.isSignedIn
         }

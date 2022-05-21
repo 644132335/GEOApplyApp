@@ -16,9 +16,9 @@ struct GEOApplyAppApp: App {
         WindowGroup {
             switch manager.currentPage{
             case .login:
-                LoginView().environmentObject(manager)
+                LoginView().environmentObject(manager).environment(\.colorScheme, .light)
             case.main:
-                ContentView().environmentObject(manager)
+                ContentView().environmentObject(manager).environment(\.colorScheme, .light)
             }
            
         }

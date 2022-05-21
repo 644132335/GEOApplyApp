@@ -37,7 +37,7 @@ struct SignupView: View {
                     Button(action: {
                         manager.signUp(email: email, password: password, username:username)
                     }){
-                        Text("Create").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 5, leading: 45, bottom: 5, trailing: 45)).padding(5).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
+                        Text("Create").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.35, bottom: 10, trailing: manager.screenWidth*0.35)).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
                     }.padding(5)
                     
                 }

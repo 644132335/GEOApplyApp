@@ -27,7 +27,7 @@ struct HomeView: View {
                                 ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!, tofel: i.tofel!).padding(3)
                             }.padding(3)
                         }
-                            }
+                    }
                 }
                 
                 //floating action button for adding info
@@ -48,7 +48,7 @@ struct HomeView: View {
                     
                     //Spacer().frame(height:10)
                 }
-               
+                
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
