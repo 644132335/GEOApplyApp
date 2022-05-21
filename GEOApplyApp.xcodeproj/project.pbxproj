@@ -46,6 +46,8 @@
 		DDDE84A42835860D009FE53A /* HomeViewInMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A32835860D009FE53A /* HomeViewInMeView.swift */; };
 		DDDE84A62835861F009FE53A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A52835861F009FE53A /* SettingView.swift */; };
 		DDDE84A828358C48009FE53A /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A728358C48009FE53A /* TopTapManager.swift */; };
+		DDDE84AA2837EB35009FE53A /* MedianChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84A92837EB35009FE53A /* MedianChart.swift */; };
+		DDDE84AC2837EF20009FE53A /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE84AB2837EF20009FE53A /* BarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		DDDE84A32835860D009FE53A /* HomeViewInMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInMeView.swift; sourceTree = "<group>"; };
 		DDDE84A52835861F009FE53A /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		DDDE84A728358C48009FE53A /* TopTapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
+		DDDE84A92837EB35009FE53A /* MedianChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianChart.swift; sourceTree = "<group>"; };
+		DDDE84AB2837EF20009FE53A /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				43941591281AF68E00ECBF38 /* MeView.swift */,
+				DDDE84A92837EB35009FE53A /* MedianChart.swift */,
+				DDDE84AB2837EF20009FE53A /* BarView.swift */,
 				DDDE84972835857C009FE53A /* BasicCard.swift */,
 				DDDE849928358593009FE53A /* RingCard.swift */,
 				DDDE849B283585A8009FE53A /* InfoCard.swift */,
@@ -521,8 +527,10 @@
 				DDDE849E283585B7009FE53A /* TopTab.swift in Sources */,
 				DDDE849428358557009FE53A /* Extensions.swift in Sources */,
 				DDDE84A0283585CD009FE53A /* PostView.swift in Sources */,
+				DDDE84AC2837EF20009FE53A /* BarView.swift in Sources */,
 				43941561281AF54900ECBF38 /* ContentView.swift in Sources */,
 				4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */,
+				DDDE84AA2837EB35009FE53A /* MedianChart.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,

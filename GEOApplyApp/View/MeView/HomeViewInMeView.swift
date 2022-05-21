@@ -17,6 +17,7 @@ struct HomeViewInMeView: View {
             }.padding()
             
             InfoCard(daysLeft: "999 days left", schoolName: "Penn State", country: "China", major: "Computer Science")
+            MedianChart()
                 
         }
     }

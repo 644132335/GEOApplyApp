@@ -17,12 +17,14 @@ struct ContentView: View {
                 HomeView().tabItem{Label("Home", systemImage: "house.fill")}.navigationTitle("Explore")
                 CommunityView().tabItem{Label("Community", systemImage: "person.3.fill")}
                 MeView().tabItem{Label("Me", systemImage: "person.fill")}
+//                    .navigationTitle("Personal Center")
+//                    .navigationBarTitleDisplayMode(.inline)
             }
             .onAppear(){
                 UITabBar.appearance().backgroundColor=UIColor.white
             }
 
-            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationViewStyle(StackNavigatio/Users/chrisyang/Desktop/GEOApplyApp/GEOApplyApp/View/ContentView.swiftnViewStyle())
         
     }
 }
