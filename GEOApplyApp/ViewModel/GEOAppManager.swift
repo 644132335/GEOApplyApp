@@ -20,18 +20,19 @@ class AppManager:ObservableObject{
     let GPAGradientColor = LinearGradient(colors: [Color.yellow.opacity(0.4),Color.orange.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
     let screenHeight = UIScreen.main.bounds.height
     let screenWidth = UIScreen.main.bounds.width
-    
+    let backgroundColor = Color("background")
     
     //****************************************************Storage and functions*******************************************
     //state variables
     @Published var users=[UserInfo]()
+    @Published var currentPage: Page = .login
     
     //firebase variables
     @Published var signedIn=false
     @Published var signinerro=""
     @Published var signuperro=""
     @Published var currentUser:BasicUser?
-    @Published var currentPage: Page = .login
+    
     
     enum Page{
         case login
@@ -108,7 +109,8 @@ class AppManager:ObservableObject{
         db.collection("users").document(uid).setData([
             "email":email,
             "username":username,
-            "uid":uid
+            "uid":uid,
+            "profile":false
         ]){ err in
             if let err = err {
                 self.signuperro="\(err)"
@@ -142,7 +144,7 @@ class AppManager:ObservableObject{
             let uid = data["uid"] as? String ?? ""
             let email = data["email"] as? String ?? ""
             let username = data["username"] as? String ?? ""
-            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0)
+            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: false)
         }
     }
     

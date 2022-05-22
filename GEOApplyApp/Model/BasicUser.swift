@@ -17,5 +17,6 @@ struct BasicUser : Codable,Identifiable,Hashable{
     var sat:Double?
     var tofel:Double?
     var gpa:Double?
+    var profile:Bool?
     var id=UUID()
 }

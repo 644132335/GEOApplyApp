@@ -14,6 +14,7 @@
 		432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */; };
 		433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */; };
 		433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF99282DB73C00F4E9C4 /* EssaySec.swift */; };
+		43502F85283A83AF00CBB584 /* TextLimter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43502F84283A83AF00CBB584 /* TextLimter.swift */; };
 		4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */; };
 		43941561281AF54900ECBF38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941560281AF54900ECBF38 /* ContentView.swift */; };
 		43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43941562281AF54D00ECBF38 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProgress.swift; sourceTree = "<group>"; };
 		433DDF99282DB73C00F4E9C4 /* EssaySec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssaySec.swift; sourceTree = "<group>"; };
+		43502F84283A83AF00CBB584 /* TextLimter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLimter.swift; sourceTree = "<group>"; };
 		4394155B281AF54900ECBF38 /* GEOApplyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEOApplyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppApp.swift; sourceTree = "<group>"; };
 		43941560281AF54900ECBF38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				439DEFD22839712D002824D7 /* TopTapManager.swift */,
 				43941599281B061500ECBF38 /* GEOAppManager.swift */,
+				43502F84283A83AF00CBB584 /* TextLimter.swift */,
 				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
 			);
 			path = ViewModel;
@@ -545,6 +548,7 @@
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
+				43502F85283A83AF00CBB584 /* TextLimter.swift in Sources */,
 				439DEFCC283970EF002824D7 /* PostView.swift in Sources */,
 				439DEFC7283970EF002824D7 /* CircleImage.swift in Sources */,
 			);
