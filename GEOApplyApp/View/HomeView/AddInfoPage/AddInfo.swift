@@ -18,7 +18,6 @@ struct AddInfo: View {
     @State private var sat=0.0
     @State private var tofel=0.0
     @State private var gpa=0.0
-    @State private var userid=""
     @State private var intro=" "
     var body: some View {
         ScrollView{
@@ -67,7 +66,8 @@ struct AddInfo: View {
                 
                 HStack{
                     Button(action: {
-                        manager.addUser(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa)
+                        manager.createUserInfoCard(username: name, school: school, nationality: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
+//                        manager.addUser(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
                         dismiss()
                     }){
                         Text("SUBMIT").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.34, bottom: 10, trailing: manager.screenWidth*0.34)).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
@@ -76,6 +76,18 @@ struct AddInfo: View {
             }
             Spacer()
         }.navigationTitle("Add Your Info")
+            .onAppear{
+                if manager.currentUser?.profile==true{
+                    name=manager.currentUserInfoCard?.name ?? ""
+                    school=manager.currentUserInfoCard?.school ?? ""
+                    nation=manager.currentUserInfoCard?.nation ?? ""
+                    major=manager.currentUserInfoCard?.major ?? ""
+                    sat=manager.currentUserInfoCard?.sat ?? 0.0
+                    tofel=manager.currentUserInfoCard?.tofel ?? 0.0
+                    gpa=manager.currentUserInfoCard?.gpa ?? 0.0
+                    intro=manager.currentUserInfoCard?.intro ?? ""
+                }
+            }
         
     }
 }

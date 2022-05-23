@@ -14,19 +14,36 @@ struct HomeView: View {
             ZStack{
                 ScrollView{
                     VStack{
-                        //own info
-                        NavigationLink(destination: ApplyDetail(name: "Matthew", school: "Havard University", nation: "China", major: "Computer Science", sat: 1600, tofel: 110, gpa: 3.9)){
-                            ApplyInfoCard(name: "Matthew", nation: "United States", school: "Harvard University", gpa: 3.75, sat: 1550, tofel: 110).padding(3)
-                        }.padding(3)
+                        if manager.currentUser?.profile==true{
+                            NavigationLink(destination: ApplyDetail(name: manager.currentUser?.name ?? "", school: manager.currentUserInfoCard?.school ?? "", nation: manager.currentUserInfoCard?.nation ?? "", major: manager.currentUserInfoCard?.major ?? "", sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0, gpa: manager.currentUserInfoCard?.gpa ?? 0.0, intro: manager.currentUserInfoCard?.intro ?? "")){
+                                ApplyInfoCard(name: manager.currentUser?.name ?? "", nation: manager.currentUserInfoCard?.nation ?? "", school: manager.currentUserInfoCard?.school ?? "", gpa: manager.currentUserInfoCard?.gpa ?? 0.0, sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0)
+                            }.padding(3)
+                        }else{
+                            // if profile is not created yet
+                            Rectangle().fill(.white.opacity(0)).frame(height:manager.screenHeight*0.07)
+                            HStack{
+                                NavigationLink(destination: AddInfo()){
+                                    Text("Please Add Your Profile").font(.title3).foregroundColor(manager.backgroundColor)
+                                        .background(RoundedRectangle(cornerRadius: 20)
+                                        .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))
+                                        .foregroundColor(manager.backgroundColor)
+                                        .frame(width: manager.screenWidth*0.8, height: manager.screenHeight*0.15, alignment: .center).padding(3))
+                                }
+                            }.padding(3)
+                            Rectangle().fill(.white.opacity(0)).frame(height:manager.screenHeight*0.05)
+
+                        }
                         
-                        Text(manager.currentUser?.name ?? "")
-                        Text(manager.currentUser?.email ?? "")
+                        Divider()
+                        
                         //other info
                         ForEach(manager.users, id:\.self){i in
-                            NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!)){
+                            NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!, intro: i.intro ?? "Lazy and did not write anything")){
                                 ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!, tofel: i.tofel!).padding(3)
                             }.padding(3)
                         }
+                        
+                        
                     }
                 }
                 
@@ -52,6 +69,7 @@ struct HomeView: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }

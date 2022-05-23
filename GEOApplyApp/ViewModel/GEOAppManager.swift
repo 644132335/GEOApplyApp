@@ -32,6 +32,7 @@ class AppManager:ObservableObject{
     @Published var signinerro=""
     @Published var signuperro=""
     @Published var currentUser:BasicUser?
+    @Published var currentUserInfoCard:UserInfo?
     
     
     enum Page{
@@ -42,8 +43,8 @@ class AppManager:ObservableObject{
     init(){
     }
    
-    func addUser(userid: String?, name: String?, school: String?, nation: String?, major: String?, sat: Double?, tofel: Double?, gpa: Double?){
-        users.append(UserInfo(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa))
+    func addUser(userid: String?, name: String?, school: String?, nation: String?, major: String?, sat: Double?, tofel: Double?, gpa: Double?,intro: String?){
+        users.append(UserInfo(userid: userid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa,intro: intro))
     }
     
     //******************************************************Firebase Area*****************************
@@ -67,6 +68,7 @@ class AppManager:ObservableObject{
                 self?.signinerro=""
                 //populate user
                 self?.getUser()
+                self?.getUserInfo()
                 withAnimation{
                     self?.currentPage = .main
                 }
@@ -144,10 +146,76 @@ class AppManager:ObservableObject{
             let uid = data["uid"] as? String ?? ""
             let email = data["email"] as? String ?? ""
             let username = data["username"] as? String ?? ""
-            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: false)
+            let profile = data["profile"] as? Bool ?? false
+            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: profile)
         }
     }
     
+    //create user info card
+    func createUserInfoCard(username:String, school:String, nationality:String, major:String, sat:Double, tofel:Double, gpa:Double, intro:String) {
+        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
+        db.collection("userInfoCard").document(uid).setData([
+            "uid":uid,
+            "school":school,
+            "nationality":nationality,
+            "major":major,
+            "sat":sat,
+            "tofel":tofel,
+            "gpa":gpa,
+            "intro":intro
+        ]){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+                return
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //set user profile to true
+        db.collection("users").document(uid).setData([
+            "profile":true
+        ],merge: true){error in
+            if let error = error {
+                print("Error writing document: \(error)")
+                return
+            } else {
+                print("Document successfully merged!")
+            }
+        }
+        //populate user
+        getUser()
+        getUserInfo()
+    }
+    
+    func getUserInfo(){
+        guard let uid = auth.currentUser?.uid else { print("no Current user signed"); return }
+        db.collection("userInfoCard").document(uid).getDocument{ info,error in
+            if let error = error {
+                //self.errorMessage = "Failed to fetch current user: \(error)"
+                print("Failed to fetch current user:", error)
+                return
+            }
+            
+            guard let data = info?.data() else {
+                //self.errorMessage = "No data found"
+                print("No data found")
+                return
+            }
+            
+            let uid = data["uid"] as? String ?? ""
+            //let profile = data["profile"] as? Bool ?? false
+            let gpa = data["gpa"] as? Double ?? 0.0
+            let intro = data["intro"] as? String ?? ""
+            let major = data["major"] as? String ?? ""
+            let nation = data["nationality"] as? String ?? ""
+            let sat = data["sat"] as? Double ?? 0.0
+            let school = data["school"] as? String ?? ""
+            let tofel = data["tofel"] as? Double ?? 0.0
+            
+            self.currentUserInfoCard=UserInfo(userid: uid, name: self.currentUser?.name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
+        }
+    }
     
     
 }

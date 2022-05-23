@@ -16,6 +16,7 @@ struct ApplyDetail: View {
     var sat:Double
     var tofel:Double
     var gpa:Double
+    var intro:String
     
     var body: some View {
         ZStack{
@@ -33,8 +34,7 @@ struct ApplyDetail: View {
                 }
                 Divider()
                 VStack{
-                    IntroSec(text: "In an essay, article, or book, an introduction is a beginning section which states the purpose and goals of the following writing. This is generally followed by the body and conclusion. The introduction typically describes the scope of the document")
-                   
+                   IntroSec(text: intro)
                    BasicInfo(nationality: nation, school: school, major: major)
                    ApplyInfoSec()
                    ScoreSec(sat: sat, tofel: tofel, gpa: gpa)
