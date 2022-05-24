@@ -14,8 +14,14 @@ struct HomeView: View {
             ZStack{
                 ScrollView{
                     VStack{
+                        HStack{
+                            Spacer().frame(width:manager.screenWidth*0.05)
+                            Text("My Info").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
+                            Spacer()
+                        }
+                        
                         if manager.currentUser?.profile==true{
-                            NavigationLink(destination: ApplyDetail(name: manager.currentUser?.name ?? "", school: manager.currentUserInfoCard?.school ?? "", nation: manager.currentUserInfoCard?.nation ?? "", major: manager.currentUserInfoCard?.major ?? "", sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0, gpa: manager.currentUserInfoCard?.gpa ?? 0.0, intro: manager.currentUserInfoCard?.intro ?? "")){
+                            NavigationLink(destination: ApplyDetail(name: manager.currentUserInfoCard?.name ?? "", school: manager.currentUserInfoCard?.school ?? "", nation: manager.currentUserInfoCard?.nation ?? "", major: manager.currentUserInfoCard?.major ?? "", sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0, gpa: manager.currentUserInfoCard?.gpa ?? 0.0, intro: manager.currentUserInfoCard?.intro ?? "")){
                                 ApplyInfoCard(name: manager.currentUser?.name ?? "", nation: manager.currentUserInfoCard?.nation ?? "", school: manager.currentUserInfoCard?.school ?? "", gpa: manager.currentUserInfoCard?.gpa ?? 0.0, sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0)
                             }.padding(3)
                         }else{
@@ -34,8 +40,12 @@ struct HomeView: View {
 
                         }
                         
-                        Divider()
-                        
+                        //Divider()
+                        HStack{
+                            Spacer().frame(width:manager.screenWidth*0.05)
+                            Text("Explore").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
+                            Spacer()
+                        }
                         //other info
                         ForEach(manager.users, id:\.self){i in
                             NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!, intro: i.intro ?? "Lazy and did not write anything")){
@@ -44,6 +54,10 @@ struct HomeView: View {
                         }
                         
                         
+                    }.refreshable{
+                        manager.getUser()
+                        manager.getUserInfo()
+                        manager.getAllProfiles()
                     }
                 }
                 
@@ -67,11 +81,19 @@ struct HomeView: View {
                 }
                 
             }
+            .toolbar(){
+                // tool bar for refresh
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button(action: {
+                        manager.getUserInfo()
+                        manager.getAllProfiles()
+                    }){Image(systemName: "arrow.clockwise").foregroundColor(manager.themeColor)}}
+            }
+
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
         }
-        
     }
 }
 

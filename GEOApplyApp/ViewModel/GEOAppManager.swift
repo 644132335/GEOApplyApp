@@ -69,6 +69,7 @@ class AppManager:ObservableObject{
                 //populate user
                 self?.getUser()
                 self?.getUserInfo()
+                self?.getAllProfiles()
                 withAnimation{
                     self?.currentPage = .main
                 }
@@ -100,6 +101,7 @@ class AppManager:ObservableObject{
     func signOut(){
         try? auth.signOut()
         self.signedIn=false
+        self.users=[]
         withAnimation{
             self.currentPage = .login
         }
@@ -162,7 +164,8 @@ class AppManager:ObservableObject{
             "sat":sat,
             "tofel":tofel,
             "gpa":gpa,
-            "intro":intro
+            "intro":intro,
+            "name":self.currentUser?.name ?? "Unnamed"
         ]){ err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -198,13 +201,11 @@ class AppManager:ObservableObject{
             }
             
             guard let data = info?.data() else {
-                //self.errorMessage = "No data found"
                 print("No data found")
                 return
             }
             
             let uid = data["uid"] as? String ?? ""
-            //let profile = data["profile"] as? Bool ?? false
             let gpa = data["gpa"] as? Double ?? 0.0
             let intro = data["intro"] as? String ?? ""
             let major = data["major"] as? String ?? ""
@@ -212,9 +213,38 @@ class AppManager:ObservableObject{
             let sat = data["sat"] as? Double ?? 0.0
             let school = data["school"] as? String ?? ""
             let tofel = data["tofel"] as? Double ?? 0.0
+            let name = data["name"] as? String ?? ""
             
-            self.currentUserInfoCard=UserInfo(userid: uid, name: self.currentUser?.name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
+            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
         }
+    }
+    
+    func getAllProfiles(){
+        //guard let uid = auth.currentUser?.uid else { print("no Current user signed"); return }
+        users=[]
+        db.collection("userInfoCard").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let data=document.data()
+                    let uid = data["uid"] as? String ?? ""
+                    let gpa = data["gpa"] as? Double ?? 0.0
+                    let intro = data["intro"] as? String ?? ""
+                    let major = data["major"] as? String ?? ""
+                    let nation = data["nationality"] as? String ?? ""
+                    let sat = data["sat"] as? Double ?? 0.0
+                    let school = data["school"] as? String ?? ""
+                    let tofel = data["tofel"] as? Double ?? 0.0
+                    let name = data["name"] as? String ?? ""
+                    
+                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro))
+                }
+                print(self.users)
+                
+            }
+        }
+        
     }
     
     

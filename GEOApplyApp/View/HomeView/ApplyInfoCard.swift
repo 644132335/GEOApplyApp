@@ -47,11 +47,6 @@ struct ApplyInfoCard: View {
                 Text("SAT: "+String(format: "%.0f", sat)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
             }
             
-            
-            //Text("GPA: 4.0").foregroundColor(.black.opacity(0.4))
-           
-            
-            //Rectangle().frame(width: 150, height: 10).opacity(0)
         
         }.padding().background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(radius: 2))
     }

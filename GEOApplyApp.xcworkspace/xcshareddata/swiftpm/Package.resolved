@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "refreshablescrollview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TariqAlmazyad/RefreshableScrollView.git",
+      "state" : {
+        "revision" : "b4495b4dd3b2391b0d947e34700ed80e09ddbf67",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
