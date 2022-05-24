@@ -15,7 +15,9 @@ struct HomeView: View {
                 ScrollView{
                     VStack{
                         HStack{
+                           
                             Spacer().frame(width:manager.screenWidth*0.05)
+                            Image(systemName: "person.text.rectangle.fill").resizable().frame(width: manager.screenWidth*0.1, height: manager.screenWidth*0.08).foregroundColor(manager.themeColor).padding(2)
                             Text("My Info").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
                             Spacer()
                         }
@@ -43,6 +45,7 @@ struct HomeView: View {
                         //Divider()
                         HStack{
                             Spacer().frame(width:manager.screenWidth*0.05)
+                            Image(systemName:  "ferry.fill").resizable().frame(width: manager.screenWidth*0.1, height: manager.screenWidth*0.08).foregroundColor(manager.themeColor).padding(2)
                             Text("Explore").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
                             Spacer()
                         }

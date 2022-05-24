@@ -25,7 +25,7 @@ struct LoginView: View {
                     //login section
                     //email
                     HStack{
-                        Image(systemName: "envelope").foregroundColor(manager.themeColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
+                        Image(systemName: "envelope").foregroundStyle(manager.LoginbuttonColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
                         TextField("Email", text: $email).font(.title2)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
@@ -41,7 +41,7 @@ struct LoginView: View {
                     
                     //password
                     HStack{
-                        Image(systemName: "lock").foregroundColor(manager.themeColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
+                        Image(systemName: "lock").foregroundStyle(manager.LoginbuttonColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
                         SecureField("Password", text: $password).font(.title2)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
@@ -68,13 +68,13 @@ struct LoginView: View {
                     }
                     manager.signIn(email: email, password: password)
                 }){
-                    Text("Login").foregroundColor(manager.themeColor).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.36, bottom: 10, trailing: manager.screenWidth*0.36)).background(RoundedRectangle(cornerRadius: 10).stroke(manager.themeColor, lineWidth: 3))
-                }.padding(5)
+                    Text("Login").foregroundStyle(manager.LoginbuttonColor).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.36, bottom: 10, trailing: manager.screenWidth*0.36)).background(RoundedRectangle(cornerRadius: 10).stroke(manager.LoginbuttonColor, lineWidth: 3))
+                }.padding(5).shadow(radius: 5)
                     
                 //register button
                 NavigationLink(destination: SignupView()){
-                    Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.34, bottom: 10, trailing: manager.screenWidth*0.34)).background(RoundedRectangle(cornerRadius: 10).fill(manager.themeColor))
-                }.padding(5)
+                    Text("Sign up").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.34, bottom: 10, trailing: manager.screenWidth*0.34)).background(RoundedRectangle(cornerRadius: 10).foregroundStyle(manager.LoginbuttonColor))
+                }.padding(5).shadow(radius: 5)
                                 
                 NavigationLink(destination: ContentView()){
                     Text("SKIP")
