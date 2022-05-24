@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4307EE64283D6B40005D4818 /* geoLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */; };
 		431CF2F7283814A300953914 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CF2F6283814A300953914 /* BasicUser.swift */; };
 		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
 		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GEOApplyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = geoLaunchScreen.storyboard; sourceTree = "<group>"; };
 		431CF2F6283814A300953914 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
 		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */,
 				4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */,
+				4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */,
 				4394158A281AF57900ECBF38 /* View */,
 				43941589281AF56D00ECBF38 /* ViewModel */,
 				43941588281AF56300ECBF38 /* Model */,
@@ -449,6 +452,7 @@
 				43941566281AF54D00ECBF38 /* Preview Assets.xcassets in Resources */,
 				43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */,
 				432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */,
+				4307EE64283D6B40005D4818 /* geoLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,9 +642,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -693,9 +699,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -718,6 +726,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = geoLaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -749,6 +758,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = geoLaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
