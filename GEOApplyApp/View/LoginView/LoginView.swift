@@ -14,23 +14,49 @@ struct LoginView: View {
     @FocusState private var isFocused: Bool
     var body: some View {
         NavigationView{
+            
             ScrollView{
+                
             VStack{
+                Group{
                 Spacer().frame(height:100)
                 Image("GEOtitle").resizable().scaledToFit().padding()
-                
-                //login section
-                TextField("Email", text: $email).font(.title2)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .focused($isFocused)
-                    .keyboardType(.emailAddress)
-                    .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
-                SecureField("Password", text: $password).font(.title2)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .focused($isFocused)
-                    .padding(15).background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.2))).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                    
+                    //login section
+                    //email
+                    HStack{
+                        Image(systemName: "envelope").foregroundColor(manager.themeColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
+                        TextField("Email", text: $email).font(.title2)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .focused($isFocused)
+                            .keyboardType(.emailAddress)
+                    }
+                    .padding(EdgeInsets(top: 5, leading: 30, bottom: 0, trailing: 30))
+                    Divider()
+                        .frame(height: 1)
+                        .padding(.horizontal, 30)
+                        .background(manager.themeColor)
+                        .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+                    
+                    //password
+                    HStack{
+                        Image(systemName: "lock").foregroundColor(manager.themeColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
+                        SecureField("Password", text: $password).font(.title2)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .focused($isFocused)
+                    }
+                    
+                    .padding(EdgeInsets(top: 5, leading: 30, bottom: 0, trailing: 30))
+                    
+                    Divider()
+                 .frame(height: 1)
+                 .padding(.horizontal, 30)
+                 .background(manager.themeColor)
+                 .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+                }
+
                 //error message
                 Text(manager.signinerro).font(.subheadline).foregroundColor(.red).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
                     
