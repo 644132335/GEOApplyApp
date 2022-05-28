@@ -10,13 +10,16 @@ import SwiftUI
 struct CommunityView: View {
     @EnvironmentObject var manager : AppManager
     var body: some View {
-        
-        VStack{
-            Text("community view")
-            Button(action: {
-                manager.signOut()
-            }){
-                Text("sign out")
+        ScrollView{
+            VStack{
+                ForEach(manager.schools){i in
+                    HStack{
+                        Rectangle().fill(.white).frame(width:manager.screenWidth*0.3)
+                        schoolApplyCard(result: true, school: i.schoolName, schoolImageURL: i.schoolImageUrl).padding()
+                        Rectangle().fill(.white).frame(width:manager.screenWidth*0.3)
+                    }
+                    
+                }
             }
         }
     }

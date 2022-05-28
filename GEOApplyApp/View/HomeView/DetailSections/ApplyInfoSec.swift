@@ -20,9 +20,9 @@ struct ApplyInfoSec: View {
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
-                        schoolApplyCard(result: true, school: "Pennsylvania State University")
-                        schoolApplyCard(result: false, school: "Havard University")
-                        schoolApplyCard(result: false, school: "Havard University")
+                        schoolApplyCard(result: true, school: "Pennsylvania State University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+                        schoolApplyCard(result: false, school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+                        schoolApplyCard(result: false, school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
                         
                     }
                 }
