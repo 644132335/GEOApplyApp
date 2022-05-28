@@ -12,10 +12,12 @@ struct BasicCard: View {
     let likeNumber : Double
     let viewNumber : Double
     let postNumber : Double
+    @EnvironmentObject var manager : AppManager
+    
+    
     var body: some View {
         
         ZStack {
-            
             VStack{
                 Text(userName)
                     .font(.title)
@@ -35,14 +37,51 @@ struct BasicCard: View {
                         Text("POST").bold()
                     }.padding()
                 }
-            }.frame(width: 400, height: 150, alignment: .center)
+            }.frame(width: manager.screenWidth*0.95, height: manager.screenHeight*0.2, alignment: .center)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .shadow(color: .gray, radius: 5)
-            
-            CircleImage()
-                .offset(y:-140)
-                .padding(.bottom, -40)
+            // Account image selected
+            VStack {
+                Button(action: {
+                        manager.changeAcountImage = true
+                        manager.openConfirmationDialog = true
+                    }, label: {
+                        if manager.changeAcountImage {
+                            Image(uiImage: manager.imageSelected)
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width:manager.screenWidth*0.32, height: manager.screenHeight*0.32)
+                                .overlay{
+                                    Circle().stroke(.white, lineWidth:4)
+                                }
+                                .shadow(radius: 7)
+                            
+                        }else{
+                            CircleImage()
+                        }
+                    })
+                    .offset(y:-140)
+                    .padding(.bottom, -40)
+                    .confirmationDialog("Alubms/Camera", isPresented:$manager.openConfirmationDialog, titleVisibility: .visible){
+                            Button(action: {
+                                manager.source = .library
+                                manager.showPicker = true
+                            }, label: {
+                                Text("Alubms")
+                            })
+                            Button(action: {
+                                manager.source = .camera
+                                manager.showPicker = true
+                            }, label: {
+                                Text("Camera")
+                            })
+                        }
+            }
+            .fullScreenCover(isPresented: $manager.showPicker, onDismiss: nil) {
+                ImagePicker(selectedImage: $manager.imageSelected, sourceType: manager.source == .library ? .photoLibrary : .camera)
+                            .ignoresSafeArea()
+                    }
         }
     }
 }

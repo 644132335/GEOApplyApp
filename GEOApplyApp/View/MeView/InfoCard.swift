@@ -13,6 +13,8 @@ struct InfoCard: View {
     let country : String
     let major : String
     
+    @EnvironmentObject var manager : AppManager
+
     var body: some View {
         VStack {
                 VStack{
@@ -50,7 +52,7 @@ struct InfoCard: View {
                         }
                         .padding()
                 }
-                .frame(width: 380, height: 200, alignment: .center)
+                .frame(width: manager.screenWidth*0.95, height: manager.screenHeight*0.25, alignment: .center)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: .gray, radius: 5)     

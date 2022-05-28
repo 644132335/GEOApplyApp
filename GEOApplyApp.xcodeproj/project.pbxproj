@@ -46,6 +46,9 @@
 		439DEFD0283970EF002824D7 /* ProfitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC4283970EF002824D7 /* ProfitView.swift */; };
 		439DEFD1283970EF002824D7 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFC5283970EF002824D7 /* InfoCard.swift */; };
 		439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFD22839712D002824D7 /* TopTapManager.swift */; };
+		43D94C612841AA6C00B4FE90 /* AddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C602841AA6C00B4FE90 /* AddInfoView.swift */; };
+		43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C622841AAF300B4FE90 /* ImagePicker.swift */; };
+		43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C642841AB5700B4FE90 /* accountImagePicker.swift */; };
 		43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2F82832B27700FED530 /* UserInfo.swift */; };
 		43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FA2832B3D500FED530 /* ThemeData.swift */; };
 		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
@@ -114,6 +117,10 @@
 		439DEFC4283970EF002824D7 /* ProfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitView.swift; sourceTree = "<group>"; };
 		439DEFC5283970EF002824D7 /* InfoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 		439DEFD22839712D002824D7 /* TopTapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
+		43D94C602841AA6C00B4FE90 /* AddInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoView.swift; sourceTree = "<group>"; };
+		43D94C622841AAF300B4FE90 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		43D94C642841AB5700B4FE90 /* accountImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountImagePicker.swift; sourceTree = "<group>"; };
+		43D94C662841ABE100B4FE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43DBB2F82832B27700FED530 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		43DBB2FA2832B3D500FED530 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 		43DBB2FD2832C13A00FED530 /* AddInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfo.swift; sourceTree = "<group>"; };
@@ -182,6 +189,7 @@
 		4394155D281AF54900ECBF38 /* GEOApplyApp */ = {
 			isa = PBXGroup;
 			children = (
+				43D94C662841ABE100B4FE90 /* Info.plist */,
 				432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */,
 				4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */,
 				4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */,
@@ -224,6 +232,7 @@
 			children = (
 				43DBB2F82832B27700FED530 /* UserInfo.swift */,
 				431CF2F6283814A300953914 /* BasicUser.swift */,
+				43D94C642841AB5700B4FE90 /* accountImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			children = (
 				439DEFD22839712D002824D7 /* TopTapManager.swift */,
 				43941599281B061500ECBF38 /* GEOAppManager.swift */,
+				43D94C622841AAF300B4FE90 /* ImagePicker.swift */,
 				43502F84283A83AF00CBB584 /* TextLimter.swift */,
 				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
 			);
@@ -275,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				43941591281AF68E00ECBF38 /* MeView.swift */,
+				43D94C602841AA6C00B4FE90 /* AddInfoView.swift */,
 				439DEFBE283970EF002824D7 /* BarView.swift */,
 				439DEFBC283970EF002824D7 /* BasicCard.swift */,
 				439DEFBB283970EF002824D7 /* CircleImage.swift */,
@@ -526,6 +537,7 @@
 				439DEFC6283970EF002824D7 /* RingCard.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
 				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
+				43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
@@ -541,6 +553,7 @@
 				439DEFD1283970EF002824D7 /* InfoCard.swift in Sources */,
 				439DEFCD283970EF002824D7 /* Extensions.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
+				43D94C612841AA6C00B4FE90 /* AddInfoView.swift in Sources */,
 				439DEFCF283970EF002824D7 /* SettingView.swift in Sources */,
 				43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
@@ -550,6 +563,7 @@
 				43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */,
 				439DEFD0283970EF002824D7 /* ProfitView.swift in Sources */,
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
+				43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
 				43502F85283A83AF00CBB584 /* TextLimter.swift in Sources */,
@@ -723,6 +737,8 @@
 				DEVELOPMENT_TEAM = GM8D76N26T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GEOApplyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -755,6 +771,8 @@
 				DEVELOPMENT_TEAM = GM8D76N26T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GEOApplyApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -13,10 +13,10 @@ struct MeView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    Spacer().frame(height: 100)
+                    Spacer().frame(height: manager.screenHeight*0.05)
                     BasicCard(userName: manager.currentUser?.name ?? "unknown", likeNumber: 100, viewNumber: 45, postNumber: 10)
                         .padding()
-                    Spacer().frame(height: 10)
+                    Spacer().frame(height: manager.screenHeight*0.002)
                     TopTab()
                     Button(action: {
                         manager.signOut()
@@ -29,8 +29,8 @@ struct MeView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: SettingView()){
-                            Image(systemName: "gearshape")
+                        NavigationLink(destination: AddInfoView()){
+                            Image(systemName: "rectangle.and.pencil.and.ellipsis")
                         }
                     }
                         }

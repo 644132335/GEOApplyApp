@@ -35,6 +35,12 @@ class AppManager:ObservableObject{
     @Published var currentUser:BasicUser?
     @Published var currentUserInfoCard:UserInfo?
     
+    //account image
+    @Published var showPicker = false
+    @Published var source: accountImagePicker.Source = .library
+    @Published var openConfirmationDialog = false
+    @Published var changeAcountImage = false
+    @Published var imageSelected = UIImage()
     
     enum Page{
         case login

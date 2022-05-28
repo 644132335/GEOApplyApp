@@ -13,6 +13,8 @@ struct RingCard: View {
     let percent: CGFloat
     let chartName: String
     
+    @EnvironmentObject var manager : AppManager
+
     var body: some View {
         let mutiplier = width / 44
         let progress = 1 - percent / 100
@@ -36,10 +38,10 @@ struct RingCard: View {
                 .frame(width: width, height: width)
                 .shadow(color: color.opacity(0.1), radius: 3, x: 0, y: 3)    
             }
-            Spacer().frame(height:20)
+            Spacer().frame(height:manager.screenWidth*0.05)
             Text(chartName)
         }
-        .frame(width: 180, height: 180, alignment: .center)
+        .frame(width: manager.screenWidth*0.45, height: manager.screenWidth*0.45, alignment: .center)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .shadow(color: .gray, radius: 5)

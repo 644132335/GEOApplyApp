@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct HomeViewInMeView: View {
+    @EnvironmentObject var manager : AppManager
     var body: some View {
         VStack {
             HStack{
                 RingCard(percent: 30, chartName: "SAT score")
-                Spacer().frame(width: 25)
+                Spacer().frame(width: manager.screenWidth*0.05)
                 RingCard(percent: 70, chartName: "GPA")
             }.padding()
             
