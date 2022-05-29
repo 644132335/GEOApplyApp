@@ -43,6 +43,15 @@ class AppManager:ObservableObject{
     @Published var changeAcountImage = false
     @Published var imageSelected = UIImage()
     
+    //user info
+    @Published  var UsrSchool=""
+    @Published  var UsrNation=""
+    @Published  var UsrMajor=""
+    @Published  var UsrSat=0.0
+    @Published  var UsrTofel=0.0
+    @Published  var UsrGPA=0.0
+    @Published  var UsrIntro="\n\n\n\n\n"
+    
     enum Page{
         case login
         case main

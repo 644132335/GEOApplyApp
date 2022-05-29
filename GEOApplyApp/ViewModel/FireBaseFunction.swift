@@ -58,6 +58,13 @@ extension AppManager{
         try? auth.signOut()
         self.signedIn=false
         self.users=[]
+        self.UsrSchool=""
+        self.UsrNation=""
+        self.UsrMajor=""
+        self.UsrSat=0.0
+        self.UsrTofel=0.0
+        self.UsrGPA=0.0
+        self.UsrIntro="\n\n\n\n\n"
         withAnimation{
             self.currentPage = .login
         }
@@ -90,17 +97,17 @@ extension AppManager{
     }
     
     //create user info card
-    func createUserInfoCard(username:String, school:String, nationality:String, major:String, sat:Double, tofel:Double, gpa:Double, intro:String) {
+    func createUserInfoCard() {
         guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
         db.collection("userInfoCard").document(uid).setData([
             "uid":uid,
-            "school":school,
-            "nationality":nationality,
-            "major":major,
-            "sat":sat,
-            "tofel":tofel,
-            "gpa":gpa,
-            "intro":intro,
+            "school":UsrSchool,
+            "nationality":UsrNation,
+            "major":UsrMajor,
+            "sat":UsrSat,
+            "tofel":UsrTofel,
+            "gpa":UsrGPA,
+            "intro":UsrIntro,
             "name":self.currentUser?.name ?? "Unnamed"
         ]){ err in
             if let err = err {
@@ -203,6 +210,15 @@ extension AppManager{
                     self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro))
                 }
                 
+            }
+            if self.currentUser?.profile==true{
+                self.UsrSchool=self.currentUserInfoCard?.school ?? ""
+                self.UsrNation=self.currentUserInfoCard?.nation ?? ""
+                self.UsrMajor=self.currentUserInfoCard?.major ?? ""
+                self.UsrSat=self.currentUserInfoCard?.sat ?? 0.0
+                self.UsrTofel=self.currentUserInfoCard?.tofel ?? 0.0
+                self.UsrGPA=self.currentUserInfoCard?.gpa ?? 0.0
+                self.UsrIntro=self.currentUserInfoCard?.intro ?? ""
             }
         }
         

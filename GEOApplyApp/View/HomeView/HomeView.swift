@@ -30,7 +30,7 @@ struct HomeView: View {
                             // if profile is not created yet
                             Rectangle().fill(.white.opacity(0)).frame(height:manager.screenHeight*0.07)
                             HStack{
-                                NavigationLink(destination: AddInfo()){
+                                NavigationLink(destination: AddProfile()){
                                     Text("Please Add Your Profile").font(.title3).foregroundColor(manager.backgroundColor)
                                         .background(RoundedRectangle(cornerRadius: 20)
                                         .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))
@@ -69,7 +69,7 @@ struct HomeView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        NavigationLink(destination: AddInfo()){
+                        NavigationLink(destination: AddProfile()){
                             Image(systemName: "pencil.circle.fill")
                                 .resizable()
                                 .frame(width: 57, height: 57)
