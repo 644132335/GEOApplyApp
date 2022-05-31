@@ -28,6 +28,8 @@ class AppManager:ObservableObject{
     @Published var users=[UserInfo]()
     @Published var currentPage: Page = .login
     @Published var schools=[schoolInfo]()
+    @Published var schoolResults=[schoolReslt]()
+    
     
     //firebase variables
     @Published var signedIn=false
@@ -35,6 +37,7 @@ class AppManager:ObservableObject{
     @Published var signuperro=""
     @Published var currentUser:BasicUser?
     @Published var currentUserInfoCard:UserInfo?
+    @Published var launchloading=true
     
     //account image
     @Published var showPicker = false
@@ -44,23 +47,28 @@ class AppManager:ObservableObject{
     @Published var imageSelected = UIImage()
     
     //user info
-    @Published  var UsrSchool=""
-    @Published  var UsrNation=""
-    @Published  var UsrMajor=""
-    @Published  var UsrSat=0.0
-    @Published  var UsrTofel=0.0
-    @Published  var UsrGPA=0.0
-    @Published  var UsrIntro="\n\n\n\n\n"
+    @Published var UsrSchool=""
+    @Published var UsrNation=""
+    @Published var UsrMajor=""
+    @Published var UsrSat=0.0
+    @Published var UsrTofel=0.0
+    @Published var UsrGPA=0.0
+    @Published var UsrIntro="\n\n\n\n\n"
+    @Published var UsrAppliedSchool="Brown University"
+    @Published var UsrSchoolResult="accepted"
     
+    //app enums
     enum Page{
         case login
         case main
+        case loginloading
     }
     
+    
     init(){
+        self.schoolResults=[]
         Task{
             await getSchoolInfo()
-            
         }
        
     }
@@ -76,7 +84,25 @@ class AppManager:ObservableObject{
         return auth.currentUser != nil
     }
     
+    //sort university by name
+    func sortSchools() {
+        let newlst=self.schools.sorted{
+            $0.schoolName<$1.schoolName
+        }
+        schools=newlst
+    }
     
+    //add school result
+    func addSchoolResult(name:String,result:String){
+        var schoolrul=""
+        for i in self.schools{
+            if i.schoolName==name{
+               schoolrul=i.schoolImageUrl
+            }
+        }
+        self.schoolResults.append(schoolReslt(schoolName: name, result: result,schoolurl: schoolrul))
+        
+    }
     
     
 }

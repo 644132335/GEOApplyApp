@@ -54,6 +54,7 @@
 		43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FA2832B3D500FED530 /* ThemeData.swift */; };
 		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
 		43DBB301283448FC00FED530 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB300283448FC00FED530 /* LoginView.swift */; };
+		43E971FC2845546F00607B62 /* SchoolResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E971FB2845546F00607B62 /* SchoolResult.swift */; };
 		43FFDF732842B08100013618 /* FireBaseFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FFDF722842B08100013618 /* FireBaseFunction.swift */; };
 		43FFDF752842B38800013618 /* SchoolInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FFDF742842B38800013618 /* SchoolInfo.swift */; };
 		6D46D950F487E9CC1D807752 /* Pods_GEOApplyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */; };
@@ -129,6 +130,7 @@
 		43DBB2FA2832B3D500FED530 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 		43DBB2FD2832C13A00FED530 /* AddInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfo.swift; sourceTree = "<group>"; };
 		43DBB300283448FC00FED530 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		43E971FB2845546F00607B62 /* SchoolResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolResult.swift; sourceTree = "<group>"; };
 		43FFDF722842B08100013618 /* FireBaseFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseFunction.swift; sourceTree = "<group>"; };
 		43FFDF742842B38800013618 /* SchoolInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolInfo.swift; sourceTree = "<group>"; };
 		7817A91D9BA81AD5F00CF6B9 /* Pods-GEOApplyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEOApplyApp.debug.xcconfig"; path = "Target Support Files/Pods-GEOApplyApp/Pods-GEOApplyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				43DBB2F82832B27700FED530 /* UserInfo.swift */,
+				43E971FB2845546F00607B62 /* SchoolResult.swift */,
 				43FFDF742842B38800013618 /* SchoolInfo.swift */,
 				431CF2F6283814A300953914 /* BasicUser.swift */,
 				43D94C642841AB5700B4FE90 /* accountImagePicker.swift */,
@@ -548,6 +551,7 @@
 				43941592281AF68E00ECBF38 /* MeView.swift in Sources */,
 				43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
+				43E971FC2845546F00607B62 /* SchoolResult.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
 				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,

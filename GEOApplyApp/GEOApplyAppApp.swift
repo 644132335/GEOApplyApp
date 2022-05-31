@@ -19,6 +19,8 @@ struct GEOApplyAppApp: App {
                 LoginView().environmentObject(manager).environment(\.colorScheme, .light)
             case.main:
                 ContentView().environmentObject(manager).environment(\.colorScheme, .light)
+            case.loginloading:
+                ProgressView()
             }
            
         }

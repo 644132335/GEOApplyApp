@@ -16,7 +16,6 @@ struct LoginView: View {
         NavigationView{
             
             ScrollView{
-                
             VStack{
                 Group{
                 Spacer().frame(height:100)

@@ -57,11 +57,8 @@ struct HomeView: View {
                         }
                         
                         
-                    }.refreshable{
-                        manager.getUser()
-                        manager.getUserInfo()
-                        manager.getAllProfiles()
                     }
+                    
                 }
                 
                 //floating action button for adding info
@@ -88,11 +85,14 @@ struct HomeView: View {
                 // tool bar for refresh
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button(action: {
-                        manager.getUserInfo()
-                        manager.getAllProfiles()
+                        Task{
+                            await manager.getUserInfo()
+                            await manager.getAllProfiles()
+                        }
+                       
                     }){Image(systemName: "arrow.clockwise").foregroundColor(manager.themeColor)}}
             }
-
+            
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
