@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ApplyInfoSec: View {
     @EnvironmentObject var manager : AppManager
+    var userinfo : [schoolReslt]
     var body: some View {
         HStack{
             Image(systemName: "building.columns.fill").foregroundColor(manager.themeColor)
@@ -20,9 +21,14 @@ struct ApplyInfoSec: View {
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
-                        schoolApplyCard(result: true, school: "Pennsylvania State University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
-                        schoolApplyCard(result: false, school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
-                        schoolApplyCard(result: false, school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+                        ForEach(userinfo,id:\.self){i in
+                            schoolApplyCard(result: i.result, school: i.schoolName, schoolImageURL: i.schoolurl)
+                        }
+//
+//
+//                        schoolApplyCard(result: "accepted", school: "Pennsylvania State University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+//                        schoolApplyCard(result: "rejected", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+//                        schoolApplyCard(result: "waiting", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
                         
                     }
                 }

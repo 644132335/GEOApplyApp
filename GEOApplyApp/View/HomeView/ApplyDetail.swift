@@ -17,7 +17,7 @@ struct ApplyDetail: View {
     var tofel:Double
     var gpa:Double
     var intro:String
-    
+    var applyinfo:[schoolReslt]
     var body: some View {
         ZStack{
             
@@ -36,7 +36,7 @@ struct ApplyDetail: View {
                 VStack{
                    IntroSec(text: intro)
                    BasicInfo(nationality: nation, school: school, major: major)
-                   ApplyInfoSec()
+                   ApplyInfoSec(userinfo:applyinfo)
                    ScoreSec(sat: sat, tofel: tofel, gpa: gpa)
                    EssaySec()
                 }

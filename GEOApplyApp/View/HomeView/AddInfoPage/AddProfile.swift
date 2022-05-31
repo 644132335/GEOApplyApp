@@ -50,20 +50,25 @@ struct AddProfile: View {
                 }
             }
             
-            Section(header:Text("application status")){
+            Section(header:Text("application status"),footer:Text("Status only update after you press confirm")){
                 VStack{
                     ForEach(manager.schoolResults.indices,id:\.self){i in
-                        VStack{
-                            Text(manager.schoolResults[i].schoolName)
-                            Text(manager.schoolResults[i].result)
-                            AsyncImage(url: URL(string: manager.schoolResults[i].schoolurl)) { image in
-                                image.resizable()
-                            } placeholder: {
-                                ProgressView()
+                        HStack{
+                            Spacer()
+                            VStack{
+                                Text(manager.schoolResults[i].schoolName)
+                                Text(manager.schoolResults[i].result)
+                                AsyncImage(url: URL(string: manager.schoolResults[i].schoolurl)) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: manager.screenWidth*0.15, height: manager.screenWidth*0.15)
+                                .padding(5)
                             }
-                            .frame(width: manager.screenWidth*0.15, height: manager.screenWidth*0.15)
-                            .padding(5)
+                            Spacer()
                         }
+                        
                    
                     }
                 }
@@ -90,7 +95,7 @@ struct AddProfile: View {
                 }){
                     HStack{
                         Spacer()
-                        Text("Create")
+                        Text("Confirm")
                         Spacer()
                     }
                 }
@@ -149,11 +154,12 @@ struct AddProfile: View {
                     }
                 }
                 }
-            }.toolbar(){
+            }
+            .toolbar(){
                 EditButton()
             }
                 
-            }
+            }.environmentObject(manager).environment(\.colorScheme, .light)
         }
         .navigationTitle("Add Your Info")
             

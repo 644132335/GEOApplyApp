@@ -109,7 +109,7 @@ extension AppManager{
     //create user info card
     func createUserInfoCard() {
         guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
-        var applyinfo:[[String:Any]]=[[:]]
+        var applyinfo:[[String:Any]]=[]
         for i in self.schoolResults{
             applyinfo.append(["schoolname":i.schoolName,"result":i.result,"schoolUrl":i.schoolurl])
         }
@@ -157,26 +157,26 @@ extension AppManager{
         getAllProfiles()
     }
     
-    // create apply info
-    func createApplyInfo(){
-        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
-        for i in self.schoolResults{
-            db.collection("userApplyInfo").document().setData([
-                "uid":uid,
-                "school":i.schoolName,
-                "schoolUrl":i.schoolurl,
-                "result":i.result
-            ],merge:true){ err in
-                if let err = err {
-                    self.signuperro="\(err)"
-                    print("Error writing document: \(err)")
-                } else {
-                    print("Document successfully written!")
-                }
-            }
-        }
-        
-    }
+//    // create apply info
+//    func createApplyInfo(){
+//        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
+//        for i in self.schoolResults{
+//            db.collection("userApplyInfo").document().setData([
+//                "uid":uid,
+//                "school":i.schoolName,
+//                "schoolUrl":i.schoolurl,
+//                "result":i.result
+//            ],merge:true){ err in
+//                if let err = err {
+//                    self.signuperro="\(err)"
+//                    print("Error writing document: \(err)")
+//                } else {
+//                    print("Document successfully written!")
+//                }
+//            }
+//        }
+//
+//    }
     
     
     //-----------------------------------------read info from database---------------------------------------------------
@@ -233,8 +233,12 @@ extension AppManager{
             let school = data?["school"] as? String ?? ""
             let tofel = data?["tofel"] as? Double ?? 0.0
             let name = data?["name"] as? String ?? ""
-            
-            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
+            let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
+            var applyinfos:[schoolReslt]=[]
+            for i in applyinfo{
+                applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
+            }
+            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos)
             
             if self.currentUser?.profile==true{
                 self.UsrSchool=self.currentUserInfoCard?.school ?? ""
@@ -244,6 +248,7 @@ extension AppManager{
                 self.UsrTofel=self.currentUserInfoCard?.tofel ?? 0.0
                 self.UsrGPA=self.currentUserInfoCard?.gpa ?? 0.0
                 self.UsrIntro=self.currentUserInfoCard?.intro ?? ""
+                self.schoolResults=self.currentUserInfoCard?.applyinfo ?? []
             }
         }catch{
             print(error)
@@ -303,8 +308,12 @@ extension AppManager{
                     let school = data["school"] as? String ?? ""
                     let tofel = data["tofel"] as? Double ?? 0.0
                     let name = data["name"] as? String ?? ""
-                    
-                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro))
+                    let applyinfo = data["applyinfo"] as? [[String:String]] ?? []
+                    var applyinfos:[schoolReslt]=[]
+                    for i in applyinfo{
+                        applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
+                    }
+                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos))
                 }
                 
             }
