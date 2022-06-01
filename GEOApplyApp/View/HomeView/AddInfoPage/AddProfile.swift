@@ -16,14 +16,14 @@ struct AddProfile: View {
     var ApplyResult = ["accepted","waiting","rejected"]
     var body: some View {
         Form{
-            Section{
+            Section(header:Text("Choose Your school")){
                 Picker("School",selection: $manager.UsrSchool){
                     ForEach(manager.schools){
                         Text($0.schoolName).foregroundColor(.black.opacity(0.7)).bold().tag($0.schoolName)
                     }
                 }
             }
-            Section(){
+            Section(header:Text("genreal info")){
                 TextField("Nation", text: $manager.UsrNation).font(.title2)
                 TextField("Major", text: $manager.UsrMajor).font(.title2)
             }
@@ -50,27 +50,15 @@ struct AddProfile: View {
                 }
             }
             
-            Section(header:Text("application status"),footer:Text("Status only update after you press confirm")){
-                VStack{
-                    ForEach(manager.schoolResults.indices,id:\.self){i in
-                        HStack{
-                            Spacer()
-                            VStack{
-                                Text(manager.schoolResults[i].schoolName)
-                                Text(manager.schoolResults[i].result)
-                                AsyncImage(url: URL(string: manager.schoolResults[i].schoolurl)) { image in
-                                    image.resizable()
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .frame(width: manager.screenWidth*0.15, height: manager.screenWidth*0.15)
-                                .padding(5)
-                            }
-                            Spacer()
+            Section(header:Text("application status"),footer:Text("Note: Status only update after you press confirm")){
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack{
+                        ForEach(manager.schoolResults.indices,id:\.self){i in
+                                schoolApplyCard(result: manager.schoolResults[i].result, school: manager.schoolResults[i].schoolName, schoolImageURL: manager.schoolResults[i].schoolurl)
+                       
                         }
-                        
-                   
                     }
+                    
                 }
                 Button(action: {
                     //add school result
@@ -104,12 +92,30 @@ struct AddProfile: View {
         .sheet(isPresented: $isShowingSheet){
             NavigationView{
             Form{
-                Section{
+                Section(header:Text("Application Status"),footer:Text("Note: use edit on top right to delete")){
                     List{
+                        if manager.schoolResults.isEmpty{
+                            HStack{
+                                Text("")
+                            }
+                        }
                         ForEach(manager.schoolResults.indices,id:\.self){i in
-                            VStack{
-                                Text(manager.schoolResults[i].schoolName)
-                                Text(manager.schoolResults[i].result)
+                            
+                            if manager.schoolResults[i].result=="accepted"{
+                                HStack{
+                                    Image(systemName: "checkmark").padding(2).foregroundColor(Color.green)
+                                    Text(manager.schoolResults[i].schoolName)
+                                }
+                            }else if manager.schoolResults[i].result=="rejected"{
+                                HStack{
+                                    Image(systemName: "xmark").padding(2).foregroundColor(Color.red)
+                                    Text(manager.schoolResults[i].schoolName)
+                                }
+                            }else{
+                                HStack{
+                                    Image(systemName: "questionmark").padding(2).foregroundColor(Color.yellow)
+                                    Text(manager.schoolResults[i].schoolName)
+                                }
                             }
                        
                         }.onDelete(perform: delete)

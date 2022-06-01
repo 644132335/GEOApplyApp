@@ -29,7 +29,8 @@ class AppManager:ObservableObject{
     @Published var currentPage: Page = .login
     @Published var schools=[schoolInfo]()
     @Published var schoolResults=[schoolReslt]()
-    
+    @Published var email=""
+    @Published var password=""
     
     //firebase variables
     @Published var signedIn=false
@@ -102,6 +103,34 @@ class AppManager:ObservableObject{
         }
         self.schoolResults.append(schoolReslt(schoolName: name, result: result,schoolurl: schoolrul))
         
+    }
+    
+    //save email and passowrd
+    func saveEmail(){
+        if let encodedData = try? JSONEncoder().encode(email){
+            UserDefaults.standard.set(encodedData, forKey: "email")
+        }
+    }
+    func savePassword(){
+        if let encodedData = try? JSONEncoder().encode(password){
+            UserDefaults.standard.set(encodedData, forKey: "password")
+        }
+    }
+    
+    //load email
+    func loadEmail(){
+        guard
+            let data = UserDefaults.standard.data(forKey: "email"),
+            let savedItems = try? JSONDecoder().decode(String.self, from: data)
+        else{return self.email = ""}
+        self.email = savedItems
+    }
+    func loadpassword(){
+        guard
+            let data = UserDefaults.standard.data(forKey: "password"),
+            let savedItems = try? JSONDecoder().decode(String.self, from: data)
+        else{return self.password = ""}
+        self.password = savedItems
     }
     
     
