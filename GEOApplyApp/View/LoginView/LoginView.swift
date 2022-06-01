@@ -59,11 +59,11 @@ struct LoginView: View {
                 HStack{
                     Spacer().frame(width:manager.screenWidth*0.09)
                     Image(systemName: checked ? "checkmark.square.fill" : "square")
-                        .foregroundColor(manager.themeColor)
+                        .foregroundStyle(manager.LoginbuttonColor)
                         .onTapGesture {
                             self.checked.toggle()
                         }
-                    Text("Remeber me").font(.footnote).foregroundColor(manager.themeColor)
+                    Text("Remeber me").font(.footnote).foregroundStyle(manager.LoginbuttonColor)
                     Spacer()
                 }.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 10))
                 
@@ -93,7 +93,8 @@ struct LoginView: View {
 
                 
                 NavigationLink(destination: ContentView()){
-                    Text("SKIP")
+                    Text("Continue as Guest")
+                    .foregroundStyle(manager.LoginbuttonColor)
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
                 }.padding()
