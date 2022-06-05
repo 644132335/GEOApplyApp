@@ -18,6 +18,7 @@ struct ApplyDetail: View {
     var gpa:Double
     var intro:String
     var applyinfo:[schoolReslt]
+    var uid:String
     var body: some View {
         ZStack{
             
@@ -45,9 +46,49 @@ struct ApplyDetail: View {
             }
         }.toolbar(){
             ToolbarItem(placement: .navigationBarTrailing){
-                
+                    //button for follow and unfollow
+                    Button(action: {
+                        if uid==manager.currentUserInfoCard?.userid{
+
+                        }else{
+                            if manager.followed.contains(uid){
+                                manager.followed=manager.followed.filter{$0 != uid}
+                            }else{
+                                manager.followed.append(uid)
+                            }
+                        }
+                        
+                        //update followed
+                        Task{
+                            print("before change follow")
+                            await manager.changeFolloweUser()
+                            print("after change follow")
+                            await manager.getFollowed()
+                        }
+                        
+                       
+                    }){
+                        if uid==manager.currentUserInfoCard?.userid{
+                            Text("")
+                        }
+                        else{
+                            if manager.followed.contains(uid){
+                                Text("Unfollow").bold().padding(5
+                                ).foregroundColor(.white).background(RoundedRectangle(cornerRadius: 30).fill(manager.themeColor))
+                            }else{
+                                Text("Follow").bold().padding(5).background(RoundedRectangle(cornerRadius: 30).stroke(manager.themeColor,lineWidth: 2)).foregroundColor(manager.themeColor)
+                            }
+                        }
+                        
+                        
+                    }.disabled(uid==manager.currentUserInfoCard?.userid)
             }
         }
+    }
+}
+struct MyPreviewProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", applyinfo: [],uid: "dsad").environmentObject(AppManager())
     }
 }
 

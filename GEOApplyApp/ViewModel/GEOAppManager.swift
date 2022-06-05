@@ -26,9 +26,11 @@ class AppManager:ObservableObject{
     //****************************************************Storage and functions*******************************************
     //state variables
     @Published var users=[UserInfo]()
+    @Published var followedUsers=[UserInfo]()
     @Published var currentPage: Page = .login
     @Published var schools=[schoolInfo]()
     @Published var schoolResults=[schoolReslt]()
+    @Published var followed:[String]=[]
     @Published var email=""
     @Published var password=""
     
@@ -132,6 +134,7 @@ class AppManager:ObservableObject{
         else{return self.password = ""}
         self.password = savedItems
     }
+    
     
     
 }

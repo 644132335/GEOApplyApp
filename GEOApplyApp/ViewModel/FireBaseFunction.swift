@@ -29,9 +29,11 @@ extension AppManager{
                 Task{
                     await self.getUser()
                     await self.getUserInfo()
+                    await self.getAllProfiles()
+                    await self.getFollowed()
                 }
                 //self.getUserInfo()
-                self.getAllProfiles()
+               
                 
                 withAnimation{
                     self.launchloading=false
@@ -72,9 +74,12 @@ extension AppManager{
         self.UsrGPA=0.0
         self.UsrIntro="\n\n\n\n\n"
         self.schoolResults=[]
+        self.followed=[]
+        self.followedUsers=[]
         withAnimation{
             self.currentPage = .login
         }
+        
     }
     
     
@@ -151,10 +156,11 @@ extension AppManager{
         Task{
             await getUser()
             await getUserInfo()
+            await getAllProfiles()
         }
        // await getUser()
         //await getUserInfo()
-        getAllProfiles()
+       
     }
     
 //    // create apply info
@@ -179,6 +185,22 @@ extension AppManager{
 //    }
     
     
+    //change follow users
+    func changeFolloweUser() async {
+        print("changefolloweuser")
+        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
+        db.collection("users").document(uid).setData([
+            "followed":self.followed
+        ],merge: true){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+                return
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
+    
     //-----------------------------------------read info from database---------------------------------------------------
     //get user info
     func getUser() async {
@@ -191,7 +213,12 @@ extension AppManager{
             let email = data?["email"] as? String ?? ""
             let username = data?["username"] as? String ?? ""
             let profile = data?["profile"] as? Bool ?? false
-            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: profile)
+            let follow = data?["followed"] as? [String] ?? []
+            DispatchQueue.main.async {
+                self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: profile)
+                self.followed=follow
+            }
+            
         }catch{
             print(error)
         }
@@ -291,7 +318,7 @@ extension AppManager{
     }
     
     //get all the info cards
-    func getAllProfiles(){
+    func getAllProfiles() async{
         users=[]
         db.collection("userInfoCard").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -319,7 +346,41 @@ extension AppManager{
             }
             
         }
-        
+    }
+    
+    //get followed cards
+    func getFollowed() async{
+        print("get followed user-------------")
+        print(self.followed)
+        self.followedUsers=[]
+        for i in self.followed{
+            do{
+                let data = try await db.collection("userInfoCard").document(i).getDocument().data()
+                let uid = data?["uid"] as? String ?? ""
+                let gpa = data?["gpa"] as? Double ?? 0.0
+                let intro = data?["intro"] as? String ?? ""
+                let major = data?["major"] as? String ?? ""
+                let nation = data?["nationality"] as? String ?? ""
+                let sat = data?["sat"] as? Double ?? 0.0
+                let school = data?["school"] as? String ?? ""
+                let tofel = data?["tofel"] as? Double ?? 0.0
+                let name = data?["name"] as? String ?? ""
+                let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
+                var applyinfos:[schoolReslt]=[]
+                for i in applyinfo{
+                    applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
+                }
+                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos)
+                DispatchQueue.main.async {
+                    self.followedUsers.append(followedUser)
+                }
+                
+                
+            }catch{
+                print(error)
+            }
+           
+        }
     }
     
     //get school info
