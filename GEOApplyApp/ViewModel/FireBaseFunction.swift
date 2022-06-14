@@ -128,6 +128,8 @@ extension AppManager{
             "gpa":UsrGPA,
             "intro":UsrIntro,
             "name":self.currentUser?.name ?? "Unnamed",
+            "view":0,
+            "follow":0,
             "applyinfo":applyinfo
         ],merge: true){ err in
             if let err = err {
@@ -158,31 +160,8 @@ extension AppManager{
             await getUserInfo()
             await getAllProfiles()
         }
-       // await getUser()
-        //await getUserInfo()
        
     }
-    
-//    // create apply info
-//    func createApplyInfo(){
-//        guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
-//        for i in self.schoolResults{
-//            db.collection("userApplyInfo").document().setData([
-//                "uid":uid,
-//                "school":i.schoolName,
-//                "schoolUrl":i.schoolurl,
-//                "result":i.result
-//            ],merge:true){ err in
-//                if let err = err {
-//                    self.signuperro="\(err)"
-//                    print("Error writing document: \(err)")
-//                } else {
-//                    print("Document successfully written!")
-//                }
-//            }
-//        }
-//
-//    }
     
     
     //change follow users
@@ -197,6 +176,32 @@ extension AppManager{
                 return
             } else {
                 print("Document successfully written!")
+            }
+        }
+    }
+    
+    //add views
+    func addView(uid:String,view:Int) {
+        db.collection("userInfoCard").document(uid).setData([
+            "view":view,
+        ],merge: true){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Add View!")
+            }
+        }
+    }
+    
+    //add followed
+    func addFollow(uid:String,follow:Int) {
+        db.collection("userInfoCard").document(uid).setData([
+            "follow":follow
+        ],merge: true){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Add Follow!")
             }
         }
     }
@@ -222,27 +227,6 @@ extension AppManager{
         }catch{
             print(error)
         }
-        
-//        db.collection("users").document(uid).getDocument{ info,error in
-//            if let error = error {
-//                //self.errorMessage = "Failed to fetch current user: \(error)"
-//                print("Failed to fetch current user:", error)
-//                return
-//            }
-//
-//            guard let data = info?.data() else {
-//                //self.errorMessage = "No data found"
-//                print("No data found")
-//                return
-//            }
-//
-//            let uid = data["uid"] as? String ?? ""
-//            let email = data["email"] as? String ?? ""
-//            let username = data["username"] as? String ?? ""
-//            let profile = data["profile"] as? Bool ?? false
-//            self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: profile)
-//            print("get user \(self.currentUser?.profile)")
-//        }
     }
     
     @MainActor
@@ -260,12 +244,15 @@ extension AppManager{
             let school = data?["school"] as? String ?? ""
             let tofel = data?["tofel"] as? Double ?? 0.0
             let name = data?["name"] as? String ?? ""
+            let view = data?["view"] as? Int ?? 0
+            let follow = data?["follow"] as? Int ?? 0
             let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
             var applyinfos:[schoolReslt]=[]
             for i in applyinfo{
                 applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
             }
-            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos)
+            applyinfos=self.sortSchools(applyinfo: applyinfos)
+            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos)
             
             if self.currentUser?.profile==true{
                 self.UsrSchool=self.currentUserInfoCard?.school ?? ""
@@ -280,41 +267,6 @@ extension AppManager{
         }catch{
             print(error)
         }
-//        db.collection("userInfoCard").document(uid).getDocument{ info,error in
-//            if let error = error {
-//                //self.errorMessage = "Failed to fetch current user: \(error)"
-//                print("Failed to fetch current user:", error)
-//                return
-//            }
-//            guard let data = info?.data() else {
-//                print("No data found")
-//                return
-//            }
-//
-//            let uid = data["uid"] as? String ?? ""
-//            let gpa = data["gpa"] as? Double ?? 0.0
-//            let intro = data["intro"] as? String ?? ""
-//            let major = data["major"] as? String ?? ""
-//            let nation = data["nationality"] as? String ?? ""
-//            let sat = data["sat"] as? Double ?? 0.0
-//            let school = data["school"] as? String ?? ""
-//            let tofel = data["tofel"] as? Double ?? 0.0
-//            let name = data["name"] as? String ?? ""
-//
-//            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro)
-//
-//            print("get userinfo profile2 \(self.currentUser?.profile)")
-//            if self.currentUser?.profile==true{
-//                print("current user profile is true")
-//                self.UsrSchool=self.currentUserInfoCard?.school ?? ""
-//                self.UsrNation=self.currentUserInfoCard?.nation ?? ""
-//                self.UsrMajor=self.currentUserInfoCard?.major ?? ""
-//                self.UsrSat=self.currentUserInfoCard?.sat ?? 0.0
-//                self.UsrTofel=self.currentUserInfoCard?.tofel ?? 0.0
-//                self.UsrGPA=self.currentUserInfoCard?.gpa ?? 0.0
-//                self.UsrIntro=self.currentUserInfoCard?.intro ?? ""
-//            }
-//        }
     }
     
     //get all the info cards
@@ -335,12 +287,15 @@ extension AppManager{
                     let school = data["school"] as? String ?? ""
                     let tofel = data["tofel"] as? Double ?? 0.0
                     let name = data["name"] as? String ?? ""
+                    let view = data["view"] as? Int ?? 0
+                    let follow = data["follow"] as? Int ?? 0
                     let applyinfo = data["applyinfo"] as? [[String:String]] ?? []
                     var applyinfos:[schoolReslt]=[]
                     for i in applyinfo{
                         applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                     }
-                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos))
+                    applyinfos=self.sortSchools(applyinfo: applyinfos)
+                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos))
                 }
                 
             }
@@ -365,12 +320,15 @@ extension AppManager{
                 let school = data?["school"] as? String ?? ""
                 let tofel = data?["tofel"] as? Double ?? 0.0
                 let name = data?["name"] as? String ?? ""
+                let view = data?["view"] as? Int ?? 0
+                let follow = data?["follow"] as? Int ?? 0
                 let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
                 var applyinfos:[schoolReslt]=[]
                 for i in applyinfo{
                     applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                 }
-                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,applyinfo: applyinfos)
+                applyinfos=self.sortSchools(applyinfo: applyinfos)
+                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos)
                 DispatchQueue.main.async {
                     self.followedUsers.append(followedUser)
                 }
@@ -398,9 +356,7 @@ extension AppManager{
                     self.schools.append(schoolInfo(schoolName: schoolName, rank: rank, schoolImageUrl: schoolImage))
                 }
                 self.sortSchools()
-                
             }
         }
     }
-    
 }

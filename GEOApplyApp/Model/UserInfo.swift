@@ -18,6 +18,8 @@ struct UserInfo : Codable,Identifiable,Hashable{
     var tofel:Double?
     var gpa:Double?
     var intro:String?
+    var view:Int?
+    var follow:Int?
     var applyinfo:[schoolReslt]?
     var id=UUID()
 }

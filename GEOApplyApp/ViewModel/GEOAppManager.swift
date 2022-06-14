@@ -95,6 +95,13 @@ class AppManager:ObservableObject{
         schools=newlst
     }
     
+    func sortSchools(applyinfo:[schoolReslt]) -> [schoolReslt] {
+        let newlst=applyinfo.sorted{
+            $0.result<$1.result
+        }
+        return newlst
+    }
+    
     //add school result
     func addSchoolResult(name:String,result:String){
         var schoolrul=""

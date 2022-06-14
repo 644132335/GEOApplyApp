@@ -10,7 +10,7 @@ import SwiftUI
 struct CircleImage: View {
     @EnvironmentObject var manager : AppManager
     var body: some View {
-        Image("GEOtitle")
+        Image("DefaultAvatar")
             .resizable()
             .scaledToFit()
             .frame(width:manager.screenWidth*0.32, height: manager.screenHeight*0.32)

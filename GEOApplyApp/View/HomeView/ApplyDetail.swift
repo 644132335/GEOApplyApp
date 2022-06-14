@@ -17,6 +17,8 @@ struct ApplyDetail: View {
     var tofel:Double
     var gpa:Double
     var intro:String
+    var view:Int
+    var follow:Int
     var applyinfo:[schoolReslt]
     var uid:String
     var body: some View {
@@ -30,6 +32,15 @@ struct ApplyDetail: View {
                         Circle().frame(width: 60, height: 60).clipShape(Circle()).shadow(radius: 6).foregroundColor(.blue.opacity(0.4))
                         Text(name).foregroundColor(.black.opacity(0.8)).bold()
                         Text(school).foregroundColor(.black.opacity(0.4)).font(.footnote)
+                        HStack{
+                            Spacer()
+                            Text("View \(view)").foregroundColor(.black.opacity(0.4)).font(.footnote)
+                            
+                            Divider()
+                            Text("Follower \(follow)").foregroundColor(.black.opacity(0.4)).font(.footnote)
+                            Spacer()
+                            
+                        }
                     }
                     Spacer()
                 }
@@ -52,9 +63,13 @@ struct ApplyDetail: View {
 
                         }else{
                             if manager.followed.contains(uid){
+                                //unfollow
                                 manager.followed=manager.followed.filter{$0 != uid}
+                                manager.addFollow(uid: uid, follow: follow==0 ? 0 : follow-1)
                             }else{
+                                //follow
                                 manager.followed.append(uid)
+                                manager.addFollow(uid: uid, follow: follow+1)
                             }
                         }
                         
@@ -84,11 +99,15 @@ struct ApplyDetail: View {
                     }.disabled(uid==manager.currentUserInfoCard?.userid)
             }
         }
+        .onAppear{
+            // add view
+            manager.addView(uid: uid, view: view+1)
+        }
     }
 }
 struct MyPreviewProvider_Previews: PreviewProvider {
     static var previews: some View {
-        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", applyinfo: [],uid: "dsad").environmentObject(AppManager())
+        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", view:0,follow:0,applyinfo: [],uid: "dsad").environmentObject(AppManager())
     }
 }
 
