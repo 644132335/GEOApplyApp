@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct PostView: View {
+struct FavoriteView: View {
     var body: some View {
-        Text("Post View")
+        Text("Favorite View")
     }
 }
 
-struct PostView_Previews: PreviewProvider {
+struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView()
+        FavoriteView()
     }
 }
