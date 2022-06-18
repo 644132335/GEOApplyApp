@@ -32,18 +32,12 @@ struct changeInfoView: View {
     //    NavigationView{
             
             List{
-                Section(header: Text("账户信息")){
-                    TextField("更改用户名", text: $username)
-                    TextField("更改邮箱", text: $email)
+                Section(header: Text("User Information")){
+                    TextField("Username", text: $manager.meUsername)
+                    TextField("Email", text: $manager.meEmail)
                 }
-                Section(header: Text("个人信息")){
-                //    TextField("年龄", text: $userAge)
-                    ZStack{
-                        NavigationLink(destination: AgePicker()) {
-                            NavigationLinkLine(imageName: "clock", color: .blue, title: "年龄")
-                        }.opacity(0.0)
-                        NavigationLinkLine(imageName: "clock", color: .blue, title: "年龄")
-                    }
+                Section(header: Text("Basic Information")){
+                    
 
                     Button(action: {
                         showingBackgroundOptions = true

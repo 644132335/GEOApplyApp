@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct EditProfileButton: View {
+    @EnvironmentObject var manager : AppManager
     @State var toSettingView : Bool = false
     var body: some View {
         NavigationLink(destination: AddInfoView(), isActive: self.$toSettingView){EmptyView()}.disabled(true)
         Button{
             self.toSettingView = true
         }label: {
-            Label("Profile", systemImage: "square.and.pencil" )
+            Label("Edit", systemImage: "square.and.pencil" ).foregroundColor(.black)
         }
-        .buttonStyle(.bordered)
-        .tint(.gray)
-        .buttonBorderShape(.roundedRectangle(radius: 20))
+        .background(RoundedRectangle(cornerRadius: 10)
+            .fill(Color.gray).opacity(0.2)
+                .frame(width: manager.screenWidth*0.23, height: manager.screenWidth*0.1)
+                )
+        .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
         
         
     }

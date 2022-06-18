@@ -14,18 +14,11 @@ struct HomeViewInMeView: View {
         VStack{
             Spacer()
             
-            VStack(alignment:  .leading, spacing: 20){
+            VStack(alignment:  .center, spacing: 20){
                 Spacer().frame(width:manager.screenWidth*0.05)
-                HStack{
-                   
-                    Spacer().frame(width:manager.screenWidth*0.05)
-                    Image(systemName: "person.text.rectangle.fill").resizable().frame(width: manager.screenWidth*0.1, height: manager.screenWidth*0.08).foregroundColor(manager.themeColor).padding(2)
-                    Text("My Info").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
-                    Spacer()
-                }
                 
                 if manager.currentUser?.profile==true{
-                    NavigationLink(destination: ApplyDetail(name: manager.currentUserInfoCard?.name ?? "", school: manager.currentUserInfoCard?.school ?? "", nation: manager.currentUserInfoCard?.nation ?? "", major: manager.currentUserInfoCard?.major ?? "", sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0, gpa: manager.currentUserInfoCard?.gpa ?? 0.0, intro: manager.currentUserInfoCard?.intro ?? "",applyinfo: manager.currentUserInfoCard?.applyinfo ?? [])){
+                    NavigationLink(destination: ApplyDetail(name: manager.currentUserInfoCard?.name ?? "", school: manager.currentUserInfoCard?.school ?? "", nation: manager.currentUserInfoCard?.nation ?? "", major: manager.currentUserInfoCard?.major ?? "", sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0, gpa: manager.currentUserInfoCard?.gpa ?? 0.0, intro: manager.currentUserInfoCard?.intro ?? "",view:manager.currentUserInfoCard?.view ?? 0,follow:manager.currentUserInfoCard?.follow ?? 0,applyinfo: manager.currentUserInfoCard?.applyinfo ?? [],uid: manager.currentUserInfoCard?.userid ?? "")){
                         ApplyInfoCard(name: manager.currentUser?.name ?? "", nation: manager.currentUserInfoCard?.nation ?? "", school: manager.currentUserInfoCard?.school ?? "", gpa: manager.currentUserInfoCard?.gpa ?? 0.0, sat: manager.currentUserInfoCard?.sat ?? 0.0, tofel: manager.currentUserInfoCard?.tofel ?? 0.0)
                     }.padding(3)
                 }else{

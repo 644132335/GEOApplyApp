@@ -11,7 +11,7 @@ struct SettingView: View {
     
     @EnvironmentObject var manager : AppManager
     @AppStorage("isDarkMode") private var isDarkMode = false
-    @StateObject var authenticationManager = AuthenticationManager()
+    //@StateObject var authenticationManager = AuthenticationManager()
    // @EnvironmentObject var authenticationManager: AuthenticationManager
 
     
@@ -25,7 +25,7 @@ struct SettingView: View {
                                      subject: "Support Email",
                                      messageHeader: "Please describe your issue or feedback below")
     var body: some View {
-        if authenticationManager.isAuthenticated {
+       // if authenticationManager.isAuthenticated {
            
 //                Section(footer: Text("更改个人信息")){
 //                    NavigationLink(destination: changeInfoView()) {
@@ -40,10 +40,10 @@ struct SettingView: View {
 //                    }
 //                }
                 
-            changeInfoView()
+           // changeInfoView()
                
-        }
-        else{
+       // }
+       // else{
             List{
                 Section(footer: Text("更改个人信息")){
                     NavigationLink(destination: changeInfoView()) {
@@ -127,7 +127,7 @@ struct SettingView: View {
             })
             .navigationTitle("Setting")
             .navigationBarTitleDisplayMode(.inline)
-        }
+        //}
         
         
     }

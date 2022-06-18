@@ -9,14 +9,12 @@ import SwiftUI
 
 struct AddInfoView: View {
     @EnvironmentObject var manager : AppManager
-    @State private var username: String = ""
-    @State private var email: String = ""
-    @State private var birthday = Date()
     @State private var schoolname: String = ""
     @State private var userAge: String = ""
     @State private var selectBackground = "初中"
-    
- //   @State private var newsSend = false
+    private var genderArray=["Male","Female","Other"]
+    private var degreeArray=["Bachelor","Master","Doctor"]
+    //   @State private var newsSend = false
     
     @State private var showingGenderOptions = false
     @State private var genderSelection = "None"
@@ -24,117 +22,158 @@ struct AddInfoView: View {
     @State private var backgroundSelection = "None"
     
     @Environment(\.dismiss) var dismiss
-   
+    
     var body: some View {
-    //    NavigationView{
+        //    NavigationView{
+        
+        Form{
+            Section(header: Text("User Information")){
+                TextField("Username", text: $manager.meUsername)
+                TextField("Email", text: $manager.meEmail)
+            }
+            Section(header: Text("Basic Information")){
+                //age setting
+                Picker("Age",selection: $manager.meAge){
+                    ForEach(0...100,id:\.self){
+                        Text("\($0)")
+                    }
+                }
+                
+                //gender setting
+                Picker("Gender",selection: $manager.meGender){
+                    ForEach(genderArray,id:\.self){
+                        Text($0)
+                    }
+                }
+                
+                
+                //School
+                Picker("School",selection: $manager.meSchool){
+                    ForEach(manager.schools){
+                        Text($0.schoolName).tag($0.schoolName)
+                    }
+                }}
+                
+                
+            Section(header:Text("Score"),footer:Text("(Note: Choose degree you are applying for and Enter 0 if not taken certain test above)")){
+                    //Degree
+                    Picker("Apply For",selection: $manager.meDegree){
+                        ForEach(degreeArray,id:\.self){
+                            Text($0)
+                        }
+                    }.pickerStyle(.segmented).padding(5)
+                    
+                    if manager.meDegree=="Bachelor"{
+                        Section{
+                            VStack{
+                                Text("SAT").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meSat, in: 0...1600,step:1)
+                                Text(String(format: "%.0f", manager.meSat)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                        Section{
+                            VStack{
+                                Text("TOFEL").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meTofel, in: 0...120,step:1)
+                                Text(String(format: "%.0f", manager.meTofel)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                        Section{
+                            VStack{
+                                Text("GPA").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meGPA, in: 0...4,step:0.01)
+                                Text(String(format: "%.2f", manager.meGPA)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                    }else if manager.meDegree=="Master"{
+                        Section{
+                            VStack{
+                                Text("GRE").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meGRE, in: 0...320,step:1)
+                                Text(String(format: "%.0f", manager.meGRE)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                        Section{
+                            VStack{
+                                Text("TOFEL").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meTofel, in: 0...120,step:1)
+                                Text(String(format: "%.0f", manager.meTofel)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                        Section{
+                            VStack{
+                                Text("GPA").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meGPA, in: 0...4,step:0.01)
+                                Text(String(format: "%.2f", manager.meGPA)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                    }else{
+                        Section{
+                            VStack{
+                                Text("TOFEL").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meTofel, in: 0...120,step:1)
+                                Text(String(format: "%.0f", manager.meTofel)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                        Section{
+                            VStack{
+                                Text("GPA").bold().font(.title2).opacity(0.5)
+                                Slider(value: $manager.meGPA, in: 0...4,step:0.01)
+                                Text(String(format: "%.2f", manager.meGPA)).bold().font(.title2).opacity(0.5)
+                            }
+                        }
+                    }
+                }
+                
+                
+                
+                
             
-            List{
-                Section(header: Text("账户信息")){
-                    TextField("添加用户名", text: $username)
-                    TextField("添加邮箱", text: $email)
+            
+            Section(footer: Text("Information will not updated unless you clicked save")){
+                Button(action: {
+                    //save me info
+                    manager.saveMeInfo()
+                    dismiss()
+                }){
+                    HStack{
+                        Spacer()
+                        Text("SAVE")
+                            .foregroundColor(Color.green)
+                        Spacer()
+                    }
                 }
-                Section(header: Text("个人信息")){
-                //    TextField("年龄", text: $userAge)
-                    ZStack{
-                        NavigationLink(destination: AgePicker()) {
-                            NavigationLinkLine(imageName: "clock", color: .blue, title: "年龄")
-                        }.opacity(0.0)
-                        NavigationLinkLine(imageName: "clock", color: .blue, title: "年龄")
-                    }
-                    
-                  
-
-                    
-                    Button(action: {
-                        showingGenderOptions = true
-                    }) {
-                        SettingLine(imageName: "person", color: .blue, title: "性别",option: genderSelection)
-                    }.confirmationDialog("Select Your Gender", isPresented: $showingGenderOptions, titleVisibility: .visible){
-                        Button("男"){
-                            genderSelection = "男"
-                        }
-                        Button("女"){
-                            genderSelection = "女"
-                        }
-                    }
-                    
-                    
-                    
-                    Button(action: {
-                        showingBackgroundOptions = true
-                    }) {
-                        SettingLine(imageName: "graduationcap.circle", color: .blue, title: "当前学历",option: backgroundSelection)
-                    }.confirmationDialog("Select Your Current Education Level", isPresented: $showingBackgroundOptions, titleVisibility: .visible){
-                        Button("初中"){
-                            backgroundSelection = "初中"
-                        }
-                        Button("高中"){
-                            backgroundSelection = "高中"
-                        }
-                        Button("大专"){
-                            backgroundSelection = "大专"
-                        }
-                        Button("本科"){
-                            backgroundSelection = "本科"
-                        }
-                        Button("研究生"){
-                            backgroundSelection = "研究生"
-                        }
-                    }
-                    
-                    DatePicker(selection: $birthday, displayedComponents: .date){
-                        Label("生日日期", systemImage: "gift")
-                    }
-                    
-                    
-                }
-                Section(header: Text("学校信息")){
-                    TextField("学校名称", text: $schoolname)
-                    
-                }
+                .padding(5)
                 
-                Section(footer: Text("保存后将存储账户信息。")){
-                    Button(action: {
-                        dismiss()
-                    }){
-                        HStack{
-                            Spacer()
-                            Text("保存")
-                                .foregroundColor(Color.green)
-                            Spacer()
-                        }
-                    }
-                    .padding(5)
-                    
-                }
-                
-                
-                
-                
-
             }
             
-            //.listStyle(GroupedListStyle())
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button{
-                        dismiss()
-                    }label: {
-                        Label("cancel", systemImage: "arrow.uturn.backward").labelStyle(.iconOnly)
-                    }
+            
+            
+            
+            
+        }
+        
+        //.listStyle(GroupedListStyle())
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing){
+                Button{
+                    dismiss()
+                }label: {
+                    Label("cancel", systemImage: "arrow.uturn.backward").labelStyle(.iconOnly)
                 }
-
-            })
-            .navigationTitle("Account")
-            .navigationBarTitleDisplayMode(.inline)
+            }
             
-            
-            
+        })
+        .navigationTitle("Account")
+        .navigationBarTitleDisplayMode(.inline)
         
-            
-    //    }
         
-                
+        
+        
+        
+        //    }
+        
+        
     }
 }
 

@@ -8,35 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		4307EE64283D6B40005D4818 /* geoLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */; };
+		43141C52285E211300BD20E9 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C35285E211300BD20E9 /* InfoCard.swift */; };
+		43141C53285E211300BD20E9 /* HomeViewInMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C36285E211300BD20E9 /* HomeViewInMeView.swift */; };
+		43141C54285E211300BD20E9 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C37285E211300BD20E9 /* LineGraph.swift */; };
+		43141C55285E211300BD20E9 /* BasicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C38285E211300BD20E9 /* BasicCard.swift */; };
+		43141C56285E211300BD20E9 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3A285E211300BD20E9 /* AnalysisView.swift */; };
+		43141C57285E211300BD20E9 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3B285E211300BD20E9 /* ChartView.swift */; };
+		43141C58285E211300BD20E9 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3C285E211300BD20E9 /* BarView.swift */; };
+		43141C59285E211300BD20E9 /* MedianChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3D285E211300BD20E9 /* MedianChart.swift */; };
+		43141C5A285E211300BD20E9 /* MedianGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3E285E211300BD20E9 /* MedianGraph.swift */; };
+		43141C5B285E211300BD20E9 /* RingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C3F285E211300BD20E9 /* RingCard.swift */; };
+		43141C5C285E211300BD20E9 /* TopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C40285E211300BD20E9 /* TopTab.swift */; };
+		43141C5D285E211300BD20E9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C41285E211300BD20E9 /* CircleImage.swift */; };
+		43141C5E285E211300BD20E9 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C43285E211300BD20E9 /* FavoriteView.swift */; };
+		43141C5F285E211300BD20E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C44285E211300BD20E9 /* Extensions.swift */; };
+		43141C60285E211300BD20E9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C45285E211300BD20E9 /* MeView.swift */; };
+		43141C61285E211300BD20E9 /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = 43141C47285E211300BD20E9 /* DeviceModels.json */; };
+		43141C62285E211300BD20E9 /* changeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C48285E211300BD20E9 /* changeInfoView.swift */; };
+		43141C63285E211300BD20E9 /* SettingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4A285E211300BD20E9 /* SettingLine.swift */; };
+		43141C64285E211300BD20E9 /* AgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4B285E211300BD20E9 /* AgePicker.swift */; };
+		43141C65285E211300BD20E9 /* AddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4C285E211300BD20E9 /* AddInfoView.swift */; };
+		43141C66285E211300BD20E9 /* AddAccountInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */; };
+		43141C67285E211300BD20E9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4E285E211300BD20E9 /* SettingView.swift */; };
+		43141C68285E211300BD20E9 /* ChangeProfileLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */; };
+		43141C69285E211300BD20E9 /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C50285E211300BD20E9 /* SupportEmail.swift */; };
+		43141C6A285E211300BD20E9 /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C51285E211300BD20E9 /* EditProfileButton.swift */; };
 		431CF2F7283814A300953914 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CF2F6283814A300953914 /* BasicUser.swift */; };
 		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
 		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
 		43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D92282CAD6900759F01 /* ScoreGauge.swift */; };
-		4322A7A8285ACEC800B9E47A /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A789285ACEC800B9E47A /* InfoCard.swift */; };
-		4322A7A9285ACEC800B9E47A /* HomeViewInMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A78A285ACEC800B9E47A /* HomeViewInMeView.swift */; };
-		4322A7AA285ACEC800B9E47A /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A78B285ACEC800B9E47A /* LineGraph.swift */; };
-		4322A7AB285ACEC800B9E47A /* BasicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A78C285ACEC800B9E47A /* BasicCard.swift */; };
-		4322A7AC285ACEC800B9E47A /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A78E285ACEC800B9E47A /* AnalysisView.swift */; };
-		4322A7AD285ACEC800B9E47A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A78F285ACEC800B9E47A /* ChartView.swift */; };
-		4322A7AE285ACEC800B9E47A /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A790285ACEC800B9E47A /* BarView.swift */; };
-		4322A7AF285ACEC800B9E47A /* MedianChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A791285ACEC800B9E47A /* MedianChart.swift */; };
-		4322A7B0285ACEC800B9E47A /* MedianGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A792285ACEC800B9E47A /* MedianGraph.swift */; };
-		4322A7B1285ACEC800B9E47A /* RingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A793285ACEC800B9E47A /* RingCard.swift */; };
-		4322A7B2285ACEC800B9E47A /* TopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A794285ACEC800B9E47A /* TopTab.swift */; };
-		4322A7B3285ACEC800B9E47A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A795285ACEC800B9E47A /* CircleImage.swift */; };
-		4322A7B4285ACEC800B9E47A /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A797285ACEC800B9E47A /* FavoriteView.swift */; };
-		4322A7B5285ACEC800B9E47A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A798285ACEC800B9E47A /* Extensions.swift */; };
-		4322A7B6285ACEC800B9E47A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A799285ACEC800B9E47A /* MeView.swift */; };
-		4322A7B7285ACEC800B9E47A /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4322A79B285ACEC800B9E47A /* DeviceModels.json */; };
-		4322A7B8285ACEC800B9E47A /* changeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A79C285ACEC800B9E47A /* changeInfoView.swift */; };
-		4322A7BA285ACEC800B9E47A /* SettingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A79F285ACEC800B9E47A /* SettingLine.swift */; };
-		4322A7BB285ACEC800B9E47A /* AgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A0285ACEC800B9E47A /* AgePicker.swift */; };
-		4322A7BC285ACEC800B9E47A /* AddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A1285ACEC800B9E47A /* AddInfoView.swift */; };
-		4322A7BE285ACEC800B9E47A /* AddAccountInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */; };
-		4322A7BF285ACEC800B9E47A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A4285ACEC800B9E47A /* SettingView.swift */; };
-		4322A7C0285ACEC800B9E47A /* ChangeProfileLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */; };
-		4322A7C1285ACEC800B9E47A /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A6285ACEC800B9E47A /* SupportEmail.swift */; };
-		4322A7C2285ACEC800B9E47A /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A7285ACEC800B9E47A /* EditProfileButton.swift */; };
 		4322A7C7285B9E2D00B9E47A /* FB_MeViewFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */; };
 		432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */; };
 		433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */; };
@@ -91,35 +91,35 @@
 /* Begin PBXFileReference section */
 		2854B8A12757BE5CE622B5F9 /* Pods_GEOApplyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GEOApplyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4307EE63283D6B40005D4818 /* geoLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = geoLaunchScreen.storyboard; sourceTree = "<group>"; };
+		43141C35285E211300BD20E9 /* InfoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		43141C36285E211300BD20E9 /* HomeViewInMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewInMeView.swift; sourceTree = "<group>"; };
+		43141C37285E211300BD20E9 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		43141C38285E211300BD20E9 /* BasicCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCard.swift; sourceTree = "<group>"; };
+		43141C3A285E211300BD20E9 /* AnalysisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		43141C3B285E211300BD20E9 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		43141C3C285E211300BD20E9 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		43141C3D285E211300BD20E9 /* MedianChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianChart.swift; sourceTree = "<group>"; };
+		43141C3E285E211300BD20E9 /* MedianGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianGraph.swift; sourceTree = "<group>"; };
+		43141C3F285E211300BD20E9 /* RingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingCard.swift; sourceTree = "<group>"; };
+		43141C40285E211300BD20E9 /* TopTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTab.swift; sourceTree = "<group>"; };
+		43141C41285E211300BD20E9 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		43141C43285E211300BD20E9 /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		43141C44285E211300BD20E9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		43141C45285E211300BD20E9 /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		43141C47285E211300BD20E9 /* DeviceModels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
+		43141C48285E211300BD20E9 /* changeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoView.swift; sourceTree = "<group>"; };
+		43141C4A285E211300BD20E9 /* SettingLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingLine.swift; sourceTree = "<group>"; };
+		43141C4B285E211300BD20E9 /* AgePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgePicker.swift; sourceTree = "<group>"; };
+		43141C4C285E211300BD20E9 /* AddInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoView.swift; sourceTree = "<group>"; };
+		43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountInfoButton.swift; sourceTree = "<group>"; };
+		43141C4E285E211300BD20E9 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileLine.swift; sourceTree = "<group>"; };
+		43141C50285E211300BD20E9 /* SupportEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
+		43141C51285E211300BD20E9 /* EditProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
 		431CF2F6283814A300953914 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
 		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
 		43213D92282CAD6900759F01 /* ScoreGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreGauge.swift; sourceTree = "<group>"; };
-		4322A789285ACEC800B9E47A /* InfoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
-		4322A78A285ACEC800B9E47A /* HomeViewInMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewInMeView.swift; sourceTree = "<group>"; };
-		4322A78B285ACEC800B9E47A /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
-		4322A78C285ACEC800B9E47A /* BasicCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCard.swift; sourceTree = "<group>"; };
-		4322A78E285ACEC800B9E47A /* AnalysisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
-		4322A78F285ACEC800B9E47A /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
-		4322A790285ACEC800B9E47A /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		4322A791285ACEC800B9E47A /* MedianChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianChart.swift; sourceTree = "<group>"; };
-		4322A792285ACEC800B9E47A /* MedianGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianGraph.swift; sourceTree = "<group>"; };
-		4322A793285ACEC800B9E47A /* RingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingCard.swift; sourceTree = "<group>"; };
-		4322A794285ACEC800B9E47A /* TopTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTab.swift; sourceTree = "<group>"; };
-		4322A795285ACEC800B9E47A /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		4322A797285ACEC800B9E47A /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
-		4322A798285ACEC800B9E47A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		4322A799285ACEC800B9E47A /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
-		4322A79B285ACEC800B9E47A /* DeviceModels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
-		4322A79C285ACEC800B9E47A /* changeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoView.swift; sourceTree = "<group>"; };
-		4322A79F285ACEC800B9E47A /* SettingLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingLine.swift; sourceTree = "<group>"; };
-		4322A7A0285ACEC800B9E47A /* AgePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgePicker.swift; sourceTree = "<group>"; };
-		4322A7A1285ACEC800B9E47A /* AddInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoView.swift; sourceTree = "<group>"; };
-		4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountInfoButton.swift; sourceTree = "<group>"; };
-		4322A7A4285ACEC800B9E47A /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileLine.swift; sourceTree = "<group>"; };
-		4322A7A6285ACEC800B9E47A /* SupportEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
-		4322A7A7285ACEC800B9E47A /* EditProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
 		4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB_MeViewFunc.swift; sourceTree = "<group>"; };
 		432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProgress.swift; sourceTree = "<group>"; };
@@ -185,6 +185,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43141C33285E211300BD20E9 /* MeView */ = {
+			isa = PBXGroup;
+			children = (
+				43141C34285E211300BD20E9 /* Home */,
+				43141C37285E211300BD20E9 /* LineGraph.swift */,
+				43141C38285E211300BD20E9 /* BasicCard.swift */,
+				43141C39285E211300BD20E9 /* Analysis */,
+				43141C40285E211300BD20E9 /* TopTab.swift */,
+				43141C41285E211300BD20E9 /* CircleImage.swift */,
+				43141C42285E211300BD20E9 /* Favorite */,
+				43141C44285E211300BD20E9 /* Extensions.swift */,
+				43141C45285E211300BD20E9 /* MeView.swift */,
+				43141C46285E211300BD20E9 /* MeViewSetting */,
+				43141C51285E211300BD20E9 /* EditProfileButton.swift */,
+			);
+			path = MeView;
+			sourceTree = "<group>";
+		};
+		43141C34285E211300BD20E9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				43141C35285E211300BD20E9 /* InfoCard.swift */,
+				43141C36285E211300BD20E9 /* HomeViewInMeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		43141C39285E211300BD20E9 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				43141C3A285E211300BD20E9 /* AnalysisView.swift */,
+				43141C3B285E211300BD20E9 /* ChartView.swift */,
+				43141C3C285E211300BD20E9 /* BarView.swift */,
+				43141C3D285E211300BD20E9 /* MedianChart.swift */,
+				43141C3E285E211300BD20E9 /* MedianGraph.swift */,
+				43141C3F285E211300BD20E9 /* RingCard.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		43141C42285E211300BD20E9 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				43141C43285E211300BD20E9 /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		43141C46285E211300BD20E9 /* MeViewSetting */ = {
+			isa = PBXGroup;
+			children = (
+				43141C47285E211300BD20E9 /* DeviceModels.json */,
+				43141C48285E211300BD20E9 /* changeInfoView.swift */,
+				43141C49285E211300BD20E9 /* AddInfo */,
+				43141C4E285E211300BD20E9 /* SettingView.swift */,
+				43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */,
+				43141C50285E211300BD20E9 /* SupportEmail.swift */,
+			);
+			path = MeViewSetting;
+			sourceTree = "<group>";
+		};
+		43141C49285E211300BD20E9 /* AddInfo */ = {
+			isa = PBXGroup;
+			children = (
+				43141C4A285E211300BD20E9 /* SettingLine.swift */,
+				43141C4B285E211300BD20E9 /* AgePicker.swift */,
+				43141C4C285E211300BD20E9 /* AddInfoView.swift */,
+				43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */,
+			);
+			path = AddInfo;
+			sourceTree = "<group>";
+		};
 		43213D91282CAD3600759F01 /* ScoreCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,79 +264,6 @@
 				433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */,
 			);
 			path = ScoreCard;
-			sourceTree = "<group>";
-		};
-		4322A787285ACEC800B9E47A /* MeView */ = {
-			isa = PBXGroup;
-			children = (
-				4322A788285ACEC800B9E47A /* Home */,
-				4322A78B285ACEC800B9E47A /* LineGraph.swift */,
-				4322A78C285ACEC800B9E47A /* BasicCard.swift */,
-				4322A78D285ACEC800B9E47A /* Analysis */,
-				4322A794285ACEC800B9E47A /* TopTab.swift */,
-				4322A795285ACEC800B9E47A /* CircleImage.swift */,
-				4322A796285ACEC800B9E47A /* Favorite */,
-				4322A798285ACEC800B9E47A /* Extensions.swift */,
-				4322A799285ACEC800B9E47A /* MeView.swift */,
-				4322A79A285ACEC800B9E47A /* MeViewSetting */,
-				4322A7A7285ACEC800B9E47A /* EditProfileButton.swift */,
-			);
-			name = MeView;
-			path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/8b39eeca930f7bcb41419a009ffbad2c/Message/MessageTemp/a358822f61750c77d83924ea42d9de3e/File/MeView";
-			sourceTree = "<group>";
-		};
-		4322A788285ACEC800B9E47A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				4322A789285ACEC800B9E47A /* InfoCard.swift */,
-				4322A78A285ACEC800B9E47A /* HomeViewInMeView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		4322A78D285ACEC800B9E47A /* Analysis */ = {
-			isa = PBXGroup;
-			children = (
-				4322A78E285ACEC800B9E47A /* AnalysisView.swift */,
-				4322A78F285ACEC800B9E47A /* ChartView.swift */,
-				4322A790285ACEC800B9E47A /* BarView.swift */,
-				4322A791285ACEC800B9E47A /* MedianChart.swift */,
-				4322A792285ACEC800B9E47A /* MedianGraph.swift */,
-				4322A793285ACEC800B9E47A /* RingCard.swift */,
-			);
-			path = Analysis;
-			sourceTree = "<group>";
-		};
-		4322A796285ACEC800B9E47A /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				4322A797285ACEC800B9E47A /* FavoriteView.swift */,
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
-		4322A79A285ACEC800B9E47A /* MeViewSetting */ = {
-			isa = PBXGroup;
-			children = (
-				4322A79B285ACEC800B9E47A /* DeviceModels.json */,
-				4322A79C285ACEC800B9E47A /* changeInfoView.swift */,
-				4322A79E285ACEC800B9E47A /* AddInfo */,
-				4322A7A4285ACEC800B9E47A /* SettingView.swift */,
-				4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */,
-				4322A7A6285ACEC800B9E47A /* SupportEmail.swift */,
-			);
-			path = MeViewSetting;
-			sourceTree = "<group>";
-		};
-		4322A79E285ACEC800B9E47A /* AddInfo */ = {
-			isa = PBXGroup;
-			children = (
-				4322A79F285ACEC800B9E47A /* SettingLine.swift */,
-				4322A7A0285ACEC800B9E47A /* AgePicker.swift */,
-				4322A7A1285ACEC800B9E47A /* AddInfoView.swift */,
-				4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */,
-			);
-			path = AddInfo;
 			sourceTree = "<group>";
 		};
 		4322A7C5285B9DC400B9E47A /* FireBaseFunctions */ = {
@@ -367,7 +366,7 @@
 		4394158A281AF57900ECBF38 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4322A787285ACEC800B9E47A /* MeView */,
+				43141C33285E211300BD20E9 /* MeView */,
 				43941560281AF54900ECBF38 /* ContentView.swift */,
 				43DBB2FF283448E900FED530 /* LoginView */,
 				4394158D281AF66400ECBF38 /* HomeView */,
@@ -558,7 +557,7 @@
 				43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */,
 				432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */,
 				4307EE64283D6B40005D4818 /* geoLaunchScreen.storyboard in Resources */,
-				4322A7B7285ACEC800B9E47A /* DeviceModels.json in Resources */,
+				43141C61285E211300BD20E9 /* DeviceModels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,59 +624,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4322A7BC285ACEC800B9E47A /* AddInfoView.swift in Sources */,
-				4322A7AE285ACEC800B9E47A /* BarView.swift in Sources */,
-				4322A7AB285ACEC800B9E47A /* BasicCard.swift in Sources */,
+				43141C6A285E211300BD20E9 /* EditProfileButton.swift in Sources */,
 				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
-				4322A7AF285ACEC800B9E47A /* MedianChart.swift in Sources */,
 				431CF2F7283814A300953914 /* BasicUser.swift in Sources */,
-				4322A7BB285ACEC800B9E47A /* AgePicker.swift in Sources */,
-				4322A7AD285ACEC800B9E47A /* ChartView.swift in Sources */,
-				4322A7B1285ACEC800B9E47A /* RingCard.swift in Sources */,
+				43141C59285E211300BD20E9 /* MedianChart.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
-				4322A7AA285ACEC800B9E47A /* LineGraph.swift in Sources */,
+				43141C68285E211300BD20E9 /* ChangeProfileLine.swift in Sources */,
 				43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */,
-				4322A7C1285ACEC800B9E47A /* SupportEmail.swift in Sources */,
+				43141C52285E211300BD20E9 /* InfoCard.swift in Sources */,
+				43141C5E285E211300BD20E9 /* FavoriteView.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
 				43E971FC2845546F00607B62 /* SchoolResult.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
-				4322A7C0285ACEC800B9E47A /* ChangeProfileLine.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
-				4322A7A9285ACEC800B9E47A /* HomeViewInMeView.swift in Sources */,
-				4322A7B4285ACEC800B9E47A /* FavoriteView.swift in Sources */,
+				43141C57285E211300BD20E9 /* ChartView.swift in Sources */,
+				43141C5A285E211300BD20E9 /* MedianGraph.swift in Sources */,
 				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,
-				4322A7BF285ACEC800B9E47A /* SettingView.swift in Sources */,
+				43141C62285E211300BD20E9 /* changeInfoView.swift in Sources */,
+				43141C58285E211300BD20E9 /* BarView.swift in Sources */,
 				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
-				4322A7C2285ACEC800B9E47A /* EditProfileButton.swift in Sources */,
-				4322A7BA285ACEC800B9E47A /* SettingLine.swift in Sources */,
-				4322A7B5285ACEC800B9E47A /* Extensions.swift in Sources */,
-				4322A7B6285ACEC800B9E47A /* MeView.swift in Sources */,
-				4322A7AC285ACEC800B9E47A /* AnalysisView.swift in Sources */,
+				43141C5D285E211300BD20E9 /* CircleImage.swift in Sources */,
+				43141C60285E211300BD20E9 /* MeView.swift in Sources */,
 				43941561281AF54900ECBF38 /* ContentView.swift in Sources */,
 				4394159A281B061500ECBF38 /* GEOAppManager.swift in Sources */,
+				43141C5F285E211300BD20E9 /* Extensions.swift in Sources */,
+				43141C67285E211300BD20E9 /* SettingView.swift in Sources */,
 				439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */,
+				43141C66285E211300BD20E9 /* AddAccountInfoButton.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
-				4322A7B0285ACEC800B9E47A /* MedianGraph.swift in Sources */,
+				43141C54285E211300BD20E9 /* LineGraph.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
-				4322A7A8285ACEC800B9E47A /* InfoCard.swift in Sources */,
 				439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */,
+				43141C5B285E211300BD20E9 /* RingCard.swift in Sources */,
 				43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */,
 				43FFDF732842B08100013618 /* FireBaseFunction.swift in Sources */,
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
-				4322A7B2285ACEC800B9E47A /* TopTab.swift in Sources */,
+				43141C5C285E211300BD20E9 /* TopTab.swift in Sources */,
+				43141C69285E211300BD20E9 /* SupportEmail.swift in Sources */,
 				43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */,
+				43141C53285E211300BD20E9 /* HomeViewInMeView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
+				43141C55285E211300BD20E9 /* BasicCard.swift in Sources */,
+				43141C65285E211300BD20E9 /* AddInfoView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
-				4322A7B3285ACEC800B9E47A /* CircleImage.swift in Sources */,
 				43502F85283A83AF00CBB584 /* TextLimter.swift in Sources */,
-				4322A7B8285ACEC800B9E47A /* changeInfoView.swift in Sources */,
+				43141C56285E211300BD20E9 /* AnalysisView.swift in Sources */,
 				43FFDF752842B38800013618 /* SchoolInfo.swift in Sources */,
 				43D082C02843C660004AE379 /* AddProfile.swift in Sources */,
 				4322A7C7285B9E2D00B9E47A /* FB_MeViewFunc.swift in Sources */,
-				4322A7BE285ACEC800B9E47A /* AddAccountInfoButton.swift in Sources */,
+				43141C63285E211300BD20E9 /* SettingLine.swift in Sources */,
+				43141C64285E211300BD20E9 /* AgePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
