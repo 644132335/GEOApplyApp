@@ -17,7 +17,7 @@ struct HomeView: View {
                         HStack{
                             Spacer().frame(width:manager.screenWidth*0.05)
                             Image(systemName: "person.text.rectangle.fill").resizable().frame(width: manager.screenWidth*0.1, height: manager.screenWidth*0.08).foregroundColor(manager.themeColor).padding(2)
-                            Text("My Info").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
+                            Text("My Profile").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
                             Spacer()
                         }
                         
@@ -54,16 +54,6 @@ struct HomeView: View {
                                 ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!, tofel: i.tofel!).padding(3)
                             }.padding(3)
                         }
-                        
-                        //followed cards
-                        Rectangle().fill(.blue).frame(width: manager.screenWidth, height: 1)
-                        ForEach(manager.followedUsers, id:\.self){i in
-                            NavigationLink(destination: ApplyDetail(name: i.name ?? "unnamed", school: i.school ?? "unnamed", nation: i.nation ?? "unnamed", major: i.major ?? "unnamed", sat: i.sat!, tofel: i.tofel!, gpa: i.gpa!, intro: i.intro ?? "Lazy and did not write anything",view: i.view ?? 0,follow:i.follow ?? 0,applyinfo: i.applyinfo ?? [],uid: i.userid ?? "")){
-                                ApplyInfoCard(name: i.name ?? "unnamed", nation: i.nation ?? "unnamed", school: i.school ?? "unnamed", gpa: i.gpa!, sat: i.sat!, tofel: i.tofel!).padding(3)
-                            }.padding(3)
-                        }
-                        
-                        
                     }
                     
                 }

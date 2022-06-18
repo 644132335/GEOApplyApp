@@ -107,7 +107,6 @@ extension AppManager{
         Task{
             await self.getUser()
         }
-        //await self.getUser()
         
     }
     
@@ -219,9 +218,29 @@ extension AppManager{
             let username = data?["username"] as? String ?? ""
             let profile = data?["profile"] as? Bool ?? false
             let follow = data?["followed"] as? [String] ?? []
+            let school = data?["school"] as? String ?? ""
+            let gender = data?["gender"] as? String ?? ""
+            let age = data?["age"] as? Int ?? 0
+            let applyDegree = data?["applyDegree"] as? String ?? ""
+            let gre = data?["gre"] as? Double ?? 0.0
+            let sat = data?["sat"] as? Double ?? 0.0
+            let tofel = data?["tofel"] as? Double ?? 0.0
+            let gpa = data?["gpa"] as? Double ?? 0.0
             DispatchQueue.main.async {
-                self.currentUser=BasicUser(email: email, userid: uid, name: username, school: "", nation: "", major: "", sat: 0, tofel: 0, gpa: 0,profile: profile)
+                self.currentUser=BasicUser(email: email, userid: uid, name: username, school: school, nation: "", major: "", sat: sat, tofel: tofel, gpa: gpa,gre:gre,profile: profile,applyDegree:applyDegree,gender: gender,age:age)
                 self.followed=follow
+                
+                //populate setting
+                self.meGPA=self.currentUser?.gpa ?? 0.0
+                self.meUsername=self.currentUser?.name ?? ""
+                self.meEmail=self.currentUser?.email ?? ""
+                self.meAge=self.currentUser?.age ?? 0
+                self.meGender=self.currentUser?.gender ?? ""
+                self.meDegree=self.currentUser?.applyDegree ?? ""
+                self.meSchool=self.currentUser?.school ?? ""
+                self.meSat=self.currentUser?.sat ?? 0.0
+                self.meTofel=self.currentUser?.tofel ?? 0.0
+                self.meGRE=self.currentUser?.gre ?? 0.0
             }
             
         }catch{

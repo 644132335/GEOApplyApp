@@ -36,15 +36,15 @@ struct ApplyInfoCard: View {
                
                 VStack{
                     HStack{
-                        Text(name).foregroundColor(.black.opacity(0.8)).bold()
+                        Text(name).foregroundColor(.black.opacity(0.8)).bold().lineLimit(1)
                         Spacer()
                     }
                     HStack{
-                        Text(nation).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                        Text(nation).foregroundColor(.black.opacity(0.6)).font(Font.footnote).lineLimit(1)
                         Spacer()
                     }
                     HStack{
-                        Text(school).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                        Text(school).foregroundColor(.black.opacity(0.6)).font(Font.footnote).lineLimit(1)
                         Spacer()
                     }
                     

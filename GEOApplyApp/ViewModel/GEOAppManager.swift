@@ -19,6 +19,7 @@ class AppManager:ObservableObject{
     let TofelGradientColor = LinearGradient(colors: [Color.purple.opacity(0.4),Color.red.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
     let GPAGradientColor = LinearGradient(colors: [Color.yellow.opacity(0.4),Color.orange.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
     let LoginbuttonColor = LinearGradient(colors: [Color.blue.opacity(0.4),Color.green.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
+    let GREGradientColor = LinearGradient(colors: [Color.purple.opacity(0.4),Color.blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
     let screenHeight = UIScreen.main.bounds.height
     let screenWidth = UIScreen.main.bounds.width
     let backgroundColor = Color("background")
@@ -60,6 +61,18 @@ class AppManager:ObservableObject{
     @Published var UsrAppliedSchool="Brown University"
     @Published var UsrSchoolResult="accepted"
     
+    //meView Info
+    @Published var meUsername=""
+    @Published var meEmail=""
+    @Published var meAge=0
+    @Published var meGender=""
+    @Published var meDegree=""
+    @Published var meSchool=""
+    @Published var meSat=0.0
+    @Published var meTofel=0.0
+    @Published var meGPA=0.0
+    @Published var meGRE=0.0
+
     //app enums
     enum Page{
         case login

@@ -21,10 +21,10 @@ struct ScoreProgress: View {
             VStack{
                 Text(title).bold()
                 ZStack(alignment: .leading) {
-                    Rectangle().frame(width: totalwidth , height: 15)
+                    Rectangle().frame(width: manager.screenWidth*0.6 , height: manager.screenWidth*0.05)
                         .opacity(0.15)
                         .foregroundColor(Color.gray)
-                    Rectangle().frame(width: (cur/max)*totalwidth, height: 15)
+                    Rectangle().frame(width: (cur/max)*manager.screenWidth*0.6, height: manager.screenWidth*0.05)
                         .foregroundStyle(gradientColor)
                 }.cornerRadius(45.0)
                 if showDecimal{

@@ -29,16 +29,15 @@
 		4322A7B6285ACEC800B9E47A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A799285ACEC800B9E47A /* MeView.swift */; };
 		4322A7B7285ACEC800B9E47A /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4322A79B285ACEC800B9E47A /* DeviceModels.json */; };
 		4322A7B8285ACEC800B9E47A /* changeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A79C285ACEC800B9E47A /* changeInfoView.swift */; };
-		4322A7B9285ACEC800B9E47A /* CredentialsLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A79D285ACEC800B9E47A /* CredentialsLoginView.swift */; };
 		4322A7BA285ACEC800B9E47A /* SettingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A79F285ACEC800B9E47A /* SettingLine.swift */; };
 		4322A7BB285ACEC800B9E47A /* AgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A0285ACEC800B9E47A /* AgePicker.swift */; };
 		4322A7BC285ACEC800B9E47A /* AddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A1285ACEC800B9E47A /* AddInfoView.swift */; };
-		4322A7BD285ACEC800B9E47A /* NavigationLinkLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A2285ACEC800B9E47A /* NavigationLinkLine.swift */; };
 		4322A7BE285ACEC800B9E47A /* AddAccountInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */; };
 		4322A7BF285ACEC800B9E47A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A4285ACEC800B9E47A /* SettingView.swift */; };
 		4322A7C0285ACEC800B9E47A /* ChangeProfileLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */; };
 		4322A7C1285ACEC800B9E47A /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A6285ACEC800B9E47A /* SupportEmail.swift */; };
 		4322A7C2285ACEC800B9E47A /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7A7285ACEC800B9E47A /* EditProfileButton.swift */; };
+		4322A7C7285B9E2D00B9E47A /* FB_MeViewFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */; };
 		432BCA6C28353F6D000C5F2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */; };
 		433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */; };
 		433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF99282DB73C00F4E9C4 /* EssaySec.swift */; };
@@ -65,7 +64,6 @@
 		43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C642841AB5700B4FE90 /* accountImagePicker.swift */; };
 		43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2F82832B27700FED530 /* UserInfo.swift */; };
 		43DBB2FB2832B3D500FED530 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FA2832B3D500FED530 /* ThemeData.swift */; };
-		43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB2FD2832C13A00FED530 /* AddInfo.swift */; };
 		43DBB301283448FC00FED530 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB300283448FC00FED530 /* LoginView.swift */; };
 		43E971FC2845546F00607B62 /* SchoolResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E971FB2845546F00607B62 /* SchoolResult.swift */; };
 		43FFDF732842B08100013618 /* FireBaseFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FFDF722842B08100013618 /* FireBaseFunction.swift */; };
@@ -114,16 +112,15 @@
 		4322A799285ACEC800B9E47A /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		4322A79B285ACEC800B9E47A /* DeviceModels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
 		4322A79C285ACEC800B9E47A /* changeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoView.swift; sourceTree = "<group>"; };
-		4322A79D285ACEC800B9E47A /* CredentialsLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsLoginView.swift; sourceTree = "<group>"; };
 		4322A79F285ACEC800B9E47A /* SettingLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingLine.swift; sourceTree = "<group>"; };
 		4322A7A0285ACEC800B9E47A /* AgePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgePicker.swift; sourceTree = "<group>"; };
 		4322A7A1285ACEC800B9E47A /* AddInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoView.swift; sourceTree = "<group>"; };
-		4322A7A2285ACEC800B9E47A /* NavigationLinkLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkLine.swift; sourceTree = "<group>"; };
 		4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountInfoButton.swift; sourceTree = "<group>"; };
 		4322A7A4285ACEC800B9E47A /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileLine.swift; sourceTree = "<group>"; };
 		4322A7A6285ACEC800B9E47A /* SupportEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
 		4322A7A7285ACEC800B9E47A /* EditProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
+		4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB_MeViewFunc.swift; sourceTree = "<group>"; };
 		432BCA6B28353F6D000C5F2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProgress.swift; sourceTree = "<group>"; };
 		433DDF99282DB73C00F4E9C4 /* EssaySec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssaySec.swift; sourceTree = "<group>"; };
@@ -154,7 +151,6 @@
 		43D94C662841ABE100B4FE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43DBB2F82832B27700FED530 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		43DBB2FA2832B3D500FED530 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
-		43DBB2FD2832C13A00FED530 /* AddInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfo.swift; sourceTree = "<group>"; };
 		43DBB300283448FC00FED530 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		43E971FB2845546F00607B62 /* SchoolResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolResult.swift; sourceTree = "<group>"; };
 		43FFDF722842B08100013618 /* FireBaseFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseFunction.swift; sourceTree = "<group>"; };
@@ -252,7 +248,6 @@
 			children = (
 				4322A79B285ACEC800B9E47A /* DeviceModels.json */,
 				4322A79C285ACEC800B9E47A /* changeInfoView.swift */,
-				4322A79D285ACEC800B9E47A /* CredentialsLoginView.swift */,
 				4322A79E285ACEC800B9E47A /* AddInfo */,
 				4322A7A4285ACEC800B9E47A /* SettingView.swift */,
 				4322A7A5285ACEC800B9E47A /* ChangeProfileLine.swift */,
@@ -267,10 +262,18 @@
 				4322A79F285ACEC800B9E47A /* SettingLine.swift */,
 				4322A7A0285ACEC800B9E47A /* AgePicker.swift */,
 				4322A7A1285ACEC800B9E47A /* AddInfoView.swift */,
-				4322A7A2285ACEC800B9E47A /* NavigationLinkLine.swift */,
 				4322A7A3285ACEC800B9E47A /* AddAccountInfoButton.swift */,
 			);
 			path = AddInfo;
+			sourceTree = "<group>";
+		};
+		4322A7C5285B9DC400B9E47A /* FireBaseFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				43FFDF722842B08100013618 /* FireBaseFunction.swift */,
+				4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */,
+			);
+			path = FireBaseFunctions;
 			sourceTree = "<group>";
 		};
 		43941552281AF54900ECBF38 = {
@@ -353,7 +356,7 @@
 			children = (
 				439DEFD22839712D002824D7 /* TopTapManager.swift */,
 				43941599281B061500ECBF38 /* GEOAppManager.swift */,
-				43FFDF722842B08100013618 /* FireBaseFunction.swift */,
+				4322A7C5285B9DC400B9E47A /* FireBaseFunctions */,
 				43D94C622841AAF300B4FE90 /* ImagePicker.swift */,
 				43502F84283A83AF00CBB584 /* TextLimter.swift */,
 				43DBB2FA2832B3D500FED530 /* ThemeData.swift */,
@@ -410,7 +413,6 @@
 		43DBB2FC2832C12200FED530 /* AddInfoPage */ = {
 			isa = PBXGroup;
 			children = (
-				43DBB2FD2832C13A00FED530 /* AddInfo.swift */,
 				43D082BF2843C660004AE379 /* AddProfile.swift */,
 			);
 			path = AddInfoPage;
@@ -628,7 +630,6 @@
 				4322A7AB285ACEC800B9E47A /* BasicCard.swift in Sources */,
 				43207EF628355FA0007C9985 /* SignupView.swift in Sources */,
 				4322A7AF285ACEC800B9E47A /* MedianChart.swift in Sources */,
-				4322A7BD285ACEC800B9E47A /* NavigationLinkLine.swift in Sources */,
 				431CF2F7283814A300953914 /* BasicUser.swift in Sources */,
 				4322A7BB285ACEC800B9E47A /* AgePicker.swift in Sources */,
 				4322A7AD285ACEC800B9E47A /* ChartView.swift in Sources */,
@@ -650,7 +651,6 @@
 				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
 				4322A7C2285ACEC800B9E47A /* EditProfileButton.swift in Sources */,
 				4322A7BA285ACEC800B9E47A /* SettingLine.swift in Sources */,
-				4322A7B9285ACEC800B9E47A /* CredentialsLoginView.swift in Sources */,
 				4322A7B5285ACEC800B9E47A /* Extensions.swift in Sources */,
 				4322A7B6285ACEC800B9E47A /* MeView.swift in Sources */,
 				4322A7AC285ACEC800B9E47A /* AnalysisView.swift in Sources */,
@@ -661,7 +661,6 @@
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
 				4322A7B0285ACEC800B9E47A /* MedianGraph.swift in Sources */,
-				43DBB2FE2832C13A00FED530 /* AddInfo.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
 				4322A7A8285ACEC800B9E47A /* InfoCard.swift in Sources */,
 				439415A1281C4BE600ECBF38 /* IntroSec.swift in Sources */,
@@ -677,6 +676,7 @@
 				4322A7B8285ACEC800B9E47A /* changeInfoView.swift in Sources */,
 				43FFDF752842B38800013618 /* SchoolInfo.swift in Sources */,
 				43D082C02843C660004AE379 /* AddProfile.swift in Sources */,
+				4322A7C7285B9E2D00B9E47A /* FB_MeViewFunc.swift in Sources */,
 				4322A7BE285ACEC800B9E47A /* AddAccountInfoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
