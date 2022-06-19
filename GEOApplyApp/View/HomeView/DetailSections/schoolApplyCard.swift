@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SDWebImageSwiftUI
 struct schoolApplyCard: View {
     @EnvironmentObject var manager : AppManager
     var result : String
@@ -16,11 +16,13 @@ struct schoolApplyCard: View {
     var body: some View {
         if result == "accepted"{
             VStack{
-                AsyncImage(url: URL(string: schoolImageURL)) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
-                }
+                WebImage(url: URL(string: schoolImageURL))
+                .resizable()
+//                AsyncImage(url: URL(string: schoolImageURL)) { image in
+//                    image.resizable()
+//                } placeholder: {
+//                    ProgressView()
+//                }
                 .frame(width: manager.screenWidth*0.15, height: manager.screenWidth*0.15)
                 .padding(5)
                 

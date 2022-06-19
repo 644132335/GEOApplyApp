@@ -9,4 +9,5 @@ target 'GEOApplyApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  platform :ios, '15.0'
 end
