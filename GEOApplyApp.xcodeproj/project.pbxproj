@@ -24,15 +24,15 @@
 		43141C5F285E211300BD20E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C44285E211300BD20E9 /* Extensions.swift */; };
 		43141C60285E211300BD20E9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C45285E211300BD20E9 /* MeView.swift */; };
 		43141C61285E211300BD20E9 /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = 43141C47285E211300BD20E9 /* DeviceModels.json */; };
-		43141C62285E211300BD20E9 /* changeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C48285E211300BD20E9 /* changeInfoView.swift */; };
 		43141C63285E211300BD20E9 /* SettingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4A285E211300BD20E9 /* SettingLine.swift */; };
-		43141C64285E211300BD20E9 /* AgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4B285E211300BD20E9 /* AgePicker.swift */; };
 		43141C65285E211300BD20E9 /* AddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4C285E211300BD20E9 /* AddInfoView.swift */; };
 		43141C66285E211300BD20E9 /* AddAccountInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */; };
 		43141C67285E211300BD20E9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4E285E211300BD20E9 /* SettingView.swift */; };
-		43141C68285E211300BD20E9 /* ChangeProfileLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */; };
-		43141C69285E211300BD20E9 /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C50285E211300BD20E9 /* SupportEmail.swift */; };
 		43141C6A285E211300BD20E9 /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C51285E211300BD20E9 /* EditProfileButton.swift */; };
+		43141C6D285E9AB700BD20E9 /* ChangeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C6C285E9AB700BD20E9 /* ChangeEmailView.swift */; };
+		43141C6F285E9B8200BD20E9 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C6E285E9B8200BD20E9 /* ChangePassword.swift */; };
+		43141C71285E9BEE00BD20E9 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C70285E9BEE00BD20E9 /* FeedbackView.swift */; };
+		43141C74285EAFA400BD20E9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 43141C73285EAFA400BD20E9 /* SDWebImageSwiftUI */; };
 		431CF2F7283814A300953914 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CF2F6283814A300953914 /* BasicUser.swift */; };
 		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
 		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
@@ -107,15 +107,14 @@
 		43141C44285E211300BD20E9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		43141C45285E211300BD20E9 /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		43141C47285E211300BD20E9 /* DeviceModels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
-		43141C48285E211300BD20E9 /* changeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoView.swift; sourceTree = "<group>"; };
 		43141C4A285E211300BD20E9 /* SettingLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingLine.swift; sourceTree = "<group>"; };
-		43141C4B285E211300BD20E9 /* AgePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgePicker.swift; sourceTree = "<group>"; };
 		43141C4C285E211300BD20E9 /* AddInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoView.swift; sourceTree = "<group>"; };
 		43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountInfoButton.swift; sourceTree = "<group>"; };
 		43141C4E285E211300BD20E9 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileLine.swift; sourceTree = "<group>"; };
-		43141C50285E211300BD20E9 /* SupportEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
 		43141C51285E211300BD20E9 /* EditProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
+		43141C6C285E9AB700BD20E9 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
+		43141C6E285E9B8200BD20E9 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		43141C70285E9BEE00BD20E9 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		431CF2F6283814A300953914 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
 		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
@@ -164,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43141C74285EAFA400BD20E9 /* SDWebImageSwiftUI in Frameworks */,
 				6D46D950F487E9CC1D807752 /* Pods_GEOApplyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,11 +237,9 @@
 			isa = PBXGroup;
 			children = (
 				43141C47285E211300BD20E9 /* DeviceModels.json */,
-				43141C48285E211300BD20E9 /* changeInfoView.swift */,
 				43141C49285E211300BD20E9 /* AddInfo */,
 				43141C4E285E211300BD20E9 /* SettingView.swift */,
-				43141C4F285E211300BD20E9 /* ChangeProfileLine.swift */,
-				43141C50285E211300BD20E9 /* SupportEmail.swift */,
+				43141C6B285E9A9000BD20E9 /* ChangeSettingSubView */,
 			);
 			path = MeViewSetting;
 			sourceTree = "<group>";
@@ -250,11 +248,20 @@
 			isa = PBXGroup;
 			children = (
 				43141C4A285E211300BD20E9 /* SettingLine.swift */,
-				43141C4B285E211300BD20E9 /* AgePicker.swift */,
 				43141C4C285E211300BD20E9 /* AddInfoView.swift */,
 				43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */,
 			);
 			path = AddInfo;
+			sourceTree = "<group>";
+		};
+		43141C6B285E9A9000BD20E9 /* ChangeSettingSubView */ = {
+			isa = PBXGroup;
+			children = (
+				43141C6C285E9AB700BD20E9 /* ChangeEmailView.swift */,
+				43141C70285E9BEE00BD20E9 /* FeedbackView.swift */,
+				43141C6E285E9B8200BD20E9 /* ChangePassword.swift */,
+			);
+			path = ChangeSettingSubView;
 			sourceTree = "<group>";
 		};
 		43213D91282CAD3600759F01 /* ScoreCard */ = {
@@ -462,6 +469,7 @@
 			);
 			name = GEOApplyApp;
 			packageProductDependencies = (
+				43141C73285EAFA400BD20E9 /* SDWebImageSwiftUI */,
 			);
 			productName = GEOApplyApp;
 			productReference = 4394155B281AF54900ECBF38 /* GEOApplyApp.app */;
@@ -536,6 +544,7 @@
 			);
 			mainGroup = 43941552281AF54900ECBF38;
 			packageReferences = (
+				43141C72285EAFA400BD20E9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 4394155C281AF54900ECBF38 /* Products */;
 			projectDirPath = "";
@@ -630,7 +639,6 @@
 				43141C59285E211300BD20E9 /* MedianChart.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
-				43141C68285E211300BD20E9 /* ChangeProfileLine.swift in Sources */,
 				43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */,
 				43141C52285E211300BD20E9 /* InfoCard.swift in Sources */,
 				43141C5E285E211300BD20E9 /* FavoriteView.swift in Sources */,
@@ -641,7 +649,6 @@
 				43141C57285E211300BD20E9 /* ChartView.swift in Sources */,
 				43141C5A285E211300BD20E9 /* MedianGraph.swift in Sources */,
 				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,
-				43141C62285E211300BD20E9 /* changeInfoView.swift in Sources */,
 				43141C58285E211300BD20E9 /* BarView.swift in Sources */,
 				4394159C281B09EF00ECBF38 /* ApplyInfoCard.swift in Sources */,
 				43141C5D285E211300BD20E9 /* CircleImage.swift in Sources */,
@@ -651,9 +658,11 @@
 				43141C5F285E211300BD20E9 /* Extensions.swift in Sources */,
 				43141C67285E211300BD20E9 /* SettingView.swift in Sources */,
 				439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */,
+				43141C71285E9BEE00BD20E9 /* FeedbackView.swift in Sources */,
 				43141C66285E211300BD20E9 /* AddAccountInfoButton.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
+				43141C6F285E9B8200BD20E9 /* ChangePassword.swift in Sources */,
 				433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */,
 				43141C54285E211300BD20E9 /* LineGraph.swift in Sources */,
 				4394159E281B19E300ECBF38 /* ApplyDetail.swift in Sources */,
@@ -663,10 +672,10 @@
 				43FFDF732842B08100013618 /* FireBaseFunction.swift in Sources */,
 				43941598281AF6CE00ECBF38 /* CommunityView.swift in Sources */,
 				43141C5C285E211300BD20E9 /* TopTab.swift in Sources */,
-				43141C69285E211300BD20E9 /* SupportEmail.swift in Sources */,
 				43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */,
 				43141C53285E211300BD20E9 /* HomeViewInMeView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
+				43141C6D285E9AB700BD20E9 /* ChangeEmailView.swift in Sources */,
 				43141C55285E211300BD20E9 /* BasicCard.swift in Sources */,
 				43141C65285E211300BD20E9 /* AddInfoView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,
@@ -676,7 +685,6 @@
 				43D082C02843C660004AE379 /* AddProfile.swift in Sources */,
 				4322A7C7285B9E2D00B9E47A /* FB_MeViewFunc.swift in Sources */,
 				43141C63285E211300BD20E9 /* SettingLine.swift in Sources */,
-				43141C64285E211300BD20E9 /* AgePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,6 +1045,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43141C72285EAFA400BD20E9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43141C73285EAFA400BD20E9 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43141C72285EAFA400BD20E9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43941553281AF54900ECBF38 /* Project object */;
 }

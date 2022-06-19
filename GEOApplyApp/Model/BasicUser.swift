@@ -22,5 +22,6 @@ struct BasicUser : Codable,Identifiable,Hashable{
     var applyDegree:String?
     var gender:String?
     var age:Int?
+    var avatarImageUrl:String?
     var id=UUID()
 }

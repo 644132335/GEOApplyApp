@@ -27,6 +27,7 @@ struct AddInfoView: View {
         //    NavigationView{
         
         Form{
+            // user info
             Section(header: Text("User Information")){
                 TextField("Username", text: $manager.meUsername)
                 TextField("Email", text: $manager.meEmail)

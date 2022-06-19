@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class AppManager:ObservableObject{
     
@@ -24,6 +25,8 @@ class AppManager:ObservableObject{
     let screenWidth = UIScreen.main.bounds.width
     let backgroundColor = Color("background")
     
+    //defualt image url
+    let DefaultAvatarUrl="https://firebasestorage.googleapis.com/v0/b/geo-application-78cca.appspot.com/o/appstore.png?alt=media&token=f32e0fa7-9397-4b5e-bad3-482428a5066b"
     //****************************************************Storage and functions*******************************************
     //state variables
     @Published var users=[UserInfo]()
@@ -96,6 +99,8 @@ class AppManager:ObservableObject{
     //Firebase local variables
     let auth = Auth.auth()
     let db = Firestore.firestore()
+    let storage = Storage.storage()
+    
     var isSignedIn:Bool{
         return auth.currentUser != nil
     }

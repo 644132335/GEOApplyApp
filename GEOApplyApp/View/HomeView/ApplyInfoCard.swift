@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ApplyInfoCard: View {
     @EnvironmentObject var manager : AppManager
@@ -15,18 +16,18 @@ struct ApplyInfoCard: View {
     var gpa:Double
     var sat:Double
     var tofel:Double
+    var avatarURL:String
+    
     var body: some View {
         VStack{
             HStack{
                 HStack{
                     
                 }
-                Image("DefaultAvatar")
+                WebImage(url: URL(string: avatarURL))
                     .resizable()
-                    .scaledToFit()
-                
                     .clipShape(Circle())
-                    .frame(width:manager.screenWidth*0.2, height: manager.screenWidth*0.2)
+                    .frame(width:manager.screenWidth*0.17, height: manager.screenWidth*0.17)
                     .overlay{
                         Circle().stroke(lineWidth:3).foregroundStyle(manager.LoginbuttonColor)
                     }.shadow(radius: 3)
@@ -66,6 +67,6 @@ struct ApplyInfoCard: View {
 }
 struct ApplyInfoCard_preview: PreviewProvider {
     static var previews: some View {
-        ApplyInfoCard(name: "dasdasd", nation: "China", school: "jdklsajdklasjldjdlskad", gpa: 3.2, sat: 1100.0, tofel: 110.0).environmentObject(AppManager())
+        ApplyInfoCard(name: "dasdasd", nation: "China", school: "jdklsajdklasjldjdlskad", gpa: 3.2, sat: 1100.0, tofel: 110.0,avatarURL:AppManager().DefaultAvatarUrl).environmentObject(AppManager())
     }
 }

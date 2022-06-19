@@ -226,8 +226,9 @@ extension AppManager{
             let sat = data?["sat"] as? Double ?? 0.0
             let tofel = data?["tofel"] as? Double ?? 0.0
             let gpa = data?["gpa"] as? Double ?? 0.0
+            let avatarImage=data?["userImageUrl"] as? String ?? self.DefaultAvatarUrl
             DispatchQueue.main.async {
-                self.currentUser=BasicUser(email: email, userid: uid, name: username, school: school, nation: "", major: "", sat: sat, tofel: tofel, gpa: gpa,gre:gre,profile: profile,applyDegree:applyDegree,gender: gender,age:age)
+                self.currentUser=BasicUser(email: email, userid: uid, name: username, school: school, nation: "", major: "", sat: sat, tofel: tofel, gpa: gpa,gre:gre,profile: profile,applyDegree:applyDegree,gender: gender,age:age,avatarImageUrl: avatarImage)
                 self.followed=follow
                 
                 //populate setting
@@ -266,12 +267,13 @@ extension AppManager{
             let view = data?["view"] as? Int ?? 0
             let follow = data?["follow"] as? Int ?? 0
             let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
+            let imageurl = data?["userImageUrl"] as? String ?? self.DefaultAvatarUrl
             var applyinfos:[schoolReslt]=[]
             for i in applyinfo{
                 applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
             }
             applyinfos=self.sortSchools(applyinfo: applyinfos)
-            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos)
+            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl)
             
             if self.currentUser?.profile==true{
                 self.UsrSchool=self.currentUserInfoCard?.school ?? ""
@@ -309,12 +311,15 @@ extension AppManager{
                     let view = data["view"] as? Int ?? 0
                     let follow = data["follow"] as? Int ?? 0
                     let applyinfo = data["applyinfo"] as? [[String:String]] ?? []
+                    let imageurl = data["userImageUrl"] as? String ?? self.DefaultAvatarUrl
+                    
                     var applyinfos:[schoolReslt]=[]
+
                     for i in applyinfo{
                         applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                     }
                     applyinfos=self.sortSchools(applyinfo: applyinfos)
-                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos))
+                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl))
                 }
                 
             }
@@ -342,12 +347,15 @@ extension AppManager{
                 let view = data?["view"] as? Int ?? 0
                 let follow = data?["follow"] as? Int ?? 0
                 let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
+                let imageurl = data?["userImageUrl"] as? String ?? self.DefaultAvatarUrl
+                
+                
                 var applyinfos:[schoolReslt]=[]
                 for i in applyinfo{
                     applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                 }
                 applyinfos=self.sortSchools(applyinfo: applyinfos)
-                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos)
+                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl)
                 DispatchQueue.main.async {
                     self.followedUsers.append(followedUser)
                 }

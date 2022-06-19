@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SDWebImageSwiftUI
 struct MeView: View {
     @EnvironmentObject var manager : AppManager
     @State private var showAddInfoView = false
@@ -21,20 +21,8 @@ struct MeView: View {
                                     manager.changeAcountImage = true
                                     manager.openConfirmationDialog = true
                                 }, label: {
-                                    if manager.changeAcountImage {
-                                        Image(uiImage: manager.imageSelected)
-                                            .resizable()
-                                            .clipShape(Circle())
-                                            .frame(width:manager.screenWidth*0.27, height: manager.screenHeight*0.27)
-                                            .overlay{
-                                                Circle().stroke(.white, lineWidth:1)
-                                            }
-                                            .shadow(radius: 7)
-                                        
-                                    }else{
-                                        CircleImage()
-                                    }
-                                })
+                                    CircleImage()
+                                }).padding(EdgeInsets(top: manager.screenWidth*0.1, leading: 0, bottom: manager.screenWidth*0.0, trailing: 0))
 
                                 .confirmationDialog("Alubms/Camera", isPresented:$manager.openConfirmationDialog, titleVisibility: .visible){
                                         Button(action: {
@@ -56,7 +44,7 @@ struct MeView: View {
                                     .font(.body)
                                     .fontWeight(.bold)
                                     .lineLimit(1)
-                                Spacer().frame(height: manager.screenWidth*0.04)
+                                Spacer().frame(height: manager.screenWidth*0.02)
                                 Group{
                                     HStack{
                                         Text(manager.currentUser?.email ?? "Unknown").font(.caption)
@@ -66,30 +54,38 @@ struct MeView: View {
                                         Text(manager.currentUser?.school ?? "Unknown").font(.caption)
                                             .fontWeight(.light)
                                     }.lineLimit(1)
-                                    HStack{
-                                        Text("\(manager.currentUser?.age ?? 0) years old").font(.caption)
-                                            .fontWeight(.light)
-                                    }.lineLimit(1)
-                                    HStack{
-                                        Text(manager.currentUser?.gender ?? "Unknown").font(.caption)
-                                            .fontWeight(.light)
-                                    }.lineLimit(1)
+                                    
                                 }
-                                
-                            }
+                            }.padding(EdgeInsets(top: manager.screenWidth*0.1, leading: 0, bottom: manager.screenWidth*0.0, trailing: 0))
                             
                             Spacer()
-                            
-                            
                         
-                        
-                        
-                        }.fullScreenCover(isPresented: $manager.showPicker, onDismiss: nil) {
+                        }.fullScreenCover(isPresented: $manager.showPicker, onDismiss: {manager.saveAvatar()}) {
                             ImagePicker(selectedImage: $manager.imageSelected, sourceType: manager.source == .library ? .photoLibrary : .camera)
                                 }
                         .padding(.horizontal)
                       //  .padding(.vertical)
                         
+                        HStack{
+                            HStack{
+                                Text("\(manager.currentUser?.age ?? 0) years old").font(.caption)
+                                    .fontWeight(.light)
+                                    .padding(manager.screenWidth*0.02)
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.gray).opacity(0.2)
+                                            )
+                            }
+                            .lineLimit(1)
+                            HStack{
+                                Text(manager.currentUser?.gender ?? "Unknown").font(.caption)
+                                    .fontWeight(.light)
+                                    .padding(manager.screenWidth*0.02)
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.gray).opacity(0.2)
+                                            )
+                            }.lineLimit(1)
+                            Spacer()
+                        }.padding(EdgeInsets(top: 0, leading: manager.screenWidth*0.05, bottom: 0, trailing: manager.screenWidth*0.05))
                         
                         HStack{
                             Group{
@@ -163,6 +159,6 @@ struct MeView: View {
 
 struct MeView_Previews: PreviewProvider {
     static var previews: some View {
-        MeView()
+        MeView().environmentObject(AppManager())
     }
 }

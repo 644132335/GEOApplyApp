@@ -21,5 +21,6 @@ struct UserInfo : Codable,Identifiable,Hashable{
     var view:Int?
     var follow:Int?
     var applyinfo:[schoolReslt]?
+    var avatarImageURL:String?
     var id=UUID()
 }

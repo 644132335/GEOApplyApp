@@ -60,7 +60,7 @@ struct MedianChart: View {
                     
                 }
                 if pickerSelected2 == 1{
-                    MedianGraph(max: 320, median: manager.currentUser?.gre ?? 0.0,text: "       You: ",  gradientColor: manager.satGradientColor, showDecimal: false)
+                    MedianGraph(max: 320, median: manager.currentUser?.gre ?? 0.0,text: "       You: ",  gradientColor: manager.GREGradientColor, showDecimal: false)
                     MedianGraph(max: 320, median: 310,text: "Median: ",  gradientColor: manager.GREGradientColor, showDecimal: false)
                     
                     

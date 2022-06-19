@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ApplyDetail: View {
     @EnvironmentObject var manager : AppManager
@@ -21,6 +22,8 @@ struct ApplyDetail: View {
     var follow:Int
     var applyinfo:[schoolReslt]
     var uid:String
+    var avatarURL:String
+    
     var body: some View {
         ZStack{
             
@@ -29,7 +32,10 @@ struct ApplyDetail: View {
                 HStack{
                     Spacer()
                     VStack{
-                        Circle().frame(width: 60, height: 60).clipShape(Circle()).shadow(radius: 6).foregroundColor(.blue.opacity(0.4))
+                        WebImage(url: URL(string: avatarURL))
+                            .resizable()
+                            .frame(width: manager.screenWidth*0.2, height: manager.screenWidth*0.2).clipShape(Circle()).shadow(radius: 6)
+                        
                         Text(name).foregroundColor(.black.opacity(0.8)).bold()
                         Text(school).foregroundColor(.black.opacity(0.4)).font(.footnote)
                         HStack{
@@ -60,7 +66,7 @@ struct ApplyDetail: View {
                     //button for follow and unfollow
                     Button(action: {
                         if uid==manager.currentUserInfoCard?.userid{
-
+                            //do something with own card
                         }else{
                             if manager.followed.contains(uid){
                                 //unfollow
@@ -75,9 +81,7 @@ struct ApplyDetail: View {
                         
                         //update followed
                         Task{
-                            print("before change follow")
                             await manager.changeFolloweUser()
-                            print("after change follow")
                             await manager.getFollowed()
                         }
                         
@@ -107,7 +111,7 @@ struct ApplyDetail: View {
 }
 struct MyPreviewProvider_Previews: PreviewProvider {
     static var previews: some View {
-        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", view:0,follow:0,applyinfo: [],uid: "dsad").environmentObject(AppManager())
+        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", view:0,follow:0,applyinfo: [],uid: "dsad",avatarURL:AppManager().DefaultAvatarUrl).environmentObject(AppManager())
     }
 }
 
