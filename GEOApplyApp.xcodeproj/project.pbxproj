@@ -33,6 +33,7 @@
 		43141C6F285E9B8200BD20E9 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C6E285E9B8200BD20E9 /* ChangePassword.swift */; };
 		43141C71285E9BEE00BD20E9 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C70285E9BEE00BD20E9 /* FeedbackView.swift */; };
 		43141C74285EAFA400BD20E9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 43141C73285EAFA400BD20E9 /* SDWebImageSwiftUI */; };
+		43141C762860AF6800BD20E9 /* AddSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43141C752860AF6700BD20E9 /* AddSchoolView.swift */; };
 		431CF2F7283814A300953914 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CF2F6283814A300953914 /* BasicUser.swift */; };
 		43207EF628355FA0007C9985 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43207EF528355FA0007C9985 /* SignupView.swift */; };
 		43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43213D8F282CAB3800759F01 /* ScoreSec.swift */; };
@@ -115,6 +116,7 @@
 		43141C6C285E9AB700BD20E9 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
 		43141C6E285E9B8200BD20E9 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		43141C70285E9BEE00BD20E9 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		43141C752860AF6700BD20E9 /* AddSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolView.swift; sourceTree = "<group>"; };
 		431CF2F6283814A300953914 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
 		43207EF528355FA0007C9985 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		43213D8F282CAB3800759F01 /* ScoreSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSec.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				43141C4A285E211300BD20E9 /* SettingLine.swift */,
 				43141C4C285E211300BD20E9 /* AddInfoView.swift */,
+				43141C752860AF6700BD20E9 /* AddSchoolView.swift */,
 				43141C4D285E211300BD20E9 /* AddAccountInfoButton.swift */,
 			);
 			path = AddInfo;
@@ -644,6 +647,7 @@
 				43141C5E285E211300BD20E9 /* FavoriteView.swift in Sources */,
 				43941594281AF6A400ECBF38 /* HomeView.swift in Sources */,
 				43E971FC2845546F00607B62 /* SchoolResult.swift in Sources */,
+				43141C762860AF6800BD20E9 /* AddSchoolView.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
 				43141C57285E211300BD20E9 /* ChartView.swift in Sources */,

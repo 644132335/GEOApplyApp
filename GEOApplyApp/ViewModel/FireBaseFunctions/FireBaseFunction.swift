@@ -119,12 +119,13 @@ extension AppManager{
         }
         db.collection("userInfoCard").document(uid).setData([
             "uid":uid,
-            "school":UsrSchool,
+            "school":meSchool,
             "nationality":UsrNation,
             "major":UsrMajor,
-            "sat":UsrSat,
-            "tofel":UsrTofel,
-            "gpa":UsrGPA,
+            "sat":meSat,
+            "tofel":meTofel,
+            "gpa":meGPA,
+            "gre":meGRE,
             "intro":UsrIntro,
             "name":self.currentUser?.name ?? "Unnamed",
             "view":0,
@@ -276,12 +277,13 @@ extension AppManager{
             self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl)
             
             if self.currentUser?.profile==true{
-                self.UsrSchool=self.currentUserInfoCard?.school ?? ""
+                self.meSchool=self.currentUserInfoCard?.school ?? ""
                 self.UsrNation=self.currentUserInfoCard?.nation ?? ""
                 self.UsrMajor=self.currentUserInfoCard?.major ?? ""
-                self.UsrSat=self.currentUserInfoCard?.sat ?? 0.0
-                self.UsrTofel=self.currentUserInfoCard?.tofel ?? 0.0
-                self.UsrGPA=self.currentUserInfoCard?.gpa ?? 0.0
+                self.meSat=self.currentUserInfoCard?.sat ?? 0.0
+                self.meTofel=self.currentUserInfoCard?.tofel ?? 0.0
+                self.meGPA=self.currentUserInfoCard?.gpa ?? 0.0
+                //self.meGRE=self.currentUserInfoCard?.gre ?? 0.0
                 self.UsrIntro=self.currentUserInfoCard?.intro ?? ""
                 self.schoolResults=self.currentUserInfoCard?.applyinfo ?? []
             }

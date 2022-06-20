@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct AddInfoView: View {
+    @State private var isShowingSheet = false
     @EnvironmentObject var manager : AppManager
-    @State private var schoolname: String = ""
-    @State private var userAge: String = ""
-    @State private var selectBackground = "初中"
     private var genderArray=["Male","Female","Other"]
     private var degreeArray=["Bachelor","Master","Doctor"]
     //   @State private var newsSend = false
-    
-    @State private var showingGenderOptions = false
-    @State private var genderSelection = "None"
-    @State private var showingBackgroundOptions = false
-    @State private var backgroundSelection = "None"
     
     @Environment(\.dismiss) var dismiss
     
@@ -53,7 +46,26 @@ struct AddInfoView: View {
                     ForEach(manager.schools){
                         Text($0.schoolName).tag($0.schoolName)
                     }
-                }}
+                }
+                
+                //major
+                NavigationLink(destination: ChangeMajorView()){
+                    HStack{
+                        Text("Major")
+                        Spacer()
+                        Text(manager.UsrMajor).opacity(0.5)
+                    }
+                }
+                //country
+                NavigationLink(destination: ChangeNationView()){
+                    HStack{
+                        Text("Country")
+                        Spacer()
+                        Text(manager.UsrNation).opacity(0.5)
+                    }
+                }
+                
+            }
                 
                 
             Section(header:Text("Score"),footer:Text("(Note: Choose degree you are applying for and Enter 0 if not taken certain test above)")){
@@ -125,15 +137,38 @@ struct AddInfoView: View {
                         }
                     }
                 }
-                
-                
-                
-                
             
-            
+            Section(header:Text("application status"),footer:Text("Note: Profile will not be created unless you add at least 1 school!")){
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack{
+                        ForEach(manager.schoolResults.indices,id:\.self){i in
+                                schoolApplyCard(result: manager.schoolResults[i].result, school: manager.schoolResults[i].schoolName, schoolImageURL: manager.schoolResults[i].schoolurl)
+                       
+                        }
+                    }
+                    
+                }
+                Button(action: {
+                    //add school result
+                    isShowingSheet.toggle()
+                }){
+                    HStack{
+                        Spacer()
+                        Text("Modify")
+                        Spacer()
+                    }
+                }}
+            Section(header:Text("Application Process")){
+                TextEditor(text:$manager.UsrIntro)
+                    
+            }
+                
             Section(footer: Text("Information will not updated unless you clicked save")){
                 Button(action: {
                     //save me info
+                    if manager.schoolResults != []{
+                        manager.createUserInfoCard()
+                    }
                     manager.saveMeInfo()
                     dismiss()
                 }){
@@ -147,11 +182,8 @@ struct AddInfoView: View {
                 .padding(5)
                 
             }
-            
-            
-            
-            
-            
+        }.sheet(isPresented: $isShowingSheet){
+            AddSchoolView(isShowingSheet: $isShowingSheet)
         }
         
         //.listStyle(GroupedListStyle())
@@ -177,6 +209,29 @@ struct AddInfoView: View {
         
     }
 }
+
+//major
+struct ChangeMajorView: View {
+    @EnvironmentObject var manager : AppManager
+    var body: some View {
+        List{
+            TextField("Major",text: $manager.UsrMajor)
+        }.navigationTitle("Enter Your Major")
+    }
+}
+
+//nation
+struct ChangeNationView: View {
+    @EnvironmentObject var manager : AppManager
+    var body: some View {
+        List{
+            TextField("Country",text: $manager.UsrNation)
+        }.navigationTitle("Enter Your Country")
+    }
+}
+
+
+
 
 struct AddInfoView_Previews: PreviewProvider {
     static var previews: some View {

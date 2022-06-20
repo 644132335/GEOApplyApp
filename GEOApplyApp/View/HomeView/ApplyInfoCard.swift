@@ -28,9 +28,7 @@ struct ApplyInfoCard: View {
                     .resizable()
                     .clipShape(Circle())
                     .frame(width:manager.screenWidth*0.17, height: manager.screenWidth*0.17)
-                    .overlay{
-                        Circle().stroke(lineWidth:3).foregroundStyle(manager.LoginbuttonColor)
-                    }.shadow(radius: 3)
+                    .shadow(radius: 3)
                 
                 
                 

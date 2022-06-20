@@ -63,7 +63,7 @@ struct HomeView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        NavigationLink(destination: AddProfile()){
+                        NavigationLink(destination: AddInfoView()){
                             Image(systemName: "pencil.circle.fill")
                                 .resizable()
                                 .frame(width: 57, height: 57)
