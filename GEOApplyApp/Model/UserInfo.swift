@@ -16,11 +16,13 @@ struct UserInfo : Codable,Identifiable,Hashable{
     var major:String?
     var sat:Double?
     var tofel:Double?
+    var gre:Double?
     var gpa:Double?
     var intro:String?
     var view:Int?
     var follow:Int?
     var applyinfo:[schoolReslt]?
     var avatarImageURL:String?
+    var degree:String?
     var id=UUID()
 }

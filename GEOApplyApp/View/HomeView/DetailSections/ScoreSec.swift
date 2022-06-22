@@ -12,6 +12,8 @@ struct ScoreSec: View {
     var sat:Double
     var tofel:Double
     var gpa:Double
+    var gre:Double
+    var degree:String
     var body: some View {
         HStack{
             Image(systemName: "graduationcap.fill").foregroundColor(manager.themeColor)
@@ -23,9 +25,16 @@ struct ScoreSec: View {
                 }
                 ScrollView(showsIndicators: false){
                     VStack{
-                        ScoreProgress(max: 1600, cur: sat, title: "SAT", gradientColor: manager.satGradientColor, showDecimal: false)
+                        if degree == "Master"{
+                            ScoreProgress(max: 320, cur: gre, title: "GRE", gradientColor: manager.GREGradientColor, showDecimal: false)
+                        }else if degree == "Bachelor"{
+                            ScoreProgress(max: 1600, cur: sat, title: "SAT", gradientColor: manager.satGradientColor, showDecimal: false)
+                        }else{
+                            //show nothing if applying for doctrol
+                        }
                         ScoreProgress(max: 120, cur: tofel, title: "TOFEL", gradientColor: manager.TofelGradientColor, showDecimal: false)
                         ScoreProgress(max: 4.0, cur: gpa, title: "GPA", gradientColor: manager.GPAGradientColor, showDecimal: true)
+                        
                     
                     }
                 }

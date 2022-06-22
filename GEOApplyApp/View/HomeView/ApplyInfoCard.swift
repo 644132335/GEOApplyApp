@@ -16,7 +16,9 @@ struct ApplyInfoCard: View {
     var gpa:Double
     var sat:Double
     var tofel:Double
+    var gre:Double
     var avatarURL:String
+    var degree:String
     
     var body: some View {
         VStack{
@@ -29,9 +31,6 @@ struct ApplyInfoCard: View {
                     .clipShape(Circle())
                     .frame(width:manager.screenWidth*0.17, height: manager.screenWidth*0.17)
                     .shadow(radius: 3)
-                
-                
-                
                
                 VStack{
                     HStack{
@@ -46,25 +45,42 @@ struct ApplyInfoCard: View {
                         Text(school).foregroundColor(.black.opacity(0.6)).font(Font.footnote).lineLimit(1)
                         Spacer()
                     }
+                    HStack{
+                        Text(degree).foregroundColor(.black.opacity(0.6)).font(Font.footnote).lineLimit(1)
+                        Spacer()
+                    }
                     
                 }
                 
                 Spacer()
             }
-            HStack{
-                Text("TOFEL: "+String(format: "%.0f", tofel)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
-                Divider()
-                Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
-                Divider()
-                Text("SAT: "+String(format: "%.0f", sat)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+            if degree == "Bachelor"{
+                HStack{
+                    Text("TOFEL: "+String(format: "%.0f", tofel)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    Divider()
+                    Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    Divider()
+                    Text("SAT: "+String(format: "%.0f", sat)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                }
+            }else if degree == "Master"{
+                HStack{
+                    Text("TOFEL: "+String(format: "%.0f", tofel)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    Divider()
+                    Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    Divider()
+                    Text("GRE: "+String(format: "%.0f", gre)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                }
+            }else{
+                HStack{
+                    Text("TOFEL: "+String(format: "%.0f", tofel)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    Divider()
+                    Text("GPA: "+String(format: "%.2f", gpa)).foregroundColor(.black.opacity(0.6)).font(Font.footnote)
+                    
+                }
             }
+            
             
         
         }.padding().background(RoundedRectangle(cornerRadius: 5).fill(.white).shadow(radius: 2))
-    }
-}
-struct ApplyInfoCard_preview: PreviewProvider {
-    static var previews: some View {
-        ApplyInfoCard(name: "dasdasd", nation: "China", school: "jdklsajdklasjldjdlskad", gpa: 3.2, sat: 1100.0, tofel: 110.0,avatarURL:AppManager().DefaultAvatarUrl).environmentObject(AppManager())
     }
 }

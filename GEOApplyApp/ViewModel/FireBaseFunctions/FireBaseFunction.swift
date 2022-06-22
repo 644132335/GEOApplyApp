@@ -130,7 +130,8 @@ extension AppManager{
             "name":self.currentUser?.name ?? "Unnamed",
             "view":0,
             "follow":0,
-            "applyinfo":applyinfo
+            "applyinfo":applyinfo,
+            "degree":meDegree
         ],merge: true){ err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -269,12 +270,14 @@ extension AppManager{
             let follow = data?["follow"] as? Int ?? 0
             let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
             let imageurl = data?["userImageUrl"] as? String ?? self.DefaultAvatarUrl
+            let degree = data?["degree"] as? String ?? ""
+            let gre = data?["gre"] as? Double ?? 0.0
             var applyinfos:[schoolReslt]=[]
             for i in applyinfo{
                 applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
             }
             applyinfos=self.sortSchools(applyinfo: applyinfos)
-            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl)
+            self.currentUserInfoCard=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gre:gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl,degree: degree)
             
             if self.currentUser?.profile==true{
                 self.meSchool=self.currentUserInfoCard?.school ?? ""
@@ -283,7 +286,7 @@ extension AppManager{
                 self.meSat=self.currentUserInfoCard?.sat ?? 0.0
                 self.meTofel=self.currentUserInfoCard?.tofel ?? 0.0
                 self.meGPA=self.currentUserInfoCard?.gpa ?? 0.0
-                //self.meGRE=self.currentUserInfoCard?.gre ?? 0.0
+                self.meGRE=self.currentUserInfoCard?.gre ?? 0.0
                 self.UsrIntro=self.currentUserInfoCard?.intro ?? ""
                 self.schoolResults=self.currentUserInfoCard?.applyinfo ?? []
             }
@@ -314,6 +317,8 @@ extension AppManager{
                     let follow = data["follow"] as? Int ?? 0
                     let applyinfo = data["applyinfo"] as? [[String:String]] ?? []
                     let imageurl = data["userImageUrl"] as? String ?? self.DefaultAvatarUrl
+                    let degree = data["degree"] as? String ?? ""
+                    let gre = data["gre"] as? Double ?? 0.0
                     
                     var applyinfos:[schoolReslt]=[]
 
@@ -321,7 +326,7 @@ extension AppManager{
                         applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                     }
                     applyinfos=self.sortSchools(applyinfo: applyinfos)
-                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl))
+                    self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gre:gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl, degree: degree))
                 }
                 
             }
@@ -350,14 +355,15 @@ extension AppManager{
                 let follow = data?["follow"] as? Int ?? 0
                 let applyinfo = data?["applyinfo"] as? [[String:String]] ?? []
                 let imageurl = data?["userImageUrl"] as? String ?? self.DefaultAvatarUrl
-                
+                let degree = data?["degree"] as? String ?? ""
+                let gre = data?["gre"] as? Double ?? 0.0
                 
                 var applyinfos:[schoolReslt]=[]
                 for i in applyinfo{
                     applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
                 }
                 applyinfos=self.sortSchools(applyinfo: applyinfos)
-                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl)
+                let followedUser=UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel,gre: gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl,degree: degree)
                 DispatchQueue.main.async {
                     self.followedUsers.append(followedUser)
                 }

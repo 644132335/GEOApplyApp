@@ -16,6 +16,7 @@ struct ApplyDetail: View {
     var major:String
     var sat:Double
     var tofel:Double
+    var gre:Double
     var gpa:Double
     var intro:String
     var view:Int
@@ -23,6 +24,7 @@ struct ApplyDetail: View {
     var applyinfo:[schoolReslt]
     var uid:String
     var avatarURL:String
+    var degree:String
     
     var body: some View {
         ZStack{
@@ -36,8 +38,9 @@ struct ApplyDetail: View {
                             .resizable()
                             .frame(width: manager.screenWidth*0.2, height: manager.screenWidth*0.2).clipShape(Circle()).shadow(radius: 6)
                         
-                        Text(name).foregroundColor(.black.opacity(0.8)).bold()
-                        Text(school).foregroundColor(.black.opacity(0.4)).font(.footnote)
+                        Text(name).foregroundColor(.black.opacity(0.8)).bold().lineLimit(1)
+                        Text(school).foregroundColor(.black.opacity(0.4)).font(.footnote).lineLimit(1)
+                        Text("Applying For \(degree)").foregroundColor(.black.opacity(0.4)).font(.footnote).lineLimit(1)
                         HStack{
                             Spacer()
                             Text("View \(view)").foregroundColor(.black.opacity(0.4)).font(.footnote)
@@ -55,7 +58,7 @@ struct ApplyDetail: View {
                    IntroSec(text: intro)
                    BasicInfo(nationality: nation, school: school, major: major)
                    ApplyInfoSec(userinfo:applyinfo)
-                   ScoreSec(sat: sat, tofel: tofel, gpa: gpa)
+                    ScoreSec(sat: sat, tofel: tofel, gpa: gpa, gre:gre, degree:degree)
                    EssaySec()
                 }
                 
@@ -63,10 +66,20 @@ struct ApplyDetail: View {
             }
         }.toolbar(){
             ToolbarItem(placement: .navigationBarTrailing){
+                //if it is own file
+                if uid==manager.currentUserInfoCard?.userid{
+                    NavigationLink(destination: AddInfoView()){
+                        Image(systemName: "square.and.pencil")
+                            .resizable()
+                            .frame(width: manager.screenWidth*0.06, height: manager.screenWidth*0.06)
+                            .foregroundColor(manager.themeColor)
+                    }
+                }else{
                     //button for follow and unfollow
                     Button(action: {
                         if uid==manager.currentUserInfoCard?.userid{
                             //do something with own card
+                            
                         }else{
                             if manager.followed.contains(uid){
                                 //unfollow
@@ -88,7 +101,7 @@ struct ApplyDetail: View {
                        
                     }){
                         if uid==manager.currentUserInfoCard?.userid{
-                            Text("")
+                            
                         }
                         else{
                             if manager.followed.contains(uid){
@@ -101,6 +114,9 @@ struct ApplyDetail: View {
                         
                         
                     }.disabled(uid==manager.currentUserInfoCard?.userid)
+                }
+                
+                    
             }
         }
         .onAppear{
@@ -109,9 +125,5 @@ struct ApplyDetail: View {
         }
     }
 }
-struct MyPreviewProvider_Previews: PreviewProvider {
-    static var previews: some View {
-        ApplyDetail(name: "dsad", school: "dsadas", nation: "china", major: "major", sat: 1200, tofel: 120, gpa: 3.9, intro: "nonnononono", view:0,follow:0,applyinfo: [],uid: "dsad",avatarURL:AppManager().DefaultAvatarUrl).environmentObject(AppManager())
-    }
-}
+
 
