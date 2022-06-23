@@ -367,8 +367,6 @@ extension AppManager{
                 DispatchQueue.main.async {
                     self.followedUsers.append(followedUser)
                 }
-                
-                
             }catch{
                 print(error)
             }
