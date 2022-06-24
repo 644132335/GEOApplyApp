@@ -83,6 +83,7 @@ struct AddSchoolView: View {
             }
             }
         }
+        .environmentObject(manager).environment(\.colorScheme, .light)
         .toolbar(){
             EditButton()
         }

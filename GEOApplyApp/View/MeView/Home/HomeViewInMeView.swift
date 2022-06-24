@@ -25,7 +25,7 @@ struct HomeViewInMeView: View {
                     // if profile is not created yet
                     Rectangle().fill(.white.opacity(0)).frame(height:manager.screenHeight*0.07)
                     HStack{
-                        NavigationLink(destination: AddProfile()){
+                        NavigationLink(destination: AddInfoView()){
                             Text("Please Add Your Profile").font(.title3).foregroundColor(manager.backgroundColor)
                                 .background(RoundedRectangle(cornerRadius: 20)
                                 .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))

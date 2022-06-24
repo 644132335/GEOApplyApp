@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var manager : AppManager
+    @State private var isShowingSheet = false
     var body: some View {
         NavigationView{
             ZStack{
@@ -30,7 +31,7 @@ struct HomeView: View {
                             // if profile is not created yet
                             Rectangle().fill(.white.opacity(0)).frame(height:manager.screenHeight*0.07)
                             HStack{
-                                NavigationLink(destination: AddProfile()){
+                                NavigationLink(destination: AddInfoView()){
                                     Text("Please Add Your Profile").font(.title3).foregroundColor(manager.backgroundColor)
                                         .background(RoundedRectangle(cornerRadius: 20)
                                         .strokeBorder(style: StrokeStyle(lineWidth: 4, dash: [10]))
@@ -48,6 +49,14 @@ struct HomeView: View {
                             Image(systemName:  "ferry.fill").resizable().frame(width: manager.screenWidth*0.1, height: manager.screenWidth*0.08).foregroundColor(manager.themeColor).padding(2)
                             Text("Explore").font(.system(.title, design: .rounded)).foregroundColor(manager.themeColor).bold().padding(2)
                             Spacer()
+                            Button(action: {
+                                isShowingSheet=true
+                            }, label: {
+                                Text("Filter").bold().foregroundColor(.white).padding(manager.screenWidth*0.015)
+                                    .background(RoundedRectangle(cornerRadius: 5)
+                                        .fill(manager.themeColor)).padding(manager.screenWidth*0.02)
+                            })
+                            
                         }
                         //other info cards
                         ForEach(manager.users, id:\.self){i in
@@ -81,6 +90,9 @@ struct HomeView: View {
             }
             .onAppear{
                 //maybe do something?
+            }
+            .sheet(isPresented: $isShowingSheet){
+                filterView(isShowingSheet:$isShowingSheet)
             }
             .toolbar(){
                 // tool bar for refresh

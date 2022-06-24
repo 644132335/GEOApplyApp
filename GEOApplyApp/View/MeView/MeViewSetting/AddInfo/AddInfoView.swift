@@ -11,7 +11,7 @@ struct AddInfoView: View {
     @State private var isShowingSheet = false
     @EnvironmentObject var manager : AppManager
     private var genderArray=["Male","Female","Other"]
-    private var degreeArray=["Bachelor","Master","Doctor"]
+    private var degreeArray=["Bachelor","Master"]
     //   @State private var newsSend = false
     
     @Environment(\.dismiss) var dismiss

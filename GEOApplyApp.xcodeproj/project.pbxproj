@@ -60,6 +60,8 @@
 		439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A4281C504C00ECBF38 /* BasicInfo.swift */; };
 		439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */; };
 		439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFD22839712D002824D7 /* TopTapManager.swift */; };
+		43A792DB28660123007E3A9C /* filterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A792DA28660123007E3A9C /* filterView.swift */; };
+		43A792DD28661040007E3A9C /* FB_FilterFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A792DC28661040007E3A9C /* FB_FilterFunc.swift */; };
 		43D082C02843C660004AE379 /* AddProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D082BF2843C660004AE379 /* AddProfile.swift */; };
 		43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C622841AAF300B4FE90 /* ImagePicker.swift */; };
 		43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C642841AB5700B4FE90 /* accountImagePicker.swift */; };
@@ -146,6 +148,8 @@
 		439415A4281C504C00ECBF38 /* BasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
 		439415A6281C5B1900ECBF38 /* schoolApplyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schoolApplyCard.swift; sourceTree = "<group>"; };
 		439DEFD22839712D002824D7 /* TopTapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
+		43A792DA28660123007E3A9C /* filterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterView.swift; sourceTree = "<group>"; };
+		43A792DC28661040007E3A9C /* FB_FilterFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB_FilterFunc.swift; sourceTree = "<group>"; };
 		43D082BF2843C660004AE379 /* AddProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfile.swift; sourceTree = "<group>"; };
 		43D94C622841AAF300B4FE90 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		43D94C642841AB5700B4FE90 /* accountImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountImagePicker.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 			children = (
 				43FFDF722842B08100013618 /* FireBaseFunction.swift */,
 				4322A7C6285B9E2D00B9E47A /* FB_MeViewFunc.swift */,
+				43A792DC28661040007E3A9C /* FB_FilterFunc.swift */,
 			);
 			path = FireBaseFunctions;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 			children = (
 				43941593281AF6A400ECBF38 /* HomeView.swift */,
 				4394159D281B19E300ECBF38 /* ApplyDetail.swift */,
+				43A792DA28660123007E3A9C /* filterView.swift */,
 				43DBB2FC2832C12200FED530 /* AddInfoPage */,
 				4394159F281C4BCA00ECBF38 /* DetailSections */,
 				4394159B281B09EF00ECBF38 /* ApplyInfoCard.swift */,
@@ -650,6 +656,7 @@
 				43141C762860AF6800BD20E9 /* AddSchoolView.swift in Sources */,
 				439415A3281C502C00ECBF38 /* ApplyInfoSec.swift in Sources */,
 				43DBB2F92832B27700FED530 /* UserInfo.swift in Sources */,
+				43A792DD28661040007E3A9C /* FB_FilterFunc.swift in Sources */,
 				43141C57285E211300BD20E9 /* ChartView.swift in Sources */,
 				43141C5A285E211300BD20E9 /* MedianGraph.swift in Sources */,
 				43213D90282CAB3800759F01 /* ScoreSec.swift in Sources */,
@@ -680,6 +687,7 @@
 				43141C53285E211300BD20E9 /* HomeViewInMeView.swift in Sources */,
 				43DBB301283448FC00FED530 /* LoginView.swift in Sources */,
 				43141C6D285E9AB700BD20E9 /* ChangeEmailView.swift in Sources */,
+				43A792DB28660123007E3A9C /* filterView.swift in Sources */,
 				43141C55285E211300BD20E9 /* BasicCard.swift in Sources */,
 				43141C65285E211300BD20E9 /* AddInfoView.swift in Sources */,
 				4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */,

@@ -75,7 +75,18 @@ class AppManager:ObservableObject{
     @Published var meTofel=0.0
     @Published var meGPA=0.0
     @Published var meGRE=0.0
-
+    
+    //filter view
+    @AppStorage("filterGPAmin") var filterGPAmin=0.0
+    @AppStorage("filterGPAmax") var filterGPAmax=4.0
+    @AppStorage("filterDegree") var filterDegree="All"
+    @AppStorage("filterSATmin") var filterSATmin=0.0
+    @AppStorage("filterSATmax") var filterSATmax=1600.0
+    @AppStorage("filterGREmin") var filterGREmin=0.0
+    @AppStorage("filterGREmax") var filterGREmax=320.0
+    @AppStorage("filterTOFELmin") var filterTOFELmin=0.0
+    @AppStorage("filterTOFELmax") var filterTOFELmax=120.0
+    
     //app enums
     enum Page{
         case login
