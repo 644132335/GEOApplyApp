@@ -48,15 +48,16 @@ extension AppManager{
                         let imageurl = data["userImageUrl"] as? String ?? self.DefaultAvatarUrl
                         let degree = data["degree"] as? String ?? ""
                         let gre = data["gre"] as? Double ?? 0.0
+                        let applyby = data["applyby"] as? String ?? ""
                         
                         var applyinfos:[schoolReslt]=[]
                         
                         if (self.filterSATmin...self.filterSATmax).contains(sat) && (self.filterGPAmin...self.filterGPAmax).contains(gpa) && (self.filterTOFELmin...self.filterTOFELmax).contains(tofel) && (self.filterGREmin...self.filterGREmax).contains(gre){
                             for i in applyinfo{
-                                applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? ""))
+                                applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? "",major: i["applyMajor"] ?? ""))
                             }
                             applyinfos=self.sortSchools(applyinfo: applyinfos)
-                            self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gre:gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl, degree: degree))
+                            self.users.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gre:gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl, degree: degree,applyby: applyby))
                             
                         }
                         

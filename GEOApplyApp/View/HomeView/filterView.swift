@@ -16,6 +16,7 @@ struct filterView: View {
     @State var GREerroMessage=""
     @State var erroMessage=""
     var degreeArray=["Bachelor","Master","All"]
+    var applyBy=["Self-Apply","Agency-Apply"]
     
     var body: some View {
         NavigationView{
@@ -29,6 +30,16 @@ struct filterView: View {
                         }
                     }
                 }
+                
+                //degree
+//                Section(){
+//                    Picker("Apply by",selection:$manager.filterApplyBy){
+//                        ForEach(applyBy,id:\.self){i in
+//                            Text(i)
+//
+//                        }
+//                    }
+//                }
                 
                 //score
                 Section(footer: Text(GPAerroMessage).foregroundColor(Color.red)){

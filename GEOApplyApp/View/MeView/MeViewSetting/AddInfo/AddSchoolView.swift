@@ -10,11 +10,13 @@ import SwiftUI
 struct AddSchoolView: View {
     @EnvironmentObject var manager : AppManager
     @Binding var isShowingSheet : Bool
+    @State var errorMessageMajor=""
+    @State var major=""
     var ApplyResult = ["accepted","waiting","rejected"]
     var body: some View {
         NavigationView{
         Form{
-            Section(header:Text("Application Status"),footer:Text("Note: use edit on top right to delete")){
+            Section(header:Text("Application Status"),footer:Text("Note: swipe left to delete or use edit on top right")){
                 List{
                     if manager.schoolResults.isEmpty{
                         HStack{
@@ -51,18 +53,27 @@ struct AddSchoolView: View {
                     }
                 }.pickerStyle(.wheel)
             }
-                Section(header:Text("Application Result")){
-                    Picker("Result",selection: $manager.UsrSchoolResult){
-                        ForEach(ApplyResult,id: \.self){
-                            Text($0).tag($0)
-                        }
-                    }.pickerStyle(.wheel)
-                }
+            Section(header:Text("Application Result")){
+                Picker("Result",selection: $manager.UsrSchoolResult){
+                    ForEach(ApplyResult,id: \.self){
+                        Text($0).tag($0)
+                    }
+                }.pickerStyle(.wheel)
+            }
+            Section(header:Text("Major Applied"),footer:Text(errorMessageMajor).foregroundColor(.red)){
+                TextField("Major",text: $manager.UsrSchoolMajor).lineLimit(1)
+            }
             
             //add school result button
             Section{
             Button(action: {
-                manager.addSchoolResult(name: manager.UsrAppliedSchool, result: manager.UsrSchoolResult)
+                if manager.UsrSchoolMajor==""{
+                    errorMessageMajor="Please Fill Your Major"
+                }else{
+                    manager.addSchoolResult(name: manager.UsrAppliedSchool, result: manager.UsrSchoolResult,major: manager.UsrSchoolMajor)
+                    manager.UsrSchoolMajor=""
+                }
+                
             }){
                 HStack{
                     Spacer()
@@ -83,12 +94,12 @@ struct AddSchoolView: View {
             }
             }
         }
-        .environmentObject(manager).environment(\.colorScheme, .light)
+        
         .toolbar(){
             EditButton()
         }
             
-        }
+        }.environmentObject(manager).environment(\.colorScheme, .light)
     }
     func delete(at offsets: IndexSet) {
         manager.schoolResults.remove(atOffsets: offsets)

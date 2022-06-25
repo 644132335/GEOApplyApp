@@ -15,7 +15,7 @@ struct CommunityView: View {
                 ForEach(manager.schools){i in
                     HStack{
                         Rectangle().fill(.white).frame(width:manager.screenWidth*0.3)
-                        schoolApplyCard(result: "accepted", school: i.schoolName, schoolImageURL: i.schoolImageUrl).padding()
+                        schoolApplyCard(result: "accepted", school: i.schoolName, schoolImageURL: i.schoolImageUrl,major: "").padding()
                         Rectangle().fill(.white).frame(width:manager.screenWidth*0.3)
                     }
                     

@@ -19,13 +19,12 @@ struct ApplyInfoCard: View {
     var gre:Double
     var avatarURL:String
     var degree:String
+    var schoolImage:String
     
     var body: some View {
         VStack{
             HStack{
-                HStack{
-                    
-                }
+                
                 WebImage(url: URL(string: avatarURL))
                     .resizable()
                     .clipShape(Circle())
@@ -36,6 +35,11 @@ struct ApplyInfoCard: View {
                     HStack{
                         Text(name).foregroundColor(.black.opacity(0.8)).bold().lineLimit(1)
                         Spacer()
+                            
+                        WebImage(url: URL(string: schoolImage))
+                            .resizable()
+                            .frame(width:manager.screenWidth*0.1, height: manager.screenWidth*0.1)
+                            .opacity(0.5)
                     }
                     HStack{
                         Text(nation).foregroundColor(.black.opacity(0.6)).font(Font.footnote).lineLimit(1)

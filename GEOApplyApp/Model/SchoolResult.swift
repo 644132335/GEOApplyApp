@@ -11,6 +11,7 @@ struct schoolReslt: Codable,Identifiable,Hashable{
     var schoolName:String
     var result:String
     var schoolurl:String
+    var major:String
     var id=UUID()
 }
 

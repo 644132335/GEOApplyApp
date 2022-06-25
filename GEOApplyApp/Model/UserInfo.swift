@@ -24,5 +24,6 @@ struct UserInfo : Codable,Identifiable,Hashable{
     var applyinfo:[schoolReslt]?
     var avatarImageURL:String?
     var degree:String?
+    var applyby:String?
     var id=UUID()
 }

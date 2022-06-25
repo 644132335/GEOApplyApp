@@ -63,7 +63,7 @@ class AppManager:ObservableObject{
     @Published var UsrIntro="\n\n\n\n\n"
     @Published var UsrAppliedSchool="Brown University"
     @Published var UsrSchoolResult="accepted"
-    
+    @Published var UsrSchoolMajor=""
     //meView Info
     @Published var meUsername=""
     @Published var meEmail=""
@@ -75,11 +75,13 @@ class AppManager:ObservableObject{
     @Published var meTofel=0.0
     @Published var meGPA=0.0
     @Published var meGRE=0.0
+    @Published var meApplyBy=""
     
     //filter view
     @AppStorage("filterGPAmin") var filterGPAmin=0.0
     @AppStorage("filterGPAmax") var filterGPAmax=4.0
     @AppStorage("filterDegree") var filterDegree="All"
+    @AppStorage("filterApplyBy") var filterApplyBy="Self-Apply"
     @AppStorage("filterSATmin") var filterSATmin=0.0
     @AppStorage("filterSATmax") var filterSATmax=1600.0
     @AppStorage("filterGREmin") var filterGREmin=0.0
@@ -132,15 +134,15 @@ class AppManager:ObservableObject{
     }
     
     //add school result
-    func addSchoolResult(name:String,result:String){
+    func addSchoolResult(name:String,result:String,major:String){
         var schoolrul=""
         for i in self.schools{
             if i.schoolName==name{
                schoolrul=i.schoolImageUrl
             }
         }
-        self.schoolResults.append(schoolReslt(schoolName: name, result: result,schoolurl: schoolrul))
-        
+        self.schoolResults.append(schoolReslt(schoolName: name, result: result,schoolurl: schoolrul,major: major))
+        print("school apply major "+major)
     }
     
     //save email and passowrd
@@ -171,6 +173,15 @@ class AppManager:ObservableObject{
         self.password = savedItems
     }
     
-    
+    //find school image
+    func findSchoolImageURL(schoolname:String)->String{
+        var schoolurl=""
+        for i in self.schools{
+            if i.schoolName==schoolname{
+               schoolurl=i.schoolImageUrl
+            }
+        }
+        return schoolurl
+    }
     
 }

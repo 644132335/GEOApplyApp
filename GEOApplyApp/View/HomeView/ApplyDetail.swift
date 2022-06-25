@@ -25,6 +25,7 @@ struct ApplyDetail: View {
     var uid:String
     var avatarURL:String
     var degree:String
+    var applyby:String
     
     var body: some View {
         ZStack{
@@ -41,6 +42,7 @@ struct ApplyDetail: View {
                         Text(name).foregroundColor(.black.opacity(0.8)).bold().lineLimit(1)
                         Text(school).foregroundColor(.black.opacity(0.4)).font(.footnote).lineLimit(1)
                         Text("Applying For \(degree)").foregroundColor(.black.opacity(0.4)).font(.footnote).lineLimit(1)
+                        Text(applyby).foregroundColor(.black.opacity(0.4)).font(.footnote).lineLimit(1)
                         HStack{
                             Spacer()
                             Text("View \(view)").foregroundColor(.black.opacity(0.4)).font(.footnote)
@@ -58,7 +60,7 @@ struct ApplyDetail: View {
                    IntroSec(text: intro)
                    BasicInfo(nationality: nation, school: school, major: major)
                    ApplyInfoSec(userinfo:applyinfo)
-                    ScoreSec(sat: sat, tofel: tofel, gpa: gpa, gre:gre, degree:degree)
+                   ScoreSec(sat: sat, tofel: tofel, gpa: gpa, gre:gre, degree:degree)
                    EssaySec()
                 }
                 

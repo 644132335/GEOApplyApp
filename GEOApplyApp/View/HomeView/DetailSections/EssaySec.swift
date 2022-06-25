@@ -20,8 +20,8 @@ struct EssaySec: View {
                 }
                 ZStack(alignment:.center){
                     HStack{
-                        schoolApplyCard(result: "accepted", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
-                        schoolApplyCard(result: "rejected", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
+                        schoolApplyCard(result: "accepted", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png",major:"CS")
+                        schoolApplyCard(result: "rejected", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png",major: "CS")
                     }.blur(radius: 10)
                     //RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.9)).frame(width: 320, height: 170, alignment: .center)
                     VStack{

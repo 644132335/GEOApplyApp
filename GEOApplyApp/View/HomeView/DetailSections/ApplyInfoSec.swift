@@ -22,13 +22,8 @@ struct ApplyInfoSec: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(userinfo,id:\.self){i in
-                            schoolApplyCard(result: i.result, school: i.schoolName, schoolImageURL: i.schoolurl)
+                            schoolApplyCard(result: i.result, school: i.schoolName, schoolImageURL: i.schoolurl,major: i.major)
                         }
-//
-//
-//                        schoolApplyCard(result: "accepted", school: "Pennsylvania State University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
-//                        schoolApplyCard(result: "rejected", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
-//                        schoolApplyCard(result: "waiting", school: "Havard University",schoolImageURL: "https://upload.wikimedia.org/wikipedia/zh/thumb/6/6e/Harvard_Wreath.svg/400px-Harvard_Wreath.svg.png")
                         
                     }
                 }

@@ -12,6 +12,7 @@ struct AddInfoView: View {
     @EnvironmentObject var manager : AppManager
     private var genderArray=["Male","Female","Other"]
     private var degreeArray=["Bachelor","Master"]
+    private var applyBy=["Self-Apply","Agency-Apply"]
     //   @State private var newsSend = false
     
     @Environment(\.dismiss) var dismiss
@@ -48,6 +49,13 @@ struct AddInfoView: View {
                     }
                 }
                 
+                //apply by
+                Picker("Apply By",selection: $manager.meApplyBy){
+                    ForEach(applyBy,id:\.self){
+                        Text($0)
+                    }
+                }
+                
                 //major
                 NavigationLink(destination: ChangeMajorView()){
                     HStack{
@@ -64,6 +72,8 @@ struct AddInfoView: View {
                         Text(manager.UsrNation).opacity(0.5)
                     }
                 }
+                
+                
                 
             }
                 
@@ -142,7 +152,7 @@ struct AddInfoView: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(manager.schoolResults.indices,id:\.self){i in
-                                schoolApplyCard(result: manager.schoolResults[i].result, school: manager.schoolResults[i].schoolName, schoolImageURL: manager.schoolResults[i].schoolurl)
+                            schoolApplyCard(result: manager.schoolResults[i].result, school: manager.schoolResults[i].schoolName, schoolImageURL: manager.schoolResults[i].schoolurl,major:manager.schoolResults[i].major)
                        
                         }
                     }
@@ -186,7 +196,6 @@ struct AddInfoView: View {
             AddSchoolView(isShowingSheet: $isShowingSheet)
         }
         
-        //.listStyle(GroupedListStyle())
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing){
                 Button{
@@ -201,10 +210,6 @@ struct AddInfoView: View {
         .navigationBarTitleDisplayMode(.inline)
         
         
-        
-        
-        
-        //    }
         
         
     }
