@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     VStack{
                         HStack{
                             Spacer().frame(width:manager.screenWidth*0.05)

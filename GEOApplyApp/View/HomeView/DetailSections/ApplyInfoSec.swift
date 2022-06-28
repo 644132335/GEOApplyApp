@@ -22,7 +22,17 @@ struct ApplyInfoSec: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(userinfo,id:\.self){i in
-                            schoolApplyCard(result: i.result, school: i.schoolName, schoolImageURL: i.schoolurl,major: i.major)
+                            ForEach(manager.schoolRanked){j in
+                                if i.schoolName==j.schoolName{
+                                    NavigationLink(destination: SchoolDetail(schoolname: j.schoolName, schoolimage: j.schoolImageUrl, rank: j.rank, intro: j.intro)){
+                                        schoolApplyCard(result: i.result, school: i.schoolName, schoolImageURL: i.schoolurl,major: i.major)
+                                    }
+                                    
+                                    //schoolApplyCard(result: i.result, school: j.schoolname, schoolImageURL: j.,major: i.major)
+                                }
+                                
+                            }
+                            
                         }
                         
                     }

@@ -11,5 +11,6 @@ struct schoolInfo: Codable,Identifiable,Hashable{
     var schoolName:String
     var rank:Int
     var schoolImageUrl:String
+    var intro:String
     var id=UUID()
 }

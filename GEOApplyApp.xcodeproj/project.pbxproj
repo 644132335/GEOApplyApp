@@ -43,6 +43,7 @@
 		433DDF98282DA15900F4E9C4 /* ScoreProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */; };
 		433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DDF99282DB73C00F4E9C4 /* EssaySec.swift */; };
 		43502F85283A83AF00CBB584 /* TextLimter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43502F84283A83AF00CBB584 /* TextLimter.swift */; };
+		4377025E2869ECF900E21257 /* schoolCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377025D2869ECF900E21257 /* schoolCard.swift */; };
 		4394155F281AF54900ECBF38 /* GEOApplyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */; };
 		43941561281AF54900ECBF38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43941560281AF54900ECBF38 /* ContentView.swift */; };
 		43941563281AF54D00ECBF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43941562281AF54D00ECBF38 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DEFD22839712D002824D7 /* TopTapManager.swift */; };
 		43A792DB28660123007E3A9C /* filterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A792DA28660123007E3A9C /* filterView.swift */; };
 		43A792DD28661040007E3A9C /* FB_FilterFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A792DC28661040007E3A9C /* FB_FilterFunc.swift */; };
+		43B81D52286B3421008C8FA0 /* SchoolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81D51286B3421008C8FA0 /* SchoolDetail.swift */; };
 		43D082C02843C660004AE379 /* AddProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D082BF2843C660004AE379 /* AddProfile.swift */; };
 		43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C622841AAF300B4FE90 /* ImagePicker.swift */; };
 		43D94C652841AB5700B4FE90 /* accountImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94C642841AB5700B4FE90 /* accountImagePicker.swift */; };
@@ -128,6 +130,7 @@
 		433DDF97282DA15900F4E9C4 /* ScoreProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProgress.swift; sourceTree = "<group>"; };
 		433DDF99282DB73C00F4E9C4 /* EssaySec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssaySec.swift; sourceTree = "<group>"; };
 		43502F84283A83AF00CBB584 /* TextLimter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLimter.swift; sourceTree = "<group>"; };
+		4377025D2869ECF900E21257 /* schoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schoolCard.swift; sourceTree = "<group>"; };
 		4394155B281AF54900ECBF38 /* GEOApplyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEOApplyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394155E281AF54900ECBF38 /* GEOApplyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOApplyAppApp.swift; sourceTree = "<group>"; };
 		43941560281AF54900ECBF38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		439DEFD22839712D002824D7 /* TopTapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTapManager.swift; sourceTree = "<group>"; };
 		43A792DA28660123007E3A9C /* filterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterView.swift; sourceTree = "<group>"; };
 		43A792DC28661040007E3A9C /* FB_FilterFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB_FilterFunc.swift; sourceTree = "<group>"; };
+		43B81D51286B3421008C8FA0 /* SchoolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetail.swift; sourceTree = "<group>"; };
 		43D082BF2843C660004AE379 /* AddProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfile.swift; sourceTree = "<group>"; };
 		43D94C622841AAF300B4FE90 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		43D94C642841AB5700B4FE90 /* accountImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountImagePicker.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 		43141C33285E211300BD20E9 /* MeView */ = {
 			isa = PBXGroup;
 			children = (
+				43941560281AF54900ECBF38 /* ContentView.swift */,
 				43141C34285E211300BD20E9 /* Home */,
 				43141C37285E211300BD20E9 /* LineGraph.swift */,
 				43141C38285E211300BD20E9 /* BasicCard.swift */,
@@ -382,7 +387,6 @@
 			isa = PBXGroup;
 			children = (
 				43141C33285E211300BD20E9 /* MeView */,
-				43941560281AF54900ECBF38 /* ContentView.swift */,
 				43DBB2FF283448E900FED530 /* LoginView */,
 				4394158D281AF66400ECBF38 /* HomeView */,
 				4394158C281AF62D00ECBF38 /* CommunityView */,
@@ -394,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				43941597281AF6CE00ECBF38 /* CommunityView.swift */,
+				4377025D2869ECF900E21257 /* schoolCard.swift */,
+				43B81D51286B3421008C8FA0 /* SchoolDetail.swift */,
 			);
 			path = CommunityView;
 			sourceTree = "<group>";
@@ -647,6 +653,7 @@
 				431CF2F7283814A300953914 /* BasicUser.swift in Sources */,
 				43141C59285E211300BD20E9 /* MedianChart.swift in Sources */,
 				43213D93282CAD6900759F01 /* ScoreGauge.swift in Sources */,
+				43B81D52286B3421008C8FA0 /* SchoolDetail.swift in Sources */,
 				439415A7281C5B1900ECBF38 /* schoolApplyCard.swift in Sources */,
 				43D94C632841AAF300B4FE90 /* ImagePicker.swift in Sources */,
 				43141C52285E211300BD20E9 /* InfoCard.swift in Sources */,
@@ -671,6 +678,7 @@
 				439DEFD32839712D002824D7 /* TopTapManager.swift in Sources */,
 				43141C71285E9BEE00BD20E9 /* FeedbackView.swift in Sources */,
 				43141C66285E211300BD20E9 /* AddAccountInfoButton.swift in Sources */,
+				4377025E2869ECF900E21257 /* schoolCard.swift in Sources */,
 				433DDF9A282DB73C00F4E9C4 /* EssaySec.swift in Sources */,
 				439415A5281C504C00ECBF38 /* BasicInfo.swift in Sources */,
 				43141C6F285E9B8200BD20E9 /* ChangePassword.swift in Sources */,

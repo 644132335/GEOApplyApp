@@ -31,15 +31,6 @@ struct filterView: View {
                     }
                 }
                 
-                //degree
-//                Section(){
-//                    Picker("Apply by",selection:$manager.filterApplyBy){
-//                        ForEach(applyBy,id:\.self){i in
-//                            Text(i)
-//
-//                        }
-//                    }
-//                }
                 
                 //score
                 Section(footer: Text(GPAerroMessage).foregroundColor(Color.red)){

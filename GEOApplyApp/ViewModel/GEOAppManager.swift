@@ -34,6 +34,7 @@ class AppManager:ObservableObject{
     @Published var currentPage: Page = .login
     @Published var schools=[schoolInfo]()
     @Published var schoolResults=[schoolReslt]()
+    @Published var schoolRanked=[schoolInfo]()
     @Published var followed:[String]=[]
     @Published var email=""
     @Published var password=""

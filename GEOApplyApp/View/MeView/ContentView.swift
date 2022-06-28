@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
             TabView{
                 HomeView().tabItem{Label("Home", systemImage: "house.fill")}.navigationTitle("Explore")
-                CommunityView().tabItem{Label("Community", systemImage: "person.3.fill")}
+                CommunityView().tabItem{Label("School", systemImage: "building.columns.fill")}
                 MeView().tabItem{Label("Me", systemImage: "person.fill")}
             }
 

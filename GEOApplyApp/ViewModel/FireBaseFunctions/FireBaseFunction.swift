@@ -382,7 +382,7 @@ extension AppManager{
     //get school info
     func getSchoolInfo() async {
         schools=[]
-        db.collection("schoolInfo").getDocuments() { (querySnapshot, err) in
+        db.collection("schoolInfo").order(by: "rank").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -391,7 +391,9 @@ extension AppManager{
                     let schoolName = data["school"] as? String ?? ""
                     let schoolImage = data["image"] as? String ?? ""
                     let rank = data["rank"] as? Int ?? 0
-                    self.schools.append(schoolInfo(schoolName: schoolName, rank: rank, schoolImageUrl: schoolImage))
+                    let intro = data["intro"] as? String ?? "None"
+                    self.schools.append(schoolInfo(schoolName: schoolName, rank: rank, schoolImageUrl: schoolImage,intro: intro))
+                    self.schoolRanked.append(schoolInfo(schoolName: schoolName, rank: rank, schoolImageUrl: schoolImage,intro: intro))
                 }
                 self.sortSchools()
             }
