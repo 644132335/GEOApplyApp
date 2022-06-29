@@ -68,5 +68,47 @@ extension AppManager{
             }
         }
     }
+    
+    //get users that applied this school
+    func getSchoolUsers(schoolname:String){
+        var schooluserspace:[UserInfo]=[]
+        let ref=db.collection("userInfoCard").whereField("applyschool", arrayContains: schoolname)
+        ref.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let data=document.data()
+                    let uid = data["uid"] as? String ?? ""
+                    let gpa = data["gpa"] as? Double ?? 0.0
+                    let intro = data["intro"] as? String ?? ""
+                    let major = data["major"] as? String ?? ""
+                    let nation = data["nationality"] as? String ?? ""
+                    let sat = data["sat"] as? Double ?? 0.0
+                    let school = data["school"] as? String ?? ""
+                    let tofel = data["tofel"] as? Double ?? 0.0
+                    let name = data["name"] as? String ?? ""
+                    let view = data["view"] as? Int ?? 0
+                    let follow = data["follow"] as? Int ?? 0
+                    let applyinfo = data["applyinfo"] as? [[String:String]] ?? []
+                    let imageurl = data["userImageUrl"] as? String ?? self.DefaultAvatarUrl
+                    let degree = data["degree"] as? String ?? ""
+                    let gre = data["gre"] as? Double ?? 0.0
+                    let applyby = data["applyby"] as? String ?? ""
+                    var applyinfos:[schoolReslt]=[]
+                    
+                    for i in applyinfo{
+                        applyinfos.append(schoolReslt(schoolName: i["schoolname"] ?? "", result: i["result"] ?? "", schoolurl: i["schoolUrl"] ?? "",major: i["applyMajor"] ?? ""))
+                    }
+                        applyinfos=self.sortSchools(applyinfo: applyinfos)
+                        schooluserspace.append(UserInfo(userid: uid, name: name, school: school, nation: nation, major: major, sat: sat, tofel: tofel, gre:gre, gpa: gpa, intro: intro,view:view,follow:follow,applyinfo: applyinfos,avatarImageURL: imageurl, degree: degree,applyby: applyby))
+                    }
+                    
+                }
+            self.schoolUsers=schooluserspace
+                
+            }
+        }
+    
 }
 

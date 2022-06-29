@@ -66,7 +66,8 @@ struct ApplyDetail: View {
                 
             }
             }
-        }.toolbar(){
+        }
+        .toolbar(){
             ToolbarItem(placement: .navigationBarTrailing){
                 //if it is own file
                 if uid==manager.currentUserInfoCard?.userid{

@@ -82,9 +82,15 @@ struct SchoolDetail: View {
                             Text("Applied Profiles").font(.system(size: manager.screenWidth*0.05,weight: .bold, design: .rounded)).multilineTextAlignment(.leading).opacity(0.7)
                             Spacer()
                         }.padding(EdgeInsets(top: manager.screenWidth*0.01, leading: manager.screenWidth*0.05, bottom: manager.screenWidth*0.02, trailing: 0))
-                        FavoriteView()
+                        
+                        //school applied users
+                        schoolApplyUsersView().onAppear{
+                            manager.getSchoolUsers(schoolname: schoolname)
+                        }
                         Spacer().frame(height:manager.screenHeight*0.05)
                     }.frame(width: manager.screenWidth*0.95).background(RoundedRectangle(cornerRadius: 15).fill(.white).shadow(radius: 5))
+                        
+                        
                     
                     
                 }

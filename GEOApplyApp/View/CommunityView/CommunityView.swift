@@ -24,7 +24,7 @@ struct CommunityView: View {
                 }
             }
         }.navigationTitle("School Ranks").navigationBarTitleDisplayMode(.inline)
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -59,7 +59,7 @@ struct schoolApplyCard: View {
                
                 HStack{
                     Spacer()
-                    Text(school).font(.footnote).fixedSize(horizontal: false, vertical: true).frame(width: manager.screenWidth*0.3, height: manager.screenWidth*0.02, alignment: .center).padding(1).multilineTextAlignment(.center).lineLimit(2)
+                    Text(school).font(.footnote).fixedSize(horizontal: false, vertical: true).frame(width: manager.screenWidth*0.3, height: manager.screenWidth*0.02, alignment: .center).padding(1).multilineTextAlignment(.center).lineLimit(2).foregroundColor(.black)
                     
                     
                     Spacer()
@@ -88,7 +88,7 @@ struct schoolApplyCard: View {
                
                 HStack{
                     Spacer()
-                    Text(school).font(.footnote).fixedSize(horizontal: false, vertical: true).frame(width: manager.screenWidth*0.3, height: manager.screenWidth*0.02, alignment: .center).padding(1).multilineTextAlignment(.center).lineLimit(2)
+                    Text(school).font(.footnote).fixedSize(horizontal: false, vertical: true).frame(width: manager.screenWidth*0.3, height: manager.screenWidth*0.02, alignment: .center).padding(1).multilineTextAlignment(.center).lineLimit(2).foregroundColor(.black)
                     
                     
                     Spacer()

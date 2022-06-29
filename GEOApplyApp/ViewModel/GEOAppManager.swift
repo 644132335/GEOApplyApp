@@ -28,9 +28,10 @@ class AppManager:ObservableObject{
     //defualt image url
     let DefaultAvatarUrl="https://firebasestorage.googleapis.com/v0/b/geo-application-78cca.appspot.com/o/appstore.png?alt=media&token=f32e0fa7-9397-4b5e-bad3-482428a5066b"
     //****************************************************Storage and functions*******************************************
-    //state variables
+    //state variables and lists
     @Published var users=[UserInfo]()
     @Published var followedUsers=[UserInfo]()
+    @Published var schoolUsers=[UserInfo]()
     @Published var currentPage: Page = .login
     @Published var schools=[schoolInfo]()
     @Published var schoolResults=[schoolReslt]()
@@ -65,6 +66,7 @@ class AppManager:ObservableObject{
     @Published var UsrAppliedSchool="Brown University"
     @Published var UsrSchoolResult="accepted"
     @Published var UsrSchoolMajor=""
+    
     //meView Info
     @Published var meUsername=""
     @Published var meEmail=""

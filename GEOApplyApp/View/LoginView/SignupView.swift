@@ -34,7 +34,7 @@ struct SignupView: View {
                     .background(manager.themeColor)
                     .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
                 
-                
+                Group{
                 HStack{
                     Image(systemName: "envelope").foregroundStyle(manager.LoginbuttonColor).frame(width: manager.screenWidth*0.07, height: manager.screenWidth*0.07).padding(2)
                     TextField("Email", text: $email).font(.title2)
@@ -63,16 +63,24 @@ struct SignupView: View {
                     .padding(.horizontal, 30)
                     .background(manager.themeColor)
                     .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+                    Text("(Password should be 6 charactor or more)").font(.subheadline).foregroundColor(.black.opacity(0.2)).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
                 Text(manager.signuperro).font(.subheadline).foregroundColor(.red).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
                 HStack{
                     //register button
                     Button(action: {
-                        manager.signUp(email: email, password: password, username:username)
+                        if email.count<=0{
+                            manager.signuperro="Invalid Email"
+                        }else if username.count<5 || username.count>30{
+                            manager.signuperro="username should be between 5 to 30 characters"
+                        }else{
+                            manager.signUp(email: email, password: password, username:username)
+                        }
+                        
                     }){
                         Text("Create").foregroundColor(.white).font(.title2).padding(EdgeInsets(top: 10, leading: manager.screenWidth*0.35, bottom: 10, trailing: manager.screenWidth*0.35)).background(RoundedRectangle(cornerRadius: 10).foregroundStyle(manager.LoginbuttonColor))
                     }.padding(5).shadow(radius: 5)
                     
-                }
+                }}
             }
                 Spacer()
             

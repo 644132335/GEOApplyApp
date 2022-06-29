@@ -114,9 +114,11 @@ extension AppManager{
     func createUserInfoCard() {
         guard let uid = auth.currentUser?.uid else { print("no Current user"); return }
         var applyinfo:[[String:Any]]=[]
+        var applyschool:[String]=[]
         for i in self.schoolResults{
             print("school major backend "+i.major)
             applyinfo.append(["schoolname":i.schoolName,"result":i.result,"schoolUrl":i.schoolurl,"applyMajor":i.major])
+            applyschool.append(i.schoolName)
         }
         db.collection("userInfoCard").document(uid).setData([
             "uid":uid,
@@ -132,6 +134,7 @@ extension AppManager{
             "view":0,
             "follow":0,
             "applyinfo":applyinfo,
+            "applyschool":applyschool,
             "degree":meDegree,
             "applyby":meApplyBy
         ],merge: true){ err in
@@ -396,6 +399,7 @@ extension AppManager{
                     self.schoolRanked.append(schoolInfo(schoolName: schoolName, rank: rank, schoolImageUrl: schoolImage,intro: intro))
                 }
                 self.sortSchools()
+                
             }
         }
     }

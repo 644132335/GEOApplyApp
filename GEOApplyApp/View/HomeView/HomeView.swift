@@ -105,7 +105,7 @@ struct HomeView: View {
                        
                     }){Image(systemName: "arrow.clockwise").foregroundColor(manager.themeColor)}}
             }
-            
+            .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)

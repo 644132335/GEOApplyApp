@@ -18,7 +18,7 @@ struct ContentView: View {
                 CommunityView().tabItem{Label("School", systemImage: "building.columns.fill")}
                 MeView().tabItem{Label("Me", systemImage: "person.fill")}
             }
-
+            
             .navigationViewStyle(StackNavigationViewStyle())
         
     }
